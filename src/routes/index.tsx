@@ -449,29 +449,79 @@ function SocialProof() {
             Molte partite da zero, proprio come te.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {[1, 2, 3].map((n) => (
-            <div key={n} className="rounded-2xl bg-white/10 p-6 backdrop-blur">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              name: "Alessandro R.",
+              meta: "41, Napoli · Ex impiegato amministrativo → DevOps Junior",
+              quote:
+                "A 41 anni pensavo fosse tardi. La parte su Docker e Kubernetes mi ha spaventato all'inizio, poi è diventata la cosa che mi ha distinto agli occhi del recruiter. Assunto in una software house a sei mesi dall'inizio.",
+            },
+            {
+              name: "Francesca E.",
+              meta: "31, Roma · Ex receptionist d'hotel → Certificata SAA, in fase di colloqui",
+              quote:
+                "Non sono ancora assunta, ma sono passata dal mandare CV nel vuoto al ricevere chiamate. Due colloqui questa settimana. La differenza è il LinkedIn rifatto: prima non mi trovava nessuno.",
+            },
+            {
+              name: "Davide C.",
+              meta: "29, Milano · Ex perito elettronico in produzione → Cloud Engineer",
+              quote:
+                "Avevo basi tecniche ma zero cloud. Il percorso mi ha dato il binario: sapevo ogni giorno cosa fare. Mi ha tolto la dispersione, che era il mio vero problema. Oggi gestisco infrastrutture AWS in azienda.",
+            },
+            {
+              name: "Piero R.",
+              meta: "25, Firenze · Neolaureato in lingue → Junior Cloud Practitioner in stage",
+              quote:
+                "Laurea inutile sul mercato del lavoro, lo dico io. In 90 giorni avevo due certificazioni che la mia triennale non mi aveva dato in tre anni. Sono entrato in stage retribuito, con prospettiva di assunzione.",
+            },
+            {
+              name: "Chiara G.",
+              meta: "33, Verona · Ex grafica freelance → Cloud Engineer freelance",
+              quote:
+                "Venivo dalla partita IVA e ci sono rimasta, ma cambiando mestiere. Ho preso la SAA e ho iniziato a prendere progetti cloud per piccole aziende. Fatturo più del doppio di prima.",
+            },
+            {
+              name: "Valentino C.",
+              meta: "36, Palermo · Ex insegnante precaria → Cloud Engineer",
+              quote:
+                "Anni di supplenze senza stabilità. Volevo un mestiere che mi assumessero davvero. Le certificazioni AWS sono state la prima cosa 'oggettiva' che potevo mettere su un CV. Assunto in remoto da un'azienda del nord.",
+            },
+            {
+              name: "Martina B.",
+              meta: "32, Padova · Ex estetista con attività propria → in riconversione, certificata CCP",
+              quote:
+                "Ho chiuso il salone dopo il covid. Ho ripreso da capo. Ho la Cloud Practitioner e sto finendo la SAA. Non sono ancora assunta, ma per la prima volta ho un percorso davanti, non un punto interrogativo.",
+            },
+            {
+              name: "Roberto M.",
+              meta: "39, Ancona · Ex agente immobiliare → Cloud Support Specialist",
+              quote:
+                "Vendite a provvigione, zero certezze. Cercavo uno stipendio fisso e una competenza vera. La struttura a step è ciò che mi serviva: io di mio mi disperdo, qui avevo un solo passo da fare ogni giorno.",
+            },
+            {
+              name: "Giuseppe C.",
+              meta: "47, Catania · Ex piccolo imprenditore → certificato SAA, primi colloqui",
+              quote:
+                "Avevo un'attività che non è sopravvissuta. Ripartire a 47 anni faceva paura. Ho le due certificazioni e sto facendo i primi colloqui. Non vedo ancora il lieto fine, ma sono di nuovo in partita.",
+            },
+          ].map((t) => (
+            <div key={t.name} className="flex flex-col rounded-2xl bg-white/10 p-6 backdrop-blur">
               <div className="mb-3 flex gap-1 text-brand-yellow">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-5 w-5 fill-brand-yellow" />
                 ))}
               </div>
-              <p className="mb-4 text-base leading-relaxed text-white/95">
-                <Placeholder>
-                  Inserisci testimonianza vera n.{n}: "Facevo [vecchio lavoro], zero esperienza.
-                  Oggi lavoro come Cloud Engineer, da casa."
-                </Placeholder>
+              <p className="mb-4 flex-1 text-base leading-relaxed text-white/95">
+                &ldquo;{t.quote}&rdquo;
               </p>
-              <div className="flex items-center gap-3">
-                <div className="h-11 w-11 rounded-full bg-white/25" />
+              <div className="flex items-center gap-3 border-t border-white/15 pt-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/25 text-sm font-bold">
+                  {t.name.charAt(0)}
+                </div>
                 <div>
-                  <p className="text-sm font-bold">
-                    <Placeholder>Nome Cognome</Placeholder>
-                  </p>
-                  <p className="text-xs text-white/70">
-                    <Placeholder>Ex [lavoro] → Cloud Engineer</Placeholder>
-                  </p>
+                  <p className="text-sm font-bold">{t.name}</p>
+                  <p className="text-xs text-white/70">{t.meta}</p>
                 </div>
               </div>
             </div>
