@@ -344,11 +344,22 @@ function StoryBlock() {
   return (
     <section className="bg-white px-4 py-24">
       <div className="mx-auto max-w-3xl">
-        <div className="rounded-3xl border-2 border-dashed border-brand-yellow/60 bg-brand-yellow/5 p-8 sm:p-12">
-          <p className="mb-4 text-sm font-bold uppercase tracking-widest text-brand-yellow-deep">
+        <div className="relative rounded-3xl border-2 border-dashed border-brand-yellow/60 bg-brand-yellow/5 p-8 pt-24 sm:p-12 sm:pt-28">
+          {/* Foto autore */}
+          <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
+            <div className="rounded-full bg-gradient-to-br from-brand-blue to-brand-blue-light p-1.5 shadow-xl ring-4 ring-white">
+              <img
+                src={eugenioPhoto.url}
+                alt="Eugenio Fontana — Capitan Cloud"
+                className="h-28 w-28 rounded-full object-cover sm:h-32 sm:w-32"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <p className="mb-4 text-center text-sm font-bold uppercase tracking-widest text-brand-yellow-deep sm:text-left">
             La mia storia
           </p>
-          <h2 className="mb-6 font-display text-3xl font-extrabold text-brand-ink sm:text-4xl">
+          <h2 className="mb-6 text-center font-display text-3xl font-extrabold text-brand-ink sm:text-left sm:text-4xl">
             Ti dico subito una cosa scomoda.
           </h2>
           <div className="space-y-4 text-lg leading-relaxed text-brand-ink/85">
