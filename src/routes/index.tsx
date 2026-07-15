@@ -19,8 +19,30 @@ import {
   Star,
   MessageCircle,
   ChevronDown,
+  Briefcase,
+  MessagesSquare,
+  FileCheck2,
+  Building2,
+  Linkedin,
+  ListChecks,
+  UserRound,
+  RefreshCw,
+  BadgeCheck,
+  Ticket,
+  FolderCheck,
+  Terminal,
+  Network,
+  Code2,
+  MonitorCog,
+  Layers,
 } from "lucide-react";
 import { useState } from "react";
+import percorsoOverviewAsset from "@/assets/percorso-completo-overview.png.asset.json";
+import roadmapAsset from "@/assets/roadmap-90-giorni.png.asset.json";
+import percorsoCentraleAsset from "@/assets/percorso-centrale.png.asset.json";
+import certificazioniAsset from "@/assets/certificazioni-aws.png.asset.json";
+import protocolloAsset from "@/assets/protocollo-subito-assunto.png.asset.json";
+import percorsiIntegrativiAsset from "@/assets/percorsi-integrativi.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,7 +68,6 @@ function Placeholder({ children }: { children: React.ReactNode }) {
 function VslPage() {
   return (
     <main className="bg-white text-brand-ink font-sans overflow-x-hidden">
-      {/* DiscordBar removed */}
       <Nav />
       <Hero />
       <AttentionBlock />
@@ -56,8 +77,11 @@ function VslPage() {
       <Objections />
       <SocialProof />
       <Reveal />
+      <PathOverview />
       <Curriculum />
-      <Bonuses />
+      <Certifications />
+      <ProtocolloSubitoAssunto />
+      <PercorsiIntegrativi />
       <PricingCTA />
       <Vision />
       <FAQ />
@@ -648,91 +672,347 @@ function Curriculum() {
           </div>
         </div>
 
-        {/* Certifications */}
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {[
-            {
-              code: "CLF-C02",
-              name: "AWS Certified Cloud Practitioner",
-              desc: "La porta d'ingresso al mondo AWS.",
-            },
-            {
-              code: "SAA-C03",
-              name: "AWS Solutions Architect – Associate",
-              desc: "La certificazione che pesa davvero sul mercato del lavoro cloud.",
-            },
-          ].map((c) => (
+        {/* Roadmap image */}
+        <div className="mt-12 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
+          <img
+            src={roadmapAsset.url}
+            alt="La roadmap dei 90 giorni: 15 giorni percorso centrale, 15 giorni CLF-C02, 55 giorni SAA-C03, 5 giorni Protocollo Subito Assunto"
+            className="w-full"
+            loading="lazy"
+          />
+        </div>
+
+        {/* Percorso centrale image */}
+        <div className="mt-8 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
+          <img
+            src={percorsoCentraleAsset.url}
+            alt="Il percorso centrale: 15 moduli dai fondamenti DevOps & Cloud fino a DevSecOps, Cloud Security, FinOps e trend emergenti"
+            className="w-full"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- PATH OVERVIEW (3 + 1) ---------- */
+function PathOverview() {
+  const steps = [
+    {
+      n: "01",
+      title: "Percorso Centrale",
+      desc: "Diventa Cloud Engineer: 15 moduli pratici da DevOps e Cloud fino a Kubernetes, Security e FinOps.",
+      accent: "text-brand-blue",
+    },
+    {
+      n: "02",
+      title: "Certificazioni AWS",
+      desc: "Ottieni CLF-C02 e SAA-C03 con il Protocollo Supera Esame!™ — video corso, simulatori, validazione cert-ready.",
+      accent: "text-brand-yellow-deep",
+    },
+    {
+      n: "03",
+      title: "Protocollo Subito Assunto!™",
+      desc: "Portfolio, CV, LinkedIn, colloqui, database aziende e sessione 1-to-1 con Capitan Cloud.",
+      accent: "text-brand-blue",
+    },
+    {
+      n: "+1",
+      title: "Percorsi Integrativi",
+      desc: "8 percorsi extra: Claude Code, Networking, Python, Linux & Bash, Windows & PowerShell, Docker, Kubernetes e Terraform.",
+      accent: "text-emerald-600",
+    },
+  ];
+  return (
+    <section className="bg-secondary px-4 py-24">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 text-center">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-blue">
+            Un unico percorso. Tutto ciò che serve.
+          </p>
+          <h2 className="font-display text-3xl font-extrabold text-brand-ink sm:text-5xl">
+            Il percorso completo:{" "}
+            <span className="gradient-yellow-text">3 step + 1 percorso integrativo</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-brand-ink/70">
+            Formazione, certificazioni, carriera e competenze: un sistema che tiene tutto insieme, in ordine.
+          </p>
+        </div>
+
+        <div className="mb-12 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
+          <img
+            src={percorsoOverviewAsset.url}
+            alt="Il percorso completo Capitan Cloud: 3 step (Percorso Centrale, Certificazioni AWS, Protocollo Subito Assunto) + 1 percorsi integrativi"
+            className="w-full"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {steps.map((s) => (
             <div
-              key={c.code}
-              className="flex items-start gap-5 rounded-2xl border-2 border-brand-yellow/40 bg-white p-6"
+              key={s.n}
+              className="rounded-2xl border-2 border-brand-blue/10 bg-white p-6 transition hover:-translate-y-1 hover:border-brand-blue/40 hover:shadow-lg"
             >
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-yellow text-brand-ink">
-                <ShieldCheck className="h-7 w-7" strokeWidth={2.5} />
-              </div>
-              <div>
-                <p className="text-xs font-bold uppercase tracking-wider text-brand-yellow-deep">
-                  {c.code}
-                </p>
-                <h4 className="font-display text-lg font-extrabold text-brand-ink">{c.name}</h4>
-                <p className="mt-1 text-sm text-brand-ink/70">{c.desc}</p>
-              </div>
+              <span className={`font-display text-4xl font-extrabold ${s.accent}`}>{s.n}</span>
+              <h3 className="mt-2 font-display text-lg font-extrabold text-brand-ink">
+                {s.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-brand-ink/70">{s.desc}</p>
             </div>
           ))}
         </div>
-        <p className="mt-4 text-center text-xs text-brand-ink/60">
-          ⓘ Il costo degli esami di certificazione non è incluso (si pagano ad AWS). Ricevi un
-          voucher del <strong>10% di sconto</strong> su ciascuno.
+      </div>
+    </section>
+  );
+}
+
+/* ---------- CERTIFICATIONS ---------- */
+function Certifications() {
+  return (
+    <section className="bg-white px-4 py-24">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 text-center">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-yellow-deep">
+            Step 02 · Le certificazioni ufficiali
+          </p>
+          <h2 className="font-display text-3xl font-extrabold text-brand-ink sm:text-5xl">
+            Due certificazioni AWS.{" "}
+            <span className="gradient-yellow-text">Un metodo per superarle.</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-brand-ink/70">
+            Con il <strong>Protocollo Supera Esame!™</strong> arrivi all'esame preparato davvero:
+            video corso completo, simulatore d'esame e validazione cert-ready 1-to-1.
+          </p>
+        </div>
+
+        <div className="mb-12 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
+          <img
+            src={certificazioniAsset.url}
+            alt="Le certificazioni AWS: CLF-C02 (Cloud Practitioner) e SAA-C03 (Solutions Architect Associate) con Protocollo Supera Esame"
+            className="w-full"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {[
+            {
+              n: "1",
+              t: "Video Corso Completo",
+              d: "Laboratori pratici, spiegazioni exam-focused, tutta la teoria che serve — nessun argomento lasciato a metà.",
+            },
+            {
+              n: "2",
+              t: "Simulatore d'Esame",
+              d: "Mock test realistici, tempi reali, spiegazioni dettagliate su ogni risposta. Arrivi all'esame senza sorprese.",
+            },
+            {
+              n: "3",
+              t: "Validazione Cert-Ready",
+              d: "Valutazione personale 1-to-1: quando sei davvero pronto ti diamo il via libera a prenotare l'esame.",
+            },
+          ].map((s) => (
+            <div
+              key={s.n}
+              className="rounded-2xl border-2 border-brand-yellow/40 bg-brand-yellow/5 p-6"
+            >
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-yellow text-brand-ink font-extrabold">
+                {s.n}
+              </span>
+              <h3 className="mt-3 font-display text-lg font-extrabold text-brand-ink">{s.t}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-brand-ink/75">{s.d}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-sm font-semibold text-brand-ink/75">
+          {["Quiz", "Ebook", "Flashcard Anki", "Guide", "Whitepaper", "Risorse extra"].map((r) => (
+            <span
+              key={r}
+              className="rounded-full border border-brand-yellow/50 bg-brand-yellow/10 px-4 py-1.5"
+            >
+              {r}
+            </span>
+          ))}
+        </div>
+        <p className="mt-6 text-center text-xs text-brand-ink/60">
+          ⓘ Il costo degli esami AWS non è incluso (si pagano ad AWS). Ricevi un voucher del{" "}
+          <strong>10% di sconto</strong> su ciascun esame.
         </p>
       </div>
     </section>
   );
 }
 
-/* ---------- BONUS ---------- */
-function Bonuses() {
-  const bonuses = [
-    "Portfolio Blindato — progetti pronti da mostrare in colloquio",
-    "Colloquio Simulator — ti alleni sul colloquio tecnico",
-    "AI Agent \"CV Check\" — analizza il tuo CV e ti dice cosa migliorare",
-    "Database delle aziende italiane che assumono Cloud Engineer",
-    "Profilo LinkedIn perfetto — come farti trovare dai recruiter",
-    "Top 50 domande da colloquio — le più frequenti, con l'approccio giusto",
-    "Sessione 1-to-1 con Capitan Cloud",
-    "Certificato verificabile + accesso alla community + voucher 10% esami AWS",
+/* ---------- PROTOCOLLO SUBITO ASSUNTO ---------- */
+function ProtocolloSubitoAssunto() {
+  const items = [
+    {
+      icon: FolderCheck,
+      t: "Portfolio Blindato",
+      d: "Progetti reali già pronti da mostrare: infrastrutture su AWS, pipeline CI/CD, deploy su Kubernetes. Non parole — evidenze.",
+    },
+    {
+      icon: MessagesSquare,
+      t: "Colloquio Simulator",
+      d: "Simulazioni di colloquio tecnico e comportamentale con domande vere, per allenarti prima che conti davvero.",
+    },
+    {
+      icon: FileCheck2,
+      t: "AI Agent \"CV Check\"",
+      d: "Il tuo CV analizzato da un agente AI addestrato sulle offerte Cloud reali: cosa manca, cosa cambiare, cosa togliere.",
+    },
+    {
+      icon: Building2,
+      t: "Database Aziende Italiane",
+      d: "Lista aggiornata delle aziende italiane che assumono Cloud Engineer, con come candidarsi in modo mirato.",
+    },
+    {
+      icon: Linkedin,
+      t: "Profilo LinkedIn Perfetto",
+      d: "Template, keyword e headline per farti trovare dai recruiter Cloud — non un profilo tra tanti.",
+    },
+    {
+      icon: ListChecks,
+      t: "Top 50 Domande Colloquio",
+      d: "Le domande più frequenti nei colloqui Cloud/DevOps in Italia, con l'approccio giusto per rispondere.",
+    },
+    {
+      icon: UserRound,
+      t: "Sessione 1-to-1 con Capitan Cloud",
+      d: "Una chiamata personale con Eugenio: revisione CV, LinkedIn, strategia di candidatura, dubbi tecnici.",
+    },
+    {
+      icon: Briefcase,
+      t: "Pronto per il Colloquio",
+      d: "Checklist finale prima del giorno del colloquio: cosa ripassare, cosa portare, come gestire lo stress.",
+    },
+    {
+      icon: RefreshCw,
+      t: "Corso Sempre Aggiornato",
+      d: "Il mondo Cloud cambia: aggiorniamo il corso in continuazione. L'accesso resta tuo, gli aggiornamenti anche.",
+    },
+    {
+      icon: BadgeCheck,
+      t: "Certificato Verificabile",
+      d: "Certificato di completamento con URL verificabile — utile su LinkedIn e nei processi di selezione.",
+    },
+    {
+      icon: Users,
+      t: "Accesso alla Community",
+      d: "Community privata di studenti e cloud engineer già assunti. Fai domande, condividi progressi, trovi opportunità.",
+    },
+    {
+      icon: Ticket,
+      t: "10% di Sconto Esami AWS",
+      d: "Voucher ufficiale per pagare meno gli esami CLF-C02 e SAA-C03 direttamente ad AWS.",
+    },
   ];
   return (
-    <section className="bg-white px-4 py-24">
-      <div className="mx-auto max-w-5xl">
-        <div className="mb-14 text-center">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-blue">
-            Incluso nel percorso
+    <section className="bg-gradient-to-b from-brand-blue-deep to-brand-blue px-4 py-24 text-white">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 text-center">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-yellow">
+            Step 03 · Dalla formazione al lavoro
           </p>
-          <h2 className="font-display text-3xl font-extrabold text-brand-ink sm:text-5xl">
-            La parte che gli altri corsi{" "}
-            <span className="text-brand-blue">non hanno</span>
+          <h2 className="font-display text-3xl font-extrabold sm:text-5xl">
+            Protocollo <span className="gradient-yellow-text">Subito Assunto!™</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-brand-ink/70">
-            Finito lo studio, la maggior parte delle persone si blocca sul "e adesso come mi
-            candido?". Qui trovi tutto quello che serve fino al colloquio.
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-white/85">
+            Studiare non basta. Serve un <strong>sistema concreto per farsi assumere</strong>:
+            portfolio, CV, LinkedIn, colloqui, aziende, community e supporto diretto. Ecco tutto
+            quello che è incluso.
           </p>
         </div>
-        <div className="grid gap-3 sm:grid-cols-2">
-          {bonuses.map((b, i) => (
+
+        <div className="mb-12 overflow-hidden rounded-3xl border border-white/15 bg-white/5 shadow-2xl">
+          <img
+            src={protocolloAsset.url}
+            alt="Protocollo Subito Assunto: portfolio blindato, colloquio simulator, AI CV check, aziende, LinkedIn perfetto, top 50 domande, 1-to-1, community, voucher 10%"
+            className="w-full"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {items.map((it) => (
             <div
-              key={i}
-              className="flex items-start gap-3 rounded-xl border border-brand-blue/10 bg-secondary p-5"
+              key={it.t}
+              className="rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur transition hover:-translate-y-1 hover:border-brand-yellow/60 hover:bg-white/15"
             >
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-blue text-white">
-                <Check className="h-4 w-4" strokeWidth={3} />
+              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-yellow text-brand-ink">
+                <it.icon className="h-5 w-5" strokeWidth={2.5} />
               </div>
-              <p className="pt-1 text-sm font-medium leading-snug text-brand-ink sm:text-base">
-                {b}
-              </p>
+              <h3 className="font-display text-lg font-extrabold">{it.t}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/85">{it.d}</p>
             </div>
           ))}
         </div>
-        <p className="mt-8 text-center text-sm text-brand-ink/60">
-          Valore totale bonus: <Placeholder>somma €</Placeholder> — inclusi nel prezzo.
+
+        <p className="mt-12 text-center text-lg font-semibold text-brand-yellow">
+          Non solo competenze. Un sistema concreto per farsi assumere.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- PERCORSI INTEGRATIVI ---------- */
+function PercorsiIntegrativi() {
+  const modules = [
+    { icon: Sparkles, t: "Claude Code", d: "Usare l'AI per scrivere IaC, script e automazioni Cloud più velocemente." },
+    { icon: Network, t: "Networking", d: "TCP/IP, DNS, VPN, subnetting, routing — le basi che ogni Cloud Engineer deve avere." },
+    { icon: Code2, t: "Python", d: "Scripting, automazione, boto3 per AWS: il linguaggio numero 1 nel Cloud." },
+    { icon: Terminal, t: "Linux & Bash", d: "Shell, permessi, systemd, scripting: il sistema operativo del Cloud." },
+    { icon: MonitorCog, t: "Windows & PowerShell", d: "Amministrazione Windows Server e PowerShell per ambienti ibridi." },
+    { icon: Container, t: "Docker", d: "Approfondimento container: immagini, volumi, networking, Compose e best practice." },
+    { icon: Boxes, t: "Kubernetes", d: "Cluster, Pod, Service, Ingress, Helm — orchestrazione container in produzione." },
+    { icon: Layers, t: "Terraform", d: "Infrastructure as Code su AWS: moduli, state, workspace, pipeline." },
+  ];
+  return (
+    <section className="bg-secondary px-4 py-24">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 text-center">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-blue">
+            +1 · Le competenze fondamentali
+          </p>
+          <h2 className="font-display text-3xl font-extrabold text-brand-ink sm:text-5xl">
+            Percorsi <span className="text-brand-blue">Integrativi</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-brand-ink/70">
+            8 percorsi extra inclusi nel prezzo — le competenze trasversali che fanno la
+            differenza fra un candidato qualsiasi e un <strong>Cloud Engineer pronto al lavoro</strong>.
+          </p>
+        </div>
+
+        <div className="mb-12 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
+          <img
+            src={percorsiIntegrativiAsset.url}
+            alt="Percorsi integrativi: Claude Code, Networking, Python, Linux & Bash, Windows & PowerShell, Docker, Kubernetes, Terraform"
+            className="w-full"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {modules.map((m) => (
+            <div
+              key={m.t}
+              className="rounded-2xl border-2 border-brand-blue/10 bg-white p-6 transition hover:-translate-y-1 hover:border-brand-blue/40 hover:shadow-lg"
+            >
+              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-blue/10 text-brand-blue">
+                <m.icon className="h-5 w-5" strokeWidth={2.5} />
+              </div>
+              <h3 className="font-display text-base font-extrabold text-brand-ink">{m.t}</h3>
+              <p className="mt-1.5 text-sm leading-snug text-brand-ink/70">{m.d}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-10 text-center text-base font-semibold text-brand-ink/80">
+          8 percorsi · Competenze reali · <span className="text-brand-blue">Preparazione completa</span>
         </p>
       </div>
     </section>
