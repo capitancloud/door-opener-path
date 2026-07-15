@@ -861,7 +861,7 @@ function Curriculum() {
                     <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-ink/50">
                       Fase 0{i + 1}
                     </p>
-                    <p className={`bg-gradient-to-r ${ph.color} bg-clip-text font-display text-2xl font-extrabold leading-none text-transparent sm:text-3xl`}>
+                    <p className={`bg-gradient-to-r ${ph.color} bg-clip-text font-display text-lg font-extrabold leading-none text-transparent sm:text-xl`}>
                       Giorni {ph.dayShort}
                     </p>
                   </div>
