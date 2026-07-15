@@ -892,14 +892,6 @@ function ProtocolloSubitoAssunto() {
           </p>
         </div>
 
-        <div className="mb-12 overflow-hidden rounded-3xl border border-white/15 bg-white/5 shadow-2xl">
-          <img
-            src={protocolloAsset.url}
-            alt="Protocollo Subito Assunto: portfolio blindato, colloquio simulator, AI CV check, aziende, LinkedIn perfetto, top 50 domande, 1-to-1, community, voucher 10%"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it) => (
