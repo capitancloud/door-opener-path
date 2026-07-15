@@ -10,7 +10,7 @@ export const Route = createFileRoute("/cookie-policy")({
       {
         name: "description",
         content:
-          "Informativa sui cookie e tecnologie simili utilizzati sul sito capitancloud.it del Protocollo Supera Esame™.",
+          "Informativa sui cookie e tecnologie simili utilizzati sul sito capitancloud.it di Capitan Cloud.",
       },
       { property: "og:title", content: "Cookie Policy — Capitan Cloud" },
       {
