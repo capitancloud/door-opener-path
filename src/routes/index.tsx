@@ -1400,6 +1400,10 @@ function PricingCTA() {
                 Prenota una chiamata gratuita di 15 minuti
               </a>
               .
+              <br />
+              <span className="mt-1 inline-block text-xs font-semibold text-brand-ink/70">
+                Parlerai <span className="text-brand-blue">personalmente con me (Eugenio)</span> — niente venditori, niente call center.
+              </span>
             </p>
           </div>
 
