@@ -348,12 +348,14 @@ function StoryBlock() {
           {/* Foto autore */}
           <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
             <div className="rounded-full bg-gradient-to-br from-brand-blue to-brand-blue-light p-1.5 shadow-xl ring-4 ring-white">
-              <img
-                src={eugenioPhoto.url}
-                alt="Eugenio Fontana — Capitan Cloud"
-                className="h-28 w-28 rounded-full object-cover sm:h-32 sm:w-32"
-                loading="lazy"
-              />
+              <div className="h-28 w-28 overflow-hidden rounded-full sm:h-32 sm:w-32">
+                <img
+                  src={eugenioPhoto.url}
+                  alt="Eugenio Fontana — Capitan Cloud"
+                  className="h-full w-full scale-[1.75] object-cover object-[50%_38%]"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
           <p className="mb-4 text-center text-sm font-bold uppercase tracking-widest text-brand-yellow-deep sm:text-left">
