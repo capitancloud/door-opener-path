@@ -65,16 +65,13 @@ function Placeholder({ children }: { children: React.ReactNode }) {
 }
 
 function VslPage() {
-  useState(() => {
-    if (typeof window !== "undefined") {
-      // Se la pagina viene aperta con un hash residuo (es. #checkout), pulisci e scrolla in cima.
-      if (window.location.hash) {
-        window.history.replaceState(null, "", window.location.pathname + window.location.search);
-      }
+  useEffect(() => {
+    // Se la pagina viene aperta con un hash residuo (es. #checkout), pulisci e scrolla in cima.
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
       window.scrollTo(0, 0);
     }
-    return null;
-  });
+  }, []);
   return (
     <main className="bg-white text-brand-ink font-sans overflow-x-hidden">
       <Nav />
