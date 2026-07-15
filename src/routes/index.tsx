@@ -1384,12 +1384,12 @@ function Footer() {
         <p className="font-display text-lg font-extrabold text-white">Capitan Cloud</p>
         <p>© {new Date().getFullYear()} Capitan Cloud — Eugenio Fontana. Tutti i diritti riservati.</p>
         <div className="flex gap-4">
-          <a href="#" className="hover:text-white">
+          <Link to="/privacy" className="hover:text-white">
             Privacy
-          </a>
-          <a href="#" className="hover:text-white">
-            Termini
-          </a>
+          </Link>
+          <Link to="/cookie-policy" className="hover:text-white">
+            Cookie Policy
+          </Link>
         </div>
       </div>
     </footer>
