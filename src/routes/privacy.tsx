@@ -88,8 +88,7 @@ function PrivacyPage() {
               <li>Navigazione del sito/landing page capitancloud.it (di seguito, "Sito").</li>
               <li>Richiesta di informazioni e contatti (moduli, email, chat).</li>
               <li>
-                Acquisto del Protocollo Supera Esame™ (pagamento una tantum per singola
-                certificazione).
+                Acquisto del percorso "Diventa Cloud Engineer in 90 Giorni" (pagamento una tantum).
               </li>
               <li>Accesso a materiali didattici (video, PDF) e simulazioni d'esame.</li>
               <li>Prenotazione e svolgimento di sessioni Cert-Ready 1-to-1 da remoto.</li>
