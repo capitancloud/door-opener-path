@@ -135,7 +135,7 @@ function Nav() {
           </a>
         </nav>
         <a
-          href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer"
+          href="#checkout"
           className="gradient-cta shadow-cta inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-white transition hover:brightness-110"
         >
           <Sparkles className="h-4 w-4" />
