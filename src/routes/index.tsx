@@ -1436,8 +1436,9 @@ function PricingCTA() {
                 <p className="mt-2 text-sm leading-relaxed text-brand-ink/80">
                   Se in <strong>90 giorni</strong> completi al 100% il percorso centrale, i
                   percorsi di certificazione e tutti i percorsi integrativi — quindi hai
-                  visionato tutte le lezioni — e <strong>non superi la prima certificazione
-                  AWS Cloud Practitioner (CLF-C02)</strong>, ti rimborso l'intero importo.
+                  visionato tutte le lezioni — e <strong>non superi la certificazione
+                  AWS Cloud Practitioner (CLF-C02) per due volte</strong> (fornendo la prova
+                  ufficiale di entrambi gli esiti negativi), ti rimborso l'intero importo.
                   <br />
                   <span className="mt-2 block text-xs opacity-70">
                     La garanzia premia chi fa sul serio: tu ci metti il lavoro, io mi prendo
