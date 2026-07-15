@@ -342,40 +342,35 @@ function StoryBlock() {
       <div className="mx-auto max-w-3xl">
         <div className="rounded-3xl border-2 border-dashed border-brand-yellow/60 bg-brand-yellow/5 p-8 sm:p-12">
           <p className="mb-4 text-sm font-bold uppercase tracking-widest text-brand-yellow-deep">
-            La tua storia
+            La mia storia
           </p>
           <h2 className="mb-6 font-display text-3xl font-extrabold text-brand-ink sm:text-4xl">
-            Anch'io sono stato dove sei tu adesso.
+            Ti dico subito una cosa scomoda.
           </h2>
           <div className="space-y-4 text-lg leading-relaxed text-brand-ink/85">
             <p>
-              <Placeholder>
-                Racconta qui il tuo punto di partenza in modo che il lettore pensi "era una persona
-                come me": il lavoro, la sensazione di essere bloccato, i dubbi.
-              </Placeholder>
+              Io non sono partito dal punto in cui sei tu adesso. Non ti racconterò che ho mollato
+              un lavoro che odiavo per reinventarmi da zero.
             </p>
             <p>
-              Anch'io ero convinto che il treno fosse passato. Che certe cose fossero roba per
-              gente più fortunata, più giovane, più "portata" di me.
+              Quello che ho fatto, negli ultimi 10 anni, è un'altra cosa — e per te forse conta di
+              più: ho accompagnato <strong>oltre 100.000 persone</strong> attraverso quella porta.
+              Persone che il primo giorno mi dicevano quasi tutte la stessa frase:{" "}
+              <em>"ormai è tardi per me, quelli bravi hanno iniziato a vent'anni."</em>
             </p>
             <p>
-              Poi, un po' per caso, ho scoperto un mondo di cui non sapevo niente. Un settore dove
-              le aziende cercano persone e non le trovano. Dove non ti chiedono da che famiglia
-              vieni o che voti avevi a scuola, ma una cosa sola:{" "}
+              Guardandole cambiare strada ho capito una cosa semplice: in questo settore non
+              contano l'età che hai, i voti che avevi a scuola o la famiglia da cui vieni. Conta
+              una cosa sola — <strong>quello che sai dimostrare</strong>. Le aziende cercano
+              persone e non le trovano. Non ti chiedono da dove parti. Ti chiedono:{" "}
               <em>"sai fare questo? Dimostramelo."</em>
             </p>
             <p>
-              All'inizio non ci credevo neanch'io. Sembrava troppo bello.{" "}
-              <Placeholder>
-                Inserisci il momento della svolta e un risultato concreto e onesto.
-              </Placeholder>
-            </p>
-            <p>
-              Da allora ho aiutato <strong>oltre 100.000 persone</strong> a fare lo stesso
-              percorso. E ti assicuro una cosa:{" "}
+              E ti assicuro una cosa:{" "}
               <strong>
-                chi ce l'ha fatta non era più sveglio di te. Aveva solo trovato la porta giusta.
-              </strong>
+                chi ce l'ha fatta non era più sveglio di te. Aveva solo trovato la porta giusta
+              </strong>{" "}
+              — e qualcuno che gliela indicava. Quel qualcuno, adesso, posso essere io.
             </p>
           </div>
         </div>
