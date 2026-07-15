@@ -135,7 +135,7 @@ function Nav() {
           </a>
         </nav>
         <a
-          href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer"
+          href="#checkout"
           className="gradient-cta shadow-cta inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-white transition hover:brightness-110"
         >
           <Sparkles className="h-4 w-4" />
@@ -203,7 +203,7 @@ function Hero() {
         </div>
 
         <a
-          href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer"
+          href="#checkout"
           className="gradient-cta shadow-cta mx-auto mt-10 inline-flex w-full max-w-2xl items-center justify-center gap-3 rounded-2xl px-8 py-5 text-base font-bold uppercase tracking-wide text-white transition hover:brightness-110 sm:text-lg"
         >
           <Sparkles className="h-5 w-5" />
@@ -1290,7 +1290,7 @@ function Vision() {
           </p>
         </div>
         <a
-          href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer"
+          href="#checkout"
           className="gradient-cta shadow-cta mt-10 inline-flex items-center gap-3 rounded-2xl px-8 py-5 text-base font-bold uppercase tracking-wide text-white transition hover:brightness-110 sm:text-lg"
         >
           <Sparkles className="h-5 w-5" />
@@ -1388,7 +1388,7 @@ function PostScriptum() {
           perché non decide. Tu sei arrivato in fondo: una parte di te ha già capito che si può.
           <strong> Ascoltala.</strong>{" "}
           <a
-            href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer"
+            href="#checkout"
             className="font-bold text-brand-blue underline decoration-brand-yellow decoration-2 underline-offset-4"
           >
             👉 Inizia ora
