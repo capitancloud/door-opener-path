@@ -1308,10 +1308,6 @@ function FAQ() {
       a: "Il percorso è pensato per chi ha già una vita: bastano circa 2 ore al giorno, con i tuoi tempi. Nessuna scadenza imposta, l'accesso resta tuo.",
     },
     {
-      q: "Funziona su Windows e Mac?",
-      a: "Sì. I laboratori sono guidati passo-passo su entrambi i sistemi.",
-    },
-    {
       q: "Il costo degli esami è incluso nel prezzo?",
       a: "No. Il prezzo copre il percorso completo, i corsi e tutti i materiali. Gli esami di certificazione si pagano separatamente ad AWS, ma ricevi un voucher con il 10% di sconto su ciascuno.",
     },
