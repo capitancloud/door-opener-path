@@ -1066,6 +1066,27 @@ function Certifications() {
             Con il <strong>Protocollo Supera Esame!™</strong> arrivi all'esame preparato davvero:
             video corso completo, simulatore d'esame e validazione cert-ready 1-to-1.
           </p>
+          <div className="mx-auto mt-6 max-w-2xl rounded-2xl border-2 border-brand-yellow/50 bg-brand-yellow/10 px-6 py-5">
+            <p className="text-sm font-bold uppercase tracking-widest text-brand-yellow-deep">
+              ✅ Già incluso nel percorso — nessun acquisto extra
+            </p>
+            <p className="mt-2 text-base leading-relaxed text-brand-ink/80">
+              Il <strong>Protocollo Supera Esame!™</strong> per le certificazioni{" "}
+              <strong>Amazon AWS Cloud Practitioner</strong> e{" "}
+              <strong>Amazon AWS Solutions Architect Associate</strong> è{" "}
+              <strong>compreso nel prezzo del percorso</strong>: non devi acquistarlo
+              separatamente. Vuoi vedere nel dettaglio come funziona?
+            </p>
+            <a
+              href="https://certificazioni.capitancloud.it/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold uppercase tracking-wide text-brand-ink shadow-md shadow-brand-yellow/30 transition hover:brightness-105"
+            >
+              Scopri il Protocollo Supera Esame!™
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
         </div>
 
 
