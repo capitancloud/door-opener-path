@@ -1448,8 +1448,8 @@ function Vision() {
         <div className="space-y-5 text-lg leading-relaxed text-brand-ink/85 sm:text-xl">
           <p>
             Ma diversa. <strong>Non più quel peso.</strong> Perché sai che stai costruendo
-            qualcosa. Perché ogni giorno ti avvicini a un lavoro che paga di più, che puoi fare da
-            casa, di cui andare fiero.
+            qualcosa. Perché ogni giorno ti avvicini a un lavoro che paga di più, che ti permette
+            di lavorare in azienda dentro un comodo ufficio o da casa, di cui andare fiero.
           </p>
           <p>
             Immagina la sera in cui dici a chi ami: <em>"ho trovato la mia strada. Cambio vita."</em>{" "}
