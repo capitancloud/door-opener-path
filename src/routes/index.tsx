@@ -195,8 +195,7 @@ function Hero() {
           Voglio iniziare — Diventa Cloud Engineer ({PRICE})
         </a>
         <p className="mt-4 text-sm text-white/70">
-          Pagamento sicuro · Accesso immediato · Disponibile anche in{" "}
-          <Placeholder>rate</Placeholder>
+          Pagamento sicuro · Accesso immediato
         </p>
       </div>
     </section>
@@ -1034,8 +1033,7 @@ function PricingCTA() {
               <span className="pb-3 text-lg text-brand-ink/60">una tantum</span>
             </div>
             <p className="text-sm text-brand-ink/70">
-              Accesso incluso, contenuti aggiornati nel tempo. Disponibile anche in{" "}
-              <Placeholder>rate</Placeholder>.
+              Accesso incluso, contenuti aggiornati nel tempo.
             </p>
 
             <a
