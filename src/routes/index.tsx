@@ -59,6 +59,10 @@ const CHECKOUT_URL = "https://studenti.accademiadelcloud.it/p/payment-page";
 const QUIZ_URL = "#quiz"; // ← sostituisci con URL del quiz gratuito
 const FULL_PRICE = "997€";
 const PRICE = "297€";
+const WHATSAPP_NUMBER = "393514734862";
+const WHATSAPP_MESSAGE =
+  'Ciao Eugenio, ho visto la pagina del corso "Diventa Cloud Engineer in 90 Giorni" e vorrei qualche chiarimento prima di iscrivermi.';
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 function Placeholder({ children }: { children: React.ReactNode }) {
   return <span className="placeholder-note">✎ {children}</span>;
