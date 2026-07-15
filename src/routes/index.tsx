@@ -179,11 +179,17 @@ function Hero() {
         </p>
 
         <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
-          Il percorso completo di <strong>Eugenio Fontana (Capitan Cloud)</strong> — oltre{" "}
-          <strong>100.000 studenti formati</strong>. Dentro trovi <strong>1 percorso centrale</strong>{" "}
-          da zero a Cloud Engineer, <strong>2 percorsi dedicati alle certificazioni AWS</strong>{" "}
-          più importanti (CLF-C02 e SAA-C03), <strong>8 percorsi integrativi</strong> per specializzarti
-          e il metodo <strong>Protocollo Subito Assunto!™</strong> che ti accompagna fino al colloquio.
+          Un unico programma, pensato e guidato da <strong>Eugenio Fontana (Capitan Cloud)</strong>,
+          che ha già formato oltre <strong>100.000 studenti</strong>.
+        </p>
+        <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
+          Dentro trovi tutto quello che ti serve, in ordine:
+          <br />
+          <strong>1 percorso centrale</strong> che ti porta da zero a Cloud Engineer,
+          <strong> 2 percorsi di preparazione</strong> alle certificazioni AWS più richieste
+          (CLF-C02 e SAA-C03), <strong>8 percorsi integrativi</strong> per specializzarti sugli
+          strumenti che usano davvero le aziende e il metodo{" "}
+          <strong>Protocollo Subito Assunto!™</strong> che ti segue passo passo fino al colloquio.
         </p>
 
 
