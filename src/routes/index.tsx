@@ -1033,8 +1033,7 @@ function PricingCTA() {
               <span className="pb-3 text-lg text-brand-ink/60">una tantum</span>
             </div>
             <p className="text-sm text-brand-ink/70">
-              Accesso incluso, contenuti aggiornati nel tempo. Disponibile anche in{" "}
-              <Placeholder>rate</Placeholder>.
+              Accesso incluso, contenuti aggiornati nel tempo.
             </p>
 
             <a
