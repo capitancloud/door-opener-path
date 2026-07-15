@@ -68,7 +68,6 @@ function Placeholder({ children }: { children: React.ReactNode }) {
 function VslPage() {
   return (
     <main className="bg-white text-brand-ink font-sans overflow-x-hidden">
-      {/* DiscordBar removed */}
       <Nav />
       <Hero />
       <AttentionBlock />
@@ -78,8 +77,11 @@ function VslPage() {
       <Objections />
       <SocialProof />
       <Reveal />
+      <PathOverview />
       <Curriculum />
-      <Bonuses />
+      <Certifications />
+      <ProtocolloSubitoAssunto />
+      <PercorsiIntegrativi />
       <PricingCTA />
       <Vision />
       <FAQ />
