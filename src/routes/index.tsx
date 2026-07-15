@@ -270,7 +270,7 @@ function AttentionBlock() {
     <section className="bg-white px-4 py-24">
       <div className="mx-auto max-w-4xl text-center">
         <p className="mb-6 text-sm font-bold uppercase tracking-[0.2em] text-brand-blue">
-          Per chi ha un lavoro che non odia abbastanza da mollare
+          Per chi ha già un lavoro ma non ha trovato ancora il coraggio di mollarlo
         </p>
         <h2 className="font-display text-3xl font-extrabold leading-tight text-brand-ink sm:text-5xl">
           C'è un lavoro che paga bene, si può fare anche da remoto e cerca disperatamente persone come te —{" "}
