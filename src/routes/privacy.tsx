@@ -170,7 +170,7 @@ function PrivacyPage() {
                       "Tempo necessario a rispondere + 12 mesi per storico richieste.",
                     ],
                     [
-                      "Vendita del Protocollo Supera Esame™, assistenza, fatturazione",
+                      "Vendita del percorso Capitan Cloud, assistenza, fatturazione",
                       "Esecuzione del contratto (art. 6.1.b) e obbligo legale (art. 6.1.c)",
                       "Dati amministrativo-contabili: fino a 10 anni (obblighi di legge).",
                     ],
