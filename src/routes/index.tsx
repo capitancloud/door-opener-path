@@ -923,6 +923,28 @@ function Certifications() {
           ⓘ Il costo degli esami AWS non è incluso (si pagano ad AWS). Ricevi un voucher del{" "}
           <strong>10% di sconto</strong> su ciascun esame.
         </p>
+
+        <div className="mx-auto mt-12 max-w-3xl rounded-2xl border-2 border-brand-blue/15 bg-brand-blue/5 p-6 text-center sm:p-8">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-blue">
+            Ti interessa solo la certificazione?
+          </p>
+          <h3 className="mt-3 font-display text-xl font-extrabold text-brand-ink sm:text-2xl">
+            Accedi al Protocollo Supera Esame!™ singolarmente
+          </h3>
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-brand-ink/75 sm:text-base">
+            Se non ti serve tutto il percorso da Cloud Engineer ma vuoi solo prepararti a una
+            certificazione AWS, puoi acquistare il protocollo di preparazione esame separatamente.
+          </p>
+          <a
+            href="https://certificazioni.capitancloud.it"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 rounded-xl border-2 border-brand-blue bg-white px-6 py-3 text-sm font-bold text-brand-blue transition hover:bg-brand-blue hover:text-white sm:text-base"
+          >
+            Scopri il protocollo certificazioni
+            <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     </section>
   );
