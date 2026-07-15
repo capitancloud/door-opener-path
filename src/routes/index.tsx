@@ -791,7 +791,34 @@ function Curriculum() {
     },
   ];
   const totalDays = 90;
-...
+  const skills = [
+    { icon: GitBranch, name: "Git & GitHub", desc: "Branch, merge, pull request, code review." },
+    { icon: Container, name: "Docker & Container", desc: "Immagini, volumi, networking, Compose." },
+    { icon: Cloud, name: "Terraform & IaC", desc: "Infrastruttura come codice su AWS." },
+    { icon: Workflow, name: "CI/CD", desc: "Pipeline con GitHub Actions e AWS native." },
+    { icon: Boxes, name: "Kubernetes", desc: "Pod, Deployment, Service, scaling, rollback." },
+    { icon: Activity, name: "Monitoring", desc: "Prometheus, Grafana, ELK, alerting." },
+    { icon: ShieldCheck, name: "DevSecOps", desc: "SAST/DAST, SonarQube, Snyk, Trivy." },
+    { icon: Lock, name: "Cloud Security & IAM", desc: "Ruoli, policy, VPC, crittografia." },
+    { icon: Gauge, name: "Reliability & Scaling", desc: "Alta disponibilità, Auto Scaling, SLA." },
+    { icon: Wallet, name: "FinOps & Costi", desc: "Cost Explorer, budget, ottimizzazione." },
+  ];
+  return (
+    <section id="curriculum" className="bg-secondary px-4 py-24">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-14 text-center">
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-brand-blue">
+            Step 01 · Il percorso centrale
+          </p>
+          <h2 className="font-display text-3xl font-extrabold text-brand-ink sm:text-5xl">
+            Diventa Cloud Engineer{" "}
+            <span className="gradient-yellow-text">in 90 giorni</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-brand-ink/70">
+            Un sistema con l'ordine esatto delle cose: cosa imparare, in che sequenza, fino al
+            colloquio. Circa 2 ore al giorno.
+          </p>
+        </div>
         {/* 4 phases — visual timeline */}
         <div className="mb-16">
           {/* Proportional timeline bar (desktop) */}
