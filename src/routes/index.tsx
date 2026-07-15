@@ -390,6 +390,17 @@ function StoryBlock() {
               — e qualcuno che gliela indicava. Quel qualcuno, adesso, posso essere io.
             </p>
           </div>
+          <div className="mt-8 flex justify-center sm:justify-start">
+            <a
+              href="https://eugeniofontana.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-brand-blue/30 bg-white px-5 py-2.5 text-sm font-bold text-brand-blue transition hover:border-brand-blue hover:bg-brand-blue hover:text-white"
+            >
+              Vuoi saperne di più su di me?
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
