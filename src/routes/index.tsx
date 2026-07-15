@@ -1323,7 +1323,9 @@ function ProgrammaPdf() {
               </p>
             </div>
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1P8owvK39IpGZuUTXbZo91zq49newELkG/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-orange to-brand-pink px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:opacity-95"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
