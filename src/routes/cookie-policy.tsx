@@ -56,7 +56,7 @@ function CookiePage() {
         <div className="mt-10 space-y-10 leading-relaxed text-brand-ink/85">
           <p className="rounded-2xl border-l-4 border-brand-blue bg-brand-blue/5 p-5 text-base">
             Questa Cookie Policy illustra come utilizziamo i cookie e tecnologie simili sul sito
-            capitancloud.it (il "Sito") del <strong>Protocollo Supera Esame™</strong>.
+            <strong> capitancloud.it</strong> (il "Sito") di <strong>Capitan Cloud</strong>.
           </p>
 
           <Section title="Cosa sono i cookie">
