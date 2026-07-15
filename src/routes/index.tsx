@@ -56,7 +56,7 @@ export const Route = createFileRoute("/")({
 });
 
 const CHECKOUT_URL = "https://studenti.accademiadelcloud.it/p/payment-page";
-const QUIZ_URL = "#quiz"; // ← sostituisci con URL del quiz gratuito
+const QUIZ_URL = "https://quiz.capitancloud.it";
 const FULL_PRICE = "997€";
 const PRICE = "297€";
 const WHATSAPP_NUMBER = "393514734862";
@@ -322,6 +322,8 @@ function QuizBanner() {
             <div className="flex flex-col items-stretch gap-3 lg:items-end">
               <a
                 href={QUIZ_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-blue px-8 py-4 text-base font-bold text-white shadow-lg shadow-brand-blue/30 transition hover:brightness-110 sm:text-lg"
               >
                 Fai il quiz gratuito
