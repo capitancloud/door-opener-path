@@ -672,41 +672,25 @@ function Curriculum() {
           </div>
         </div>
 
-        {/* Certifications */}
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {[
-            {
-              code: "CLF-C02",
-              name: "AWS Certified Cloud Practitioner",
-              desc: "La porta d'ingresso al mondo AWS.",
-            },
-            {
-              code: "SAA-C03",
-              name: "AWS Solutions Architect – Associate",
-              desc: "La certificazione che pesa davvero sul mercato del lavoro cloud.",
-            },
-          ].map((c) => (
-            <div
-              key={c.code}
-              className="flex items-start gap-5 rounded-2xl border-2 border-brand-yellow/40 bg-white p-6"
-            >
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-yellow text-brand-ink">
-                <ShieldCheck className="h-7 w-7" strokeWidth={2.5} />
-              </div>
-              <div>
-                <p className="text-xs font-bold uppercase tracking-wider text-brand-yellow-deep">
-                  {c.code}
-                </p>
-                <h4 className="font-display text-lg font-extrabold text-brand-ink">{c.name}</h4>
-                <p className="mt-1 text-sm text-brand-ink/70">{c.desc}</p>
-              </div>
-            </div>
-          ))}
+        {/* Roadmap image */}
+        <div className="mt-12 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
+          <img
+            src={roadmapAsset.url}
+            alt="La roadmap dei 90 giorni: 15 giorni percorso centrale, 15 giorni CLF-C02, 55 giorni SAA-C03, 5 giorni Protocollo Subito Assunto"
+            className="w-full"
+            loading="lazy"
+          />
         </div>
-        <p className="mt-4 text-center text-xs text-brand-ink/60">
-          ⓘ Il costo degli esami di certificazione non è incluso (si pagano ad AWS). Ricevi un
-          voucher del <strong>10% di sconto</strong> su ciascuno.
-        </p>
+
+        {/* Percorso centrale image */}
+        <div className="mt-8 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
+          <img
+            src={percorsoCentraleAsset.url}
+            alt="Il percorso centrale: 15 moduli dai fondamenti DevOps & Cloud fino a DevSecOps, Cloud Security, FinOps e trend emergenti"
+            className="w-full"
+            loading="lazy"
+          />
+        </div>
       </div>
     </section>
   );
