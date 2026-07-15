@@ -1290,7 +1290,7 @@ function Vision() {
           </p>
         </div>
         <a
-          href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer"
+          href="#checkout"
           className="gradient-cta shadow-cta mt-10 inline-flex items-center gap-3 rounded-2xl px-8 py-5 text-base font-bold uppercase tracking-wide text-white transition hover:brightness-110 sm:text-lg"
         >
           <Sparkles className="h-5 w-5" />
