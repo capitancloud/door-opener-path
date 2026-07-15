@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { Cookie } from "lucide-react";
 
 const STORAGE_KEY = "cc-cookie-consent-v1";
 
@@ -38,8 +39,9 @@ export function CookieBanner() {
       className="fixed inset-x-3 bottom-3 z-[100] sm:inset-x-auto sm:right-4 sm:bottom-4 sm:max-w-md"
     >
       <div className="rounded-2xl border border-brand-blue/15 bg-white p-5 shadow-2xl ring-1 ring-black/5">
-        <p className="font-display text-base font-extrabold text-brand-ink">
-          🍪 Cookie
+        <p className="flex items-center gap-2 font-display text-base font-extrabold text-brand-ink">
+          <Cookie className="h-5 w-5 text-brand-blue" aria-hidden="true" />
+          Cookie
         </p>
         <p className="mt-2 text-sm leading-relaxed text-brand-ink/75">
           Usiamo cookie tecnici necessari al funzionamento del sito e, previo consenso,
