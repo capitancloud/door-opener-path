@@ -919,7 +919,7 @@ function PathOverview() {
       n: "+1",
       tag: "In regalo dentro il corso",
       title: "Percorsi Integrativi",
-      desc: "8 mini-corsi extra per colmare le lacune di base (Linux, Python, Docker, reti…) senza dover cercare tutorial su YouTube. Se una parola non ti è chiara, qui trovi il video che te la spiega da zero.",
+      desc: "8 percorsi extra completi e approfonditi per colmare le lacune di base (Linux, Python, Docker, reti…) senza dover cercare tutorial su YouTube. Se una parola non ti è chiara, qui trovi il video che te la spiega da zero.",
       gradient: "from-emerald-500 to-emerald-600",
       ring: "ring-emerald-500/20",
       badge: "bg-emerald-50 text-emerald-700",
