@@ -322,6 +322,8 @@ function QuizBanner() {
             <div className="flex flex-col items-stretch gap-3 lg:items-end">
               <a
                 href={QUIZ_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-blue px-8 py-4 text-base font-bold text-white shadow-lg shadow-brand-blue/30 transition hover:brightness-110 sm:text-lg"
               >
                 Fai il quiz gratuito
