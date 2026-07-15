@@ -1503,6 +1503,11 @@ function FAQ() {
       highlightYellow: true,
     },
     {
+      q: "Come funziona la garanzia rimborso?",
+      a: "Per avere diritto al rimborso devi rispettare 3 condizioni, tutte verificabili: 1) guardare per intero (100%) ogni singolo video del percorso centrale, dei due percorsi di certificazione AWS e degli 8 percorsi integrativi, entro 90 giorni dall'acquisto; 2) sostenere l'esame ufficiale AWS Cloud Practitioner almeno due volte; 3) non superare l'esame in nessuno dei due tentativi, fornendo la prova ufficiale dei due esiti negativi. Se tutte e tre le condizioni sono soddisfatte, ti rimborso l'intero importo.",
+      highlightPurple: true,
+    },
+    {
       q: "Devo saper programmare?",
       a: "No. Il percorso parte dalle basi assolute. Vedrai un po' di codice, ma il Cloud Engineering non è sviluppo software: si tratta di configurare, automatizzare e mettere in sicurezza infrastrutture.",
     },
