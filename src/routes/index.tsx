@@ -159,11 +159,11 @@ function Hero() {
 
       <div className="relative mx-auto max-w-5xl text-center">
         <div className="mb-6 flex justify-center">
-          <span className="relative inline-flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-white/10 ring-4 ring-white/40 shadow-2xl backdrop-blur sm:h-28 sm:w-28">
+          <span className="relative inline-flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-white ring-4 ring-white/40 shadow-2xl sm:h-28 sm:w-28">
             <img
               src={capitanLogo.url}
               alt="Logo Capitan Cloud"
-              className="h-full w-full scale-[1.35] object-cover"
+              className="h-full w-full object-contain p-1"
             />
           </span>
         </div>
