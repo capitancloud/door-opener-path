@@ -1111,14 +1111,14 @@ function ProtocolloSubitoAssunto() {
 /* ---------- PERCORSI INTEGRATIVI ---------- */
 function PercorsiIntegrativi() {
   const modules = [
-    { icon: Sparkles, t: "Claude Code", d: "Usare l'AI per scrivere IaC, script e automazioni Cloud più velocemente." },
-    { icon: Network, t: "Networking", d: "TCP/IP, DNS, VPN, subnetting, routing — le basi che ogni Cloud Engineer deve avere." },
-    { icon: Code2, t: "Python", d: "Scripting, automazione, boto3 per AWS: il linguaggio numero 1 nel Cloud." },
-    { icon: Terminal, t: "Linux & Bash", d: "Shell, permessi, systemd, scripting: il sistema operativo del Cloud." },
-    { icon: MonitorCog, t: "Windows & PowerShell", d: "Amministrazione Windows Server e PowerShell per ambienti ibridi." },
-    { icon: Container, t: "Docker", d: "Approfondimento container: immagini, volumi, networking, Compose e best practice." },
-    { icon: Boxes, t: "Kubernetes", d: "Cluster, Pod, Service, Ingress, Helm — orchestrazione container in produzione." },
-    { icon: Layers, t: "Terraform", d: "Infrastructure as Code su AWS: moduli, state, workspace, pipeline." },
+    { icon: Sparkles, t: "Claude Code", d: "Impari a farti aiutare dall'intelligenza artificiale nel lavoro di tutti i giorni: scrivi in metà tempo e con meno errori." },
+    { icon: Network, t: "Networking", d: "Come 'parlano' tra loro i computer e internet. Serve perché nel Cloud tutto è connesso — se non sai come funziona, resti bloccato al primo problema." },
+    { icon: Code2, t: "Python", d: "Il linguaggio più usato nel Cloud, spiegato da zero. Ti serve per automatizzare le cose noiose e farle fare al computer al posto tuo." },
+    { icon: Terminal, t: "Linux & Bash", d: "Il sistema operativo su cui girano quasi tutti i server del mondo. Imparerai a dargli i comandi giusti, senza paura del 'terminale nero'." },
+    { icon: MonitorCog, t: "Windows & PowerShell", d: "Tante aziende italiane usano ancora Windows Server: qui impari a gestirlo, così sei pronto anche per quelle realtà." },
+    { icon: Container, t: "Docker", d: "Un modo semplice per 'impacchettare' un'applicazione e farla girare uguale ovunque. È lo standard di oggi — se lo sai, parti già avvantaggiato." },
+    { icon: Boxes, t: "Kubernetes", d: "Quando le applicazioni diventano grandi, serve chi le sappia orchestrare. Qui impari a farlo — ed è una delle competenze più pagate del settore." },
+    { icon: Layers, t: "Terraform", d: "Invece di cliccare mille volte nella dashboard AWS, scrivi il tuo Cloud in un file. Più veloce, più ordinato, super richiesto dalle aziende." },
   ];
   return (
     <section className="bg-secondary px-4 py-24">
