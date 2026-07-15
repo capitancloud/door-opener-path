@@ -54,6 +54,7 @@ export const Route = createFileRoute("/")({
 
 const CHECKOUT_URL = "#checkout"; // ← sostituisci con URL Stripe/checkout reale
 const QUIZ_URL = "#quiz"; // ← sostituisci con URL del quiz gratuito
+const FULL_PRICE = "997€";
 const PRICE = "297€";
 
 function Placeholder({ children }: { children: React.ReactNode }) {
@@ -1147,13 +1148,30 @@ function PricingCTA() {
             <h2 className="font-display text-3xl font-extrabold sm:text-4xl">
               Il percorso completo + 2 certificazioni AWS + Protocollo Subito Assunto!™
             </h2>
-            <div className="my-8 flex items-end justify-center gap-2">
+            <div className="my-6 flex justify-center">
+              <span className="inline-flex items-center gap-2 rounded-full bg-brand-orange/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-orange">
+                <Sparkles className="h-3.5 w-3.5" />
+                Promo lancio · Tempo limitato
+              </span>
+            </div>
+            <div className="mb-2 flex items-center justify-center gap-3">
+              <span className="font-display text-3xl font-bold text-brand-ink/40 line-through decoration-brand-orange/70 decoration-[3px]">
+                {FULL_PRICE}
+              </span>
+              <span className="rounded-md bg-brand-orange px-2 py-0.5 text-xs font-extrabold uppercase tracking-wider text-white">
+                −70%
+              </span>
+            </div>
+            <div className="flex items-end justify-center gap-2">
               <span className="font-display text-7xl font-extrabold text-brand-blue sm:text-8xl">
-                297€
+                {PRICE}
               </span>
               <span className="pb-3 text-lg text-brand-ink/60">una tantum</span>
             </div>
-            <p className="text-sm text-brand-ink/70">
+            <p className="mt-4 text-sm font-semibold text-brand-orange">
+              Prezzo di lancio riservato ai primi iscritti — poi torna a {FULL_PRICE}.
+            </p>
+            <p className="mt-2 text-sm text-brand-ink/70">
               Accesso incluso, contenuti aggiornati nel tempo.
             </p>
 
@@ -1267,7 +1285,7 @@ function FAQ() {
       a: "Sì. I laboratori sono guidati passo-passo su entrambi i sistemi.",
     },
     {
-      q: "Il costo degli esami è incluso nei 297€?",
+      q: "Il costo degli esami è incluso nel prezzo?",
       a: "No. Il prezzo copre il percorso completo, i corsi e tutti i materiali. Gli esami di certificazione si pagano separatamente ad AWS, ma ricevi un voucher con il 10% di sconto su ciascuno.",
     },
     {
