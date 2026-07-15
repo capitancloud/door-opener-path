@@ -19,8 +19,30 @@ import {
   Star,
   MessageCircle,
   ChevronDown,
+  Briefcase,
+  MessagesSquare,
+  FileCheck2,
+  Building2,
+  Linkedin,
+  ListChecks,
+  UserRound,
+  RefreshCw,
+  BadgeCheck,
+  Ticket,
+  FolderCheck,
+  Terminal,
+  Network,
+  Code2,
+  MonitorCog,
+  Layers,
 } from "lucide-react";
 import { useState } from "react";
+import percorsoOverviewAsset from "@/assets/percorso-completo-overview.png.asset.json";
+import roadmapAsset from "@/assets/roadmap-90-giorni.png.asset.json";
+import percorsoCentraleAsset from "@/assets/percorso-centrale.png.asset.json";
+import certificazioniAsset from "@/assets/certificazioni-aws.png.asset.json";
+import protocolloAsset from "@/assets/protocollo-subito-assunto.png.asset.json";
+import percorsiIntegrativiAsset from "@/assets/percorsi-integrativi.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
