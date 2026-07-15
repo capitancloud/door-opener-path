@@ -585,6 +585,21 @@ function SocialProof() {
             </div>
           ))}
         </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-base text-white/80 sm:text-lg">
+            Vuoi leggerne altre? Ne trovi molte di più qui:
+          </p>
+          <a
+            href="https://recensioni.capitancloud.it/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-2 rounded-2xl border-2 border-white/30 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur transition hover:bg-white/20 sm:text-base"
+          >
+            Leggi tutte le recensioni
+            <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     </section>
   );
