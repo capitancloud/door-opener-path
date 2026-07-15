@@ -54,6 +54,7 @@ export const Route = createFileRoute("/")({
 
 const CHECKOUT_URL = "#checkout"; // ← sostituisci con URL Stripe/checkout reale
 const QUIZ_URL = "#quiz"; // ← sostituisci con URL del quiz gratuito
+const FULL_PRICE = "997€";
 const PRICE = "297€";
 
 function Placeholder({ children }: { children: React.ReactNode }) {
