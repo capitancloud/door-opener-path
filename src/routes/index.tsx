@@ -721,14 +721,6 @@ function PathOverview() {
           </p>
         </div>
 
-        <div className="mb-12 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
-          <img
-            src={percorsoOverviewAsset.url}
-            alt="Il percorso completo Capitan Cloud: 3 step (Percorso Centrale, Certificazioni AWS, Protocollo Subito Assunto) + 1 percorsi integrativi"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((s) => (
