@@ -158,6 +158,16 @@ function Hero() {
       <div className="bubble h-16 w-16 left-[40%] bottom-24 opacity-50" />
 
       <div className="relative mx-auto max-w-5xl text-center">
+        <div className="mb-6 flex justify-center">
+          <span className="relative inline-flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-white/10 ring-4 ring-white/40 shadow-2xl backdrop-blur sm:h-28 sm:w-28">
+            <img
+              src={capitanLogo.url}
+              alt="Logo Capitan Cloud"
+              className="h-full w-full scale-[1.35] object-cover"
+            />
+          </span>
+        </div>
+
         <p className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold backdrop-blur">
           <Sparkles className="h-4 w-4 text-brand-yellow" /> Nuovo percorso 2026 · Posti limitati
         </p>
