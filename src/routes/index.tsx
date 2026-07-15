@@ -56,7 +56,7 @@ export const Route = createFileRoute("/")({
 });
 
 const CHECKOUT_URL = "https://studenti.accademiadelcloud.it/p/payment-page";
-const QUIZ_URL = "#quiz"; // ← sostituisci con URL del quiz gratuito
+const QUIZ_URL = "https://quiz.capitancloud.it";
 const FULL_PRICE = "997€";
 const PRICE = "297€";
 const WHATSAPP_NUMBER = "393514734862";
