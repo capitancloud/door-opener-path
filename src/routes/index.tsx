@@ -250,20 +250,15 @@ function Hero() {
 
 
 
-        {/* VSL video placeholder */}
-        <div
-          data-vsl-embed="replace-with-youtube-or-vimeo-iframe"
-          className="mx-auto mt-12 aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-white/20 bg-brand-blue-deep/60 shadow-2xl backdrop-blur"
-        >
-          <div className="flex h-full w-full flex-col items-center justify-center gap-4">
-            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/95 shadow-2xl">
-              <Play className="h-9 w-9 translate-x-0.5 fill-brand-blue text-brand-blue" />
-            </div>
-            <p className="text-lg font-semibold text-white/90">Guarda il video (2 min)</p>
-            <p className="text-sm text-white/60">
-              <Placeholder>Sostituisci con embed YouTube/Vimeo</Placeholder>
-            </p>
-          </div>
+        {/* VSL video */}
+        <div className="mx-auto mt-12 aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-white/20 bg-brand-blue-deep/60 shadow-2xl backdrop-blur">
+          <iframe
+            src="https://www.youtube.com/embed/jpOh21eS41A"
+            title="Diventa Cloud Engineer in 90 Giorni"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="h-full w-full"
+          />
         </div>
 
         <a
