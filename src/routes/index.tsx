@@ -273,9 +273,9 @@ function AttentionBlock() {
           Per chi ha un lavoro che non odia abbastanza da mollare
         </p>
         <h2 className="font-display text-3xl font-extrabold leading-tight text-brand-ink sm:text-5xl">
-          C'è un lavoro che paga bene, si fa da casa e cerca disperatamente persone come te —{" "}
+          C'è un lavoro che paga bene, si può fare anche da remoto e cerca disperatamente persone come te —{" "}
           <span className="text-brand-blue">
-            anche senza laurea, anche se inizi da zero a 30 o 40 anni.
+            anche senza laurea, anche se inizi da zero a 30 o 40 o addirittura 50 anni.
           </span>
         </h2>
         <p className="mt-6 text-xl font-semibold text-brand-ink/70">
