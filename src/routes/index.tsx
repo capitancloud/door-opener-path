@@ -672,25 +672,6 @@ function Curriculum() {
           </div>
         </div>
 
-        {/* Roadmap image */}
-        <div className="mt-12 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
-          <img
-            src={roadmapAsset.url}
-            alt="La roadmap dei 90 giorni: 15 giorni percorso centrale, 15 giorni CLF-C02, 55 giorni SAA-C03, 5 giorni Protocollo Subito Assunto"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
-
-        {/* Percorso centrale image */}
-        <div className="mt-8 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
-          <img
-            src={percorsoCentraleAsset.url}
-            alt="Il percorso centrale: 15 moduli dai fondamenti DevOps & Cloud fino a DevSecOps, Cloud Security, FinOps e trend emergenti"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
       </div>
     </section>
   );
