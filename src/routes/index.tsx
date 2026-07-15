@@ -89,6 +89,7 @@ function VslPage() {
       <Certifications />
       <ProtocolloSubitoAssunto />
       <PercorsiIntegrativi />
+      <ProgrammaPdf />
       <PricingCTA />
       <Vision />
       <FAQ />
@@ -1291,6 +1292,46 @@ function PercorsiIntegrativi() {
         <p className="mt-10 text-center text-base font-semibold text-brand-ink/80">
           8 percorsi · Competenze reali · <span className="text-brand-blue">Preparazione completa</span>
         </p>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- PROGRAMMA PDF DOWNLOAD ---------- */
+function ProgrammaPdf() {
+  return (
+    <section className="bg-slate-50 px-4 py-16">
+      <div className="mx-auto max-w-3xl">
+        <div className="relative overflow-hidden rounded-3xl border border-brand-blue/15 bg-white p-6 shadow-xl sm:p-10">
+          <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-brand-blue/10 blur-2xl" />
+          <div className="absolute -left-10 -bottom-10 h-32 w-32 rounded-full bg-brand-orange/10 blur-2xl" />
+          <div className="relative flex flex-col items-center gap-6 text-center sm:flex-row sm:text-left">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-blue to-indigo-600 text-white shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M4 6a2 2 0 012-2h7l5 5v9a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <p className="mb-1 text-xs font-bold uppercase tracking-[0.2em] text-brand-blue">Vuoi saperne di più?</p>
+              <h3 className="font-display text-xl font-extrabold text-brand-ink sm:text-2xl">
+                Scarica il programma dettagliato in PDF
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-brand-ink/70">
+                Tutti i moduli, giorno per giorno, con obiettivi, strumenti e output pratici.
+                Perfetto se vuoi valutare con calma prima di iscriverti.
+              </p>
+            </div>
+            <a
+              href="#"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-orange to-brand-pink px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:opacity-95"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+              </svg>
+              Scarica il PDF
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
