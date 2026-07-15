@@ -53,6 +53,7 @@ export const Route = createFileRoute("/")({
 });
 
 const CHECKOUT_URL = "#checkout"; // ← sostituisci con URL Stripe/checkout reale
+const QUIZ_URL = "#quiz"; // ← sostituisci con URL del quiz gratuito
 const PRICE = "297€";
 
 function Placeholder({ children }: { children: React.ReactNode }) {
@@ -64,6 +65,7 @@ function VslPage() {
     <main className="bg-white text-brand-ink font-sans overflow-x-hidden">
       <Nav />
       <Hero />
+      <QuizBanner />
       <AttentionBlock />
       <InterestOpening />
       <StoryBlock />
@@ -197,6 +199,63 @@ function Hero() {
         <p className="mt-4 text-sm text-white/70">
           Pagamento sicuro · Accesso immediato
         </p>
+      </div>
+    </section>
+  );
+}
+
+
+/* ---------- QUIZ GRATUITO ---------- */
+function QuizBanner() {
+  return (
+    <section className="bg-white px-4 py-16 sm:py-20">
+      <div className="mx-auto max-w-5xl">
+        <div className="relative overflow-hidden rounded-3xl border-2 border-brand-blue/10 bg-gradient-to-br from-brand-blue/5 via-white to-brand-blue/5 p-8 shadow-xl sm:p-12">
+          <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand-yellow/20 blur-3xl" />
+          <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-brand-blue/10 blur-3xl" />
+
+          <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full bg-brand-blue/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-brand-blue">
+                <ListChecks className="h-4 w-4" />
+                Quiz gratuito · 2 minuti
+              </div>
+              <h2 className="mt-5 font-display text-3xl font-extrabold leading-tight text-brand-ink sm:text-4xl">
+                Non sei sicuro che il Cloud faccia per te?{" "}
+                <span className="text-brand-blue">Scoprilo in 2 minuti.</span>
+              </h2>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-brand-ink/70 sm:text-lg">
+                Prima di investire un euro, fai il quiz gratuito: <strong>9 domande</strong> per
+                capire se hai la predisposizione giusta per una professione tecnica nel Cloud e se
+                questo percorso è davvero adatto a te.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-brand-ink/80">
+                <span className="inline-flex items-center gap-2">
+                  <Check className="h-4 w-4 text-brand-blue" /> 9 domande mirate
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <Check className="h-4 w-4 text-brand-blue" /> Risultato immediato
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <Check className="h-4 w-4 text-brand-blue" /> 100% gratuito, nessuna carta
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-stretch gap-3 lg:items-end">
+              <a
+                href={QUIZ_URL}
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-blue px-8 py-4 text-base font-bold text-white shadow-lg shadow-brand-blue/30 transition hover:brightness-110 sm:text-lg"
+              >
+                Fai il quiz gratuito
+                <ArrowRight className="h-5 w-5" />
+              </a>
+              <p className="text-center text-xs text-brand-ink/50 lg:text-right">
+                Ti bastano 2 minuti · Nessuna registrazione
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
