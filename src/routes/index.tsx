@@ -993,11 +993,22 @@ function PricingCTA() {
               className="gradient-cta shadow-cta mt-8 inline-flex w-full items-center justify-center gap-3 rounded-2xl px-8 py-5 text-base font-bold uppercase tracking-wide text-white transition hover:brightness-110 sm:text-lg"
             >
               <Sparkles className="h-5 w-5" />
-              Voglio iniziare ora
+              Accedi al percorso — {PRICE}
             </a>
 
             <p className="mt-4 text-xs text-brand-ink/60">
               Pagamento sicuro · Accesso immediato
+            </p>
+
+            <p className="mt-6 text-sm text-brand-ink/60">
+              Hai dubbi se fa per te?{" "}
+              <a
+                href="#book-call"
+                className="font-semibold text-brand-blue underline decoration-brand-blue/40 underline-offset-4 hover:decoration-brand-blue"
+              >
+                Prenota una chiamata gratuita di 15 minuti
+              </a>
+              .
             </p>
           </div>
 
