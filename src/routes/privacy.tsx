@@ -10,7 +10,7 @@ export const Route = createFileRoute("/privacy")({
       {
         name: "description",
         content:
-          "Informativa sul trattamento dei dati personali del sito capitancloud.it e del Protocollo Supera Esame™.",
+          "Informativa sul trattamento dei dati personali del sito capitancloud.it di Capitan Cloud (Eugenio Fontana).",
       },
       { property: "og:title", content: "Privacy Policy — Capitan Cloud" },
       {
@@ -56,9 +56,9 @@ function PrivacyPage() {
         <div className="mt-10 space-y-10 text-brand-ink/85 leading-relaxed">
           <p className="rounded-2xl border-l-4 border-brand-blue bg-brand-blue/5 p-5 text-base">
             Questa informativa descrive come vengono trattati i dati personali quando visiti il
-            sito/landing page del <strong>Protocollo Supera Esame™</strong> e, in generale, quando
-            interagisci con i nostri contenuti, effettui un acquisto, ti iscrivi a comunicazioni o
-            prenoti una sessione 1-to-1.
+            sito <strong>capitancloud.it</strong> di <strong>Capitan Cloud</strong> e, in generale,
+            quando interagisci con i nostri contenuti, effettui un acquisto, ti iscrivi a
+            comunicazioni o prenoti una sessione 1-to-1.
           </p>
 
           <Section title="1) Titolare del trattamento">
@@ -88,8 +88,7 @@ function PrivacyPage() {
               <li>Navigazione del sito/landing page capitancloud.it (di seguito, "Sito").</li>
               <li>Richiesta di informazioni e contatti (moduli, email, chat).</li>
               <li>
-                Acquisto del Protocollo Supera Esame™ (pagamento una tantum per singola
-                certificazione).
+                Acquisto del percorso "Diventa Cloud Engineer in 90 Giorni" (pagamento una tantum).
               </li>
               <li>Accesso a materiali didattici (video, PDF) e simulazioni d'esame.</li>
               <li>Prenotazione e svolgimento di sessioni Cert-Ready 1-to-1 da remoto.</li>
@@ -171,7 +170,7 @@ function PrivacyPage() {
                       "Tempo necessario a rispondere + 12 mesi per storico richieste.",
                     ],
                     [
-                      "Vendita del Protocollo Supera Esame™, assistenza, fatturazione",
+                      "Vendita del percorso Capitan Cloud, assistenza, fatturazione",
                       "Esecuzione del contratto (art. 6.1.b) e obbligo legale (art. 6.1.c)",
                       "Dati amministrativo-contabili: fino a 10 anni (obblighi di legge).",
                     ],
