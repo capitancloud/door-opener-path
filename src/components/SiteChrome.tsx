@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Sparkles } from "lucide-react";
 
-const CHECKOUT_URL = "#checkout";
+const CHECKOUT_URL = "https://studenti.accademiadelcloud.it/p/payment-page";
 const PRICE = "297€";
 
 export function SiteHeader() {

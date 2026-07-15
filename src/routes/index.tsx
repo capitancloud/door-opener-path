@@ -55,7 +55,7 @@ export const Route = createFileRoute("/")({
   component: VslPage,
 });
 
-const CHECKOUT_URL = "#checkout"; // ← sostituisci con URL Stripe/checkout reale
+const CHECKOUT_URL = "https://studenti.accademiadelcloud.it/p/payment-page";
 const QUIZ_URL = "#quiz"; // ← sostituisci con URL del quiz gratuito
 const FULL_PRICE = "997€";
 const PRICE = "297€";
