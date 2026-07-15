@@ -1477,6 +1477,11 @@ function Vision() {
 function FAQ() {
   const faqs = [
     {
+      q: "Mi garantite il lavoro?",
+      a: "No, e diffida di chi lo promette. Ti diamo tutto ciò che serve per diventare un candidato credibile: competenze pratiche, due certificazioni AWS, un portfolio reale e un metodo per candidarti. Il resto dipende dal tuo impegno — ma parti con un vantaggio enorme.",
+      highlight: true,
+    },
+    {
       q: "Devo saper programmare?",
       a: "No. Il percorso parte dalle basi assolute. Vedrai un po' di codice, ma il Cloud Engineering non è sviluppo software: si tratta di configurare, automatizzare e mettere in sicurezza infrastrutture.",
     },
@@ -1504,10 +1509,6 @@ function FAQ() {
       q: "Perché pagare, se su internet c'è tutto gratis?",
       a: "Su internet c'è tutto, ma in disordine: è proprio quello che ti ha bloccato finora. Qui paghi l'ordine giusto e il tempo che risparmi — mesi, non giorni.",
     },
-    {
-      q: "Mi garantite il lavoro?",
-      a: "No, e diffida di chi lo promette. Ti diamo tutto ciò che serve per diventare un candidato credibile: competenze pratiche, due certificazioni AWS, un portfolio reale e un metodo per candidarti. Il resto dipende dal tuo impegno — ma parti con un vantaggio enorme.",
-    },
   ];
   const [open, setOpen] = useState<number | null>(0);
   return (
@@ -1520,23 +1521,44 @@ function FAQ() {
           {faqs.map((f, i) => (
             <div
               key={i}
-              className="overflow-hidden rounded-2xl border-2 border-brand-blue/10 bg-white"
+              className={
+                f.highlight
+                  ? "overflow-hidden rounded-2xl border-2 border-brand-orange bg-gradient-to-br from-brand-orange/10 to-brand-pink/10 shadow-lg shadow-brand-orange/20 ring-2 ring-brand-orange/30"
+                  : "overflow-hidden rounded-2xl border-2 border-brand-blue/10 bg-white"
+              }
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition hover:bg-brand-blue/5"
+                className={`flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition ${
+                  f.highlight ? "hover:bg-brand-orange/10" : "hover:bg-brand-blue/5"
+                }`}
               >
-                <span className="font-display text-base font-extrabold text-brand-ink sm:text-lg">
+                <span
+                  className={`font-display font-extrabold text-brand-ink ${
+                    f.highlight
+                      ? "flex items-center gap-2 text-lg sm:text-xl"
+                      : "text-base sm:text-lg"
+                  }`}
+                >
+                  {f.highlight && (
+                    <span className="inline-flex shrink-0 items-center rounded-full bg-brand-orange px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
+                      Più chiesta
+                    </span>
+                  )}
                   {f.q}
                 </span>
                 <ChevronDown
-                  className={`h-5 w-5 shrink-0 text-brand-blue transition-transform ${
-                    open === i ? "rotate-180" : ""
-                  }`}
+                  className={`h-5 w-5 shrink-0 transition-transform ${
+                    f.highlight ? "text-brand-orange" : "text-brand-blue"
+                  } ${open === i ? "rotate-180" : ""}`}
                 />
               </button>
               {open === i && (
-                <div className="border-t border-brand-blue/10 px-6 py-5 text-base leading-relaxed text-brand-ink/80">
+                <div
+                  className={`border-t px-6 py-5 text-base leading-relaxed text-brand-ink/80 ${
+                    f.highlight ? "border-brand-orange/30" : "border-brand-blue/10"
+                  }`}
+                >
                   {f.a}
                 </div>
               )}
