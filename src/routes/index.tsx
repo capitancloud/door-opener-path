@@ -1503,6 +1503,11 @@ function FAQ() {
       highlightYellow: true,
     },
     {
+      q: "Come funziona la garanzia rimborso?",
+      a: "Per avere diritto al rimborso devi rispettare 3 condizioni, tutte verificabili: 1) guardare per intero (100%) ogni singolo video del percorso centrale, dei due percorsi di certificazione AWS e degli 8 percorsi integrativi, entro 90 giorni dall'acquisto; 2) sostenere l'esame ufficiale AWS Cloud Practitioner almeno due volte; 3) non superare l'esame in nessuno dei due tentativi, fornendo la prova ufficiale dei due esiti negativi. Se tutte e tre le condizioni sono soddisfatte, ti rimborso l'intero importo.",
+      highlightPurple: true,
+    },
+    {
       q: "Devo saper programmare?",
       a: "No. Il percorso parte dalle basi assolute. Vedrai un po' di codice, ma il Cloud Engineering non è sviluppo software: si tratta di configurare, automatizzare e mettere in sicurezza infrastrutture.",
     },
@@ -1538,7 +1543,8 @@ function FAQ() {
           {faqs.map((f, i) => {
             const isOrange = f.highlight;
             const isYellow = f.highlightYellow;
-            const isHl = isOrange || isYellow;
+            const isPurple = f.highlightPurple;
+            const isHl = isOrange || isYellow || isPurple;
             return (
               <div
                 key={i}
@@ -1547,7 +1553,9 @@ function FAQ() {
                     ? "overflow-hidden rounded-2xl border-2 border-brand-orange bg-gradient-to-br from-brand-orange/10 to-brand-pink/10 shadow-lg shadow-brand-orange/20 ring-2 ring-brand-orange/30"
                     : isYellow
                       ? "overflow-hidden rounded-2xl border-2 border-brand-yellow bg-gradient-to-br from-brand-yellow/15 to-brand-yellow/5 shadow-lg shadow-brand-yellow/20 ring-2 ring-brand-yellow/40"
-                      : "overflow-hidden rounded-2xl border-2 border-brand-blue/10 bg-white"
+                      : isPurple
+                        ? "overflow-hidden rounded-2xl border-2 border-violet-500 bg-gradient-to-br from-violet-500/15 to-fuchsia-500/5 shadow-lg shadow-violet-500/20 ring-2 ring-violet-500/40"
+                        : "overflow-hidden rounded-2xl border-2 border-brand-blue/10 bg-white"
                 }
               >
                 <button
@@ -1557,7 +1565,9 @@ function FAQ() {
                       ? "hover:bg-brand-orange/10"
                       : isYellow
                         ? "hover:bg-brand-yellow/10"
-                        : "hover:bg-brand-blue/5"
+                        : isPurple
+                          ? "hover:bg-violet-500/10"
+                          : "hover:bg-brand-blue/5"
                   }`}
                 >
                   <span
@@ -1575,6 +1585,11 @@ function FAQ() {
                         Importante
                       </span>
                     )}
+                    {isPurple && (
+                      <span className="inline-flex shrink-0 items-center rounded-full bg-violet-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
+                        Garanzia
+                      </span>
+                    )}
                     {f.q}
                   </span>
                   <ChevronDown
@@ -1583,7 +1598,9 @@ function FAQ() {
                         ? "text-brand-orange"
                         : isYellow
                           ? "text-brand-ink"
-                          : "text-brand-blue"
+                          : isPurple
+                            ? "text-violet-600"
+                            : "text-brand-blue"
                     } ${open === i ? "rotate-180" : ""}`}
                   />
                 </button>
@@ -1594,7 +1611,9 @@ function FAQ() {
                         ? "border-brand-orange/30"
                         : isYellow
                           ? "border-brand-yellow/40"
-                          : "border-brand-blue/10"
+                          : isPurple
+                            ? "border-violet-500/40"
+                            : "border-brand-blue/10"
                     }`}
                   >
                     {f.a}
