@@ -794,27 +794,39 @@ function PathOverview() {
   const steps = [
     {
       n: "01",
+      tag: "Il cuore del percorso",
       title: "Percorso Centrale",
-      desc: "Diventa Cloud Engineer: 15 moduli pratici da DevOps e Cloud fino a Kubernetes, Security e FinOps.",
-      accent: "text-brand-blue",
+      desc: "Da zero a Cloud Engineer con 15 moduli passo-passo. Impari facendo: niente teoria astratta, solo esercizi pratici che ti portano fino ai temi più richiesti dalle aziende (server, sicurezza, gestione dei costi).",
+      gradient: "from-brand-blue to-brand-blue/70",
+      ring: "ring-brand-blue/20",
+      badge: "bg-brand-blue/10 text-brand-blue",
     },
     {
       n: "02",
+      tag: "I titoli ufficiali",
       title: "Certificazioni AWS",
-      desc: "Ottieni CLF-C02 e SAA-C03 con il Protocollo Supera Esame!™ — video corso, simulatori, validazione cert-ready.",
-      accent: "text-brand-yellow-deep",
+      desc: "Prendi le 2 certificazioni AWS più richieste (CLF-C02 e SAA-C03). Ti guido io con video, simulazioni d'esame e un metodo — il Protocollo Supera Esame!™ — che ti dice quando sei davvero pronto per prenotare l'esame.",
+      gradient: "from-brand-yellow to-brand-yellow-deep",
+      ring: "ring-brand-yellow/30",
+      badge: "bg-brand-yellow/15 text-brand-yellow-deep",
     },
     {
       n: "03",
+      tag: "Dal corso al lavoro",
       title: "Protocollo Subito Assunto!™",
-      desc: "Portfolio, CV, LinkedIn, colloqui, database aziende e sessione 1-to-1 con Capitan Cloud.",
-      accent: "text-brand-blue",
+      desc: "Ti preparo alla parte più difficile: trovare lavoro davvero. CV, LinkedIn, portfolio da mostrare, colloqui simulati, lista di aziende italiane a cui candidarti e una call 1-to-1 con me per la tua strategia.",
+      gradient: "from-brand-blue-light to-brand-blue",
+      ring: "ring-brand-blue/20",
+      badge: "bg-brand-blue/10 text-brand-blue",
     },
     {
       n: "+1",
+      tag: "In regalo dentro il corso",
       title: "Percorsi Integrativi",
-      desc: "8 percorsi extra: Claude Code, Networking, Python, Linux & Bash, Windows & PowerShell, Docker, Kubernetes e Terraform.",
-      accent: "text-emerald-600",
+      desc: "8 mini-corsi extra per colmare le lacune di base (Linux, Python, Docker, reti…) senza dover cercare tutorial su YouTube. Se una parola non ti è chiara, qui trovi il video che te la spiega da zero.",
+      gradient: "from-emerald-500 to-emerald-600",
+      ring: "ring-emerald-500/20",
+      badge: "bg-emerald-50 text-emerald-700",
     },
   ];
   return (
@@ -834,17 +846,35 @@ function PathOverview() {
         </div>
 
 
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((s) => (
             <div
               key={s.n}
-              className="rounded-2xl border-2 border-brand-blue/10 bg-white p-6 transition hover:-translate-y-1 hover:border-brand-blue/40 hover:shadow-lg"
+              className={`group relative overflow-hidden rounded-3xl bg-white p-7 shadow-[0_4px_24px_-8px_rgba(15,23,42,0.08)] ring-1 ${s.ring} transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_-12px_rgba(15,23,42,0.18)]`}
             >
-              <span className={`font-display text-4xl font-extrabold ${s.accent}`}>{s.n}</span>
-              <h3 className="mt-2 font-display text-lg font-extrabold text-brand-ink">
-                {s.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-brand-ink/70">{s.desc}</p>
+              {/* decorative gradient blob */}
+              <div
+                className={`pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-gradient-to-br ${s.gradient} opacity-10 blur-2xl transition-opacity duration-300 group-hover:opacity-20`}
+              />
+              {/* top accent bar */}
+              <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${s.gradient}`} />
+
+              <div className="relative">
+                <div
+                  className={`inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${s.gradient} font-display text-2xl font-extrabold text-white shadow-lg`}
+                >
+                  {s.n}
+                </div>
+                <span
+                  className={`mt-4 inline-block rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider ${s.badge}`}
+                >
+                  {s.tag}
+                </span>
+                <h3 className="mt-3 font-display text-xl font-extrabold text-brand-ink">
+                  {s.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-brand-ink/75">{s.desc}</p>
+              </div>
             </div>
           ))}
         </div>
