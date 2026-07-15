@@ -179,18 +179,63 @@ function Hero() {
         </p>
 
         <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
-          Un unico programma, pensato e guidato da <strong>Eugenio Fontana (Capitan Cloud)</strong>,
-          che ha già formato oltre <strong>100.000 studenti</strong>.
+          Un unico programma, pensato e guidato da{" "}
+          <strong>Eugenio Fontana (Capitan Cloud)</strong>, che ha già formato oltre{" "}
+          <strong>100.000 studenti</strong>.
         </p>
-        <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
-          Dentro trovi tutto quello che ti serve, in ordine:
-          <br />
-          <strong>1 percorso centrale</strong> che ti porta da zero a Cloud Engineer,
-          <strong> 2 percorsi di preparazione</strong> alle certificazioni AWS più richieste
-          (CLF-C02 e SAA-C03), <strong>8 percorsi integrativi</strong> per specializzarti sugli
-          strumenti che usano davvero le aziende e il metodo{" "}
-          <strong>Protocollo Subito Assunto!™</strong> che ti segue passo passo fino al colloquio.
-        </p>
+
+        {/* Cosa contiene il percorso — card */}
+        <div className="mx-auto mt-8 max-w-4xl rounded-3xl border border-white/20 bg-white/10 p-6 text-left backdrop-blur-md sm:p-8">
+          <p className="mb-5 text-center text-sm font-bold uppercase tracking-[0.15em] text-brand-yellow">
+            Cosa trovi dentro
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="flex items-start gap-3 rounded-2xl bg-white/10 p-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-yellow font-display text-lg font-extrabold text-brand-ink">
+                1
+              </div>
+              <div className="min-w-0">
+                <p className="font-display text-base font-extrabold text-white">Percorso centrale</p>
+                <p className="text-sm text-white/75">Da zero a Cloud Engineer, passo dopo passo.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 rounded-2xl bg-white/10 p-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-yellow font-display text-lg font-extrabold text-brand-ink">
+                2
+              </div>
+              <div className="min-w-0">
+                <p className="font-display text-base font-extrabold text-white">Certificazioni AWS</p>
+                <p className="text-sm text-white/75">Preparazione completa a CLF-C02 e SAA-C03.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 rounded-2xl bg-white/10 p-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-yellow font-display text-lg font-extrabold text-brand-ink">
+                8
+              </div>
+              <div className="min-w-0">
+                <p className="font-display text-base font-extrabold text-white">Percorsi integrativi</p>
+                <p className="text-sm text-white/75">
+                  Gli strumenti che le aziende usano davvero sul campo.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 rounded-2xl bg-gradient-to-br from-brand-orange/30 to-brand-pink/30 p-4 ring-1 ring-white/20">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-brand-orange">
+                <Briefcase className="h-5 w-5" strokeWidth={2.5} />
+              </div>
+              <div className="min-w-0">
+                <p className="font-display text-base font-extrabold text-white">
+                  Protocollo Subito Assunto!™
+                </p>
+                <p className="text-sm text-white/85">
+                  Il metodo che ti segue passo passo fino al colloquio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
 
 
         {/* VSL video placeholder */}
