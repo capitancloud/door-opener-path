@@ -37,12 +37,6 @@ import {
   Layers,
 } from "lucide-react";
 import { useState } from "react";
-import percorsoOverviewAsset from "@/assets/percorso-completo-overview.png.asset.json";
-import roadmapAsset from "@/assets/roadmap-90-giorni.png.asset.json";
-import percorsoCentraleAsset from "@/assets/percorso-centrale.png.asset.json";
-import certificazioniAsset from "@/assets/certificazioni-aws.png.asset.json";
-import protocolloAsset from "@/assets/protocollo-subito-assunto.png.asset.json";
-import percorsiIntegrativiAsset from "@/assets/percorsi-integrativi.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -672,25 +666,6 @@ function Curriculum() {
           </div>
         </div>
 
-        {/* Roadmap image */}
-        <div className="mt-12 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
-          <img
-            src={roadmapAsset.url}
-            alt="La roadmap dei 90 giorni: 15 giorni percorso centrale, 15 giorni CLF-C02, 55 giorni SAA-C03, 5 giorni Protocollo Subito Assunto"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
-
-        {/* Percorso centrale image */}
-        <div className="mt-8 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
-          <img
-            src={percorsoCentraleAsset.url}
-            alt="Il percorso centrale: 15 moduli dai fondamenti DevOps & Cloud fino a DevSecOps, Cloud Security, FinOps e trend emergenti"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
       </div>
     </section>
   );
@@ -740,14 +715,6 @@ function PathOverview() {
           </p>
         </div>
 
-        <div className="mb-12 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
-          <img
-            src={percorsoOverviewAsset.url}
-            alt="Il percorso completo Capitan Cloud: 3 step (Percorso Centrale, Certificazioni AWS, Protocollo Subito Assunto) + 1 percorsi integrativi"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((s) => (
@@ -787,14 +754,6 @@ function Certifications() {
           </p>
         </div>
 
-        <div className="mb-12 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
-          <img
-            src={certificazioniAsset.url}
-            alt="Le certificazioni AWS: CLF-C02 (Cloud Practitioner) e SAA-C03 (Solutions Architect Associate) con Protocollo Supera Esame"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
 
         <div className="grid gap-6 md:grid-cols-3">
           {[
@@ -927,14 +886,6 @@ function ProtocolloSubitoAssunto() {
           </p>
         </div>
 
-        <div className="mb-12 overflow-hidden rounded-3xl border border-white/15 bg-white/5 shadow-2xl">
-          <img
-            src={protocolloAsset.url}
-            alt="Protocollo Subito Assunto: portfolio blindato, colloquio simulator, AI CV check, aziende, LinkedIn perfetto, top 50 domande, 1-to-1, community, voucher 10%"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it) => (
@@ -987,14 +938,6 @@ function PercorsiIntegrativi() {
           </p>
         </div>
 
-        <div className="mb-12 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
-          <img
-            src={percorsiIntegrativiAsset.url}
-            alt="Percorsi integrativi: Claude Code, Networking, Python, Linux & Bash, Windows & PowerShell, Docker, Kubernetes, Terraform"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {modules.map((m) => (
