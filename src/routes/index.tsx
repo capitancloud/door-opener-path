@@ -65,6 +65,7 @@ function VslPage() {
     <main className="bg-white text-brand-ink font-sans overflow-x-hidden">
       <Nav />
       <Hero />
+      <QuizBanner />
       <AttentionBlock />
       <InterestOpening />
       <StoryBlock />
