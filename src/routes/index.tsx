@@ -283,8 +283,8 @@ function AttentionBlock() {
         </p>
         <div className="mx-auto mt-10 max-w-3xl rounded-2xl border-2 border-brand-blue/10 bg-secondary p-6 text-left text-base leading-relaxed sm:p-8 sm:text-lg">
           <p>
-            Non è vendita porta a porta. Non è un'app da inventare. Non è il sogno gonfiato di un
-            influencer. È una <strong>professione concreta e richiestissima</strong>, che migliaia
+            Non è vendita porta a porta. Non è un'app da inventare. Non è roba super complessa solo
+            per laureati in informatica. È una <strong>professione concreta e richiestissima</strong>, che migliaia
             di persone normali stanno imparando da adulte per cambiare vita. Tra poco ti dico
             esattamente qual è — ma prima lascia che ti spieghi perché te ne sto parlando proprio a
             te.
