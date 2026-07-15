@@ -1,0 +1,11 @@
+# Capitan Cloud
+
+> Diventa Cloud Engineer in 90 giorni con il metodo di Eugenio Fontana: percorso completo, 2 certificazioni AWS e Protocollo Subito Assunto!™.
+
+Capitan Cloud è un percorso formativo online (297€ una tantum) pensato per portare chiunque, anche senza laurea o esperienza tecnica, a diventare Cloud Engineer in 90 giorni. Include videocorsi, preparazione alle certificazioni AWS Cloud Practitioner e Solutions Architect Associate, materiali integrativi e supporto per l'inserimento lavorativo.
+
+## Pages
+
+- [Home](/): Presentazione del percorso, prezzo, FAQ, video di introduzione e link al quiz gratuito.
+- [Privacy Policy](/privacy): Informativa sul trattamento dei dati personali.
+- [Cookie Policy](/cookie-policy): Informativa sull'uso dei cookie.
