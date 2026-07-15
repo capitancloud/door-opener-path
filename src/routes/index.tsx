@@ -1482,6 +1482,11 @@ function FAQ() {
       highlight: true,
     },
     {
+      q: "Il costo degli esami è incluso nel prezzo?",
+      a: "No. Il prezzo copre il percorso completo, i corsi e tutti i materiali. Gli esami di certificazione si pagano separatamente ad AWS, ma ricevi un voucher con il 10% di sconto su ciascuno.",
+      highlightYellow: true,
+    },
+    {
       q: "Devo saper programmare?",
       a: "No. Il percorso parte dalle basi assolute. Vedrai un po' di codice, ma il Cloud Engineering non è sviluppo software: si tratta di configurare, automatizzare e mettere in sicurezza infrastrutture.",
     },
@@ -1492,10 +1497,6 @@ function FAQ() {
     {
       q: "Non ho tempo, lavoro tutto il giorno.",
       a: "Il percorso è pensato per chi ha già una vita: bastano circa 2 ore al giorno, con i tuoi tempi. Nessuna scadenza imposta, l'accesso resta tuo.",
-    },
-    {
-      q: "Il costo degli esami è incluso nel prezzo?",
-      a: "No. Il prezzo copre il percorso completo, i corsi e tutti i materiali. Gli esami di certificazione si pagano separatamente ad AWS, ma ricevi un voucher con il 10% di sconto su ciascuno.",
     },
     {
       q: "E se non ci capisco niente?",
@@ -1518,52 +1519,74 @@ function FAQ() {
           Domande <span className="text-brand-blue">frequenti</span>
         </h2>
         <div className="space-y-3">
-          {faqs.map((f, i) => (
-            <div
-              key={i}
-              className={
-                f.highlight
-                  ? "overflow-hidden rounded-2xl border-2 border-brand-orange bg-gradient-to-br from-brand-orange/10 to-brand-pink/10 shadow-lg shadow-brand-orange/20 ring-2 ring-brand-orange/30"
-                  : "overflow-hidden rounded-2xl border-2 border-brand-blue/10 bg-white"
-              }
-            >
-              <button
-                onClick={() => setOpen(open === i ? null : i)}
-                className={`flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition ${
-                  f.highlight ? "hover:bg-brand-orange/10" : "hover:bg-brand-blue/5"
-                }`}
+          {faqs.map((f, i) => {
+            const isOrange = f.highlight;
+            const isYellow = f.highlightYellow;
+            const isHl = isOrange || isYellow;
+            return (
+              <div
+                key={i}
+                className={
+                  isOrange
+                    ? "overflow-hidden rounded-2xl border-2 border-brand-orange bg-gradient-to-br from-brand-orange/10 to-brand-pink/10 shadow-lg shadow-brand-orange/20 ring-2 ring-brand-orange/30"
+                    : isYellow
+                      ? "overflow-hidden rounded-2xl border-2 border-brand-yellow bg-gradient-to-br from-brand-yellow/15 to-brand-yellow/5 shadow-lg shadow-brand-yellow/20 ring-2 ring-brand-yellow/40"
+                      : "overflow-hidden rounded-2xl border-2 border-brand-blue/10 bg-white"
+                }
               >
-                <span
-                  className={`font-display font-extrabold text-brand-ink ${
-                    f.highlight
-                      ? "flex items-center gap-2 text-lg sm:text-xl"
-                      : "text-base sm:text-lg"
+                <button
+                  onClick={() => setOpen(open === i ? null : i)}
+                  className={`flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition ${
+                    isOrange
+                      ? "hover:bg-brand-orange/10"
+                      : isYellow
+                        ? "hover:bg-brand-yellow/10"
+                        : "hover:bg-brand-blue/5"
                   }`}
                 >
-                  {f.highlight && (
-                    <span className="inline-flex shrink-0 items-center rounded-full bg-brand-orange px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
-                      Importante
-                    </span>
-                  )}
-                  {f.q}
-                </span>
-                <ChevronDown
-                  className={`h-5 w-5 shrink-0 transition-transform ${
-                    f.highlight ? "text-brand-orange" : "text-brand-blue"
-                  } ${open === i ? "rotate-180" : ""}`}
-                />
-              </button>
-              {open === i && (
-                <div
-                  className={`border-t px-6 py-5 text-base leading-relaxed text-brand-ink/80 ${
-                    f.highlight ? "border-brand-orange/30" : "border-brand-blue/10"
-                  }`}
-                >
-                  {f.a}
-                </div>
-              )}
-            </div>
-          ))}
+                  <span
+                    className={`font-display font-extrabold text-brand-ink ${
+                      isHl ? "flex items-center gap-2 text-lg sm:text-xl" : "text-base sm:text-lg"
+                    }`}
+                  >
+                    {isOrange && (
+                      <span className="inline-flex shrink-0 items-center rounded-full bg-brand-orange px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
+                        Importante
+                      </span>
+                    )}
+                    {isYellow && (
+                      <span className="inline-flex shrink-0 items-center rounded-full bg-brand-yellow px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand-ink">
+                        Importante
+                      </span>
+                    )}
+                    {f.q}
+                  </span>
+                  <ChevronDown
+                    className={`h-5 w-5 shrink-0 transition-transform ${
+                      isOrange
+                        ? "text-brand-orange"
+                        : isYellow
+                          ? "text-brand-ink"
+                          : "text-brand-blue"
+                    } ${open === i ? "rotate-180" : ""}`}
+                  />
+                </button>
+                {open === i && (
+                  <div
+                    className={`border-t px-6 py-5 text-base leading-relaxed text-brand-ink/80 ${
+                      isOrange
+                        ? "border-brand-orange/30"
+                        : isYellow
+                          ? "border-brand-yellow/40"
+                          : "border-brand-blue/10"
+                    }`}
+                  >
+                    {f.a}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
