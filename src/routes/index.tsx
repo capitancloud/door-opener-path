@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CookieBanner } from "@/components/CookieBanner";
 import eugenioPhoto from "@/assets/eugenio-fontana.png.asset.json";
-import capitanLogo from "@/assets/capitan-cloud-logo.jpg.asset.json";
+import capitanLogo from "@/assets/capitan-cloud-logo.png.asset.json";
 import {
   Sparkles,
   ArrowRight,
@@ -158,14 +158,12 @@ function Hero() {
       <div className="bubble h-16 w-16 left-[40%] bottom-24 opacity-50" />
 
       <div className="relative mx-auto max-w-5xl text-center">
-        <div className="mb-6 flex justify-center">
-          <span className="relative inline-flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-white ring-4 ring-white/40 shadow-2xl sm:h-28 sm:w-28">
-            <img
-              src={capitanLogo.url}
-              alt="Logo Capitan Cloud"
-              className="h-full w-full object-contain p-1"
-            />
-          </span>
+        <div className="mb-4 flex justify-center">
+          <img
+            src={capitanLogo.url}
+            alt="Logo Capitan Cloud"
+            className="h-40 w-auto drop-shadow-2xl sm:h-48"
+          />
         </div>
 
         <p className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold backdrop-blur">
