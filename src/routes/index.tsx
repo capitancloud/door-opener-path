@@ -1365,9 +1365,9 @@ function PostScriptum() {
         </p>
         <p>
           <strong className="font-display text-brand-blue">P.P.S.</strong>{" "}
-          <Placeholder>
-            Se hai scarsità vera: "Ricorda che [bonus/prezzo] vale solo fino a [data/posti]."
-          </Placeholder>
+          Questa è un'<strong>offerta di lancio</strong> con <strong>posti limitati</strong>: appena
+          esauriti, il prezzo tornerà al listino pieno di <strong>{FULL_PRICE}</strong>. Se stai
+          leggendo e il prezzo è ancora <strong>{PRICE}</strong>, sei ancora in tempo — ma non per molto.
         </p>
       </div>
     </section>
