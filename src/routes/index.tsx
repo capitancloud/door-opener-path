@@ -577,7 +577,7 @@ function Curriculum() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-14 text-center">
           <p className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-brand-blue">
-            Il percorso completo
+            Step 01 · Il percorso centrale
           </p>
           <h2 className="font-display text-3xl font-extrabold text-brand-ink sm:text-5xl">
             Diventa Cloud Engineer{" "}
