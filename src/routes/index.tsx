@@ -323,7 +323,7 @@ function InterestOpening() {
         <p>
           E poi succede una cosa che ti resta dentro. Incontri qualcuno — un ex compagno di
           scuola, un conoscente, uno che fino a ieri era nella tua identica situazione — e scopri
-          che ha cambiato vita. <strong>Lavora da casa. Guadagna bene. Sembra perfino sereno.</strong>{" "}
+          che ha cambiato vita. <strong>Lavora in un bell'ufficio elegante. Guadagna bene. Sembra perfino sereno.</strong>{" "}
           E mentre annuisci e fai i complimenti, dentro ti chiedi una cosa sola:
         </p>
         <p className="border-l-4 border-brand-yellow bg-brand-yellow/10 py-4 pl-6 pr-4 text-xl font-semibold italic text-brand-ink">
