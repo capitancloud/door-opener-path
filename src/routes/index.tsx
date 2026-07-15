@@ -756,24 +756,41 @@ function Curriculum() {
     {
       name: "Fondamenta",
       days: "Giorni 1–10",
-      desc: "Basi di DevOps, Cloud e il tuo laboratorio pratico (Git, Docker, VM). Si parte da zero.",
+      dayShort: "1–10",
+      length: 10,
+      tag: "Si parte da zero",
+      desc: "Basi di DevOps, Cloud e il tuo laboratorio pratico (Git, Docker, VM).",
+      color: "from-sky-400 to-brand-blue",
     },
     {
       name: "AWS Cloud Practitioner",
       days: "Giorni 11–30",
-      desc: "CLF-C02 — 15 giorni di teoria + 5 di simulazioni con il Protocollo Supera Esame!™. La prima certificazione ufficiale.",
+      dayShort: "11–30",
+      length: 20,
+      tag: "1ª certificazione AWS",
+      desc: "CLF-C02 — 15 giorni di teoria + 5 di simulazioni con il Protocollo Supera Esame!™.",
+      color: "from-brand-blue to-indigo-600",
     },
     {
       name: "AWS Solutions Architect – Associate",
       days: "Giorni 31–85",
-      desc: "SAA-C03 — 40 giorni di teoria + 15 di simulazioni. La certificazione che pesa davvero sul mercato del lavoro cloud.",
+      dayShort: "31–85",
+      length: 55,
+      tag: "2ª certificazione AWS · la più richiesta",
+      desc: "SAA-C03 — 40 giorni di teoria + 15 di simulazioni. La certificazione che pesa davvero sul mercato cloud.",
+      color: "from-indigo-600 to-violet-600",
     },
     {
       name: "Verso il lavoro",
       days: "Giorni 86–90",
-      desc: "Protocollo Subito Assunto!™: portfolio, CV, LinkedIn, colloquio simulato e strategia di candidatura.",
+      dayShort: "86–90",
+      length: 5,
+      tag: "Protocollo Subito Assunto!™",
+      desc: "Portfolio, CV, LinkedIn, colloquio simulato e strategia di candidatura.",
+      color: "from-brand-orange to-brand-pink",
     },
   ];
+  const totalDays = 90;
   const skills = [
     { icon: GitBranch, name: "Git & GitHub", desc: "Branch, merge, pull request, code review." },
     { icon: Container, name: "Docker & Container", desc: "Immagini, volumi, networking, Compose." },
@@ -802,28 +819,79 @@ function Curriculum() {
             colloquio. Circa 2 ore al giorno.
           </p>
         </div>
-
-        {/* 4 phases */}
-        <div className="mb-16 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {phases.map((ph, i) => (
-            <div
-              key={ph.name}
-              className="rounded-2xl border-2 border-brand-blue/10 bg-white p-6"
-            >
-              <div className="mb-3 flex items-center gap-2">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-blue text-sm font-extrabold text-white">
-                  {i + 1}
-                </span>
-                <span className="text-xs font-bold uppercase tracking-wider text-brand-blue">
-                  {ph.days}
-                </span>
-              </div>
-              <h3 className="mb-2 font-display text-lg font-extrabold text-brand-ink">
-                {ph.name}
-              </h3>
-              <p className="text-sm leading-relaxed text-brand-ink/75">{ph.desc}</p>
+        {/* 4 phases — visual timeline */}
+        <div className="mb-16">
+          {/* Proportional timeline bar (desktop) */}
+          <div className="mb-8 hidden md:block">
+            <div className="mb-2 flex items-center justify-between text-xs font-bold text-brand-ink/60">
+              <span>Giorno 1</span>
+              <span>Giorno 30</span>
+              <span>Giorno 60</span>
+              <span>Giorno 90 → Assunto</span>
             </div>
-          ))}
+            <div className="flex h-4 w-full overflow-hidden rounded-full border-2 border-brand-blue/10 bg-white shadow-inner">
+              {phases.map((ph, i) => (
+                <div
+                  key={ph.name}
+                  className={`relative bg-gradient-to-r ${ph.color} ${i > 0 ? "border-l-2 border-white" : ""}`}
+                  style={{ width: `${(ph.length / totalDays) * 100}%` }}
+                  title={`${ph.name} · ${ph.days}`}
+                >
+                  <span className="absolute inset-0 flex items-center justify-center text-[10px] font-extrabold text-white/90">
+                    {ph.length} gg
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Phase cards */}
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {phases.map((ph, i) => (
+              <div
+                key={ph.name}
+                className="relative overflow-hidden rounded-2xl border-2 border-brand-blue/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand-blue/40 hover:shadow-xl"
+              >
+                {/* colored top bar */}
+                <div className={`absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${ph.color}`} />
+
+                {/* huge phase number */}
+                <div className="mb-4 flex items-start justify-between">
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-ink/50">
+                      Fase 0{i + 1}
+                    </p>
+                    <p className={`bg-gradient-to-r ${ph.color} bg-clip-text font-display text-2xl font-extrabold leading-none text-transparent sm:text-3xl`}>
+                      Giorni {ph.dayShort}
+                    </p>
+                  </div>
+                  <span className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${ph.color} font-display text-lg font-black text-white shadow-md`}>
+                    {i + 1}
+                  </span>
+                </div>
+
+                {/* day count badge */}
+                <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-brand-blue/5 px-2.5 py-1 text-[11px] font-bold text-brand-blue">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-blue" />
+                  {ph.length} giorni · {ph.tag}
+                </div>
+
+                <h3 className="mb-2 font-display text-base font-extrabold text-brand-ink sm:text-lg">
+                  {ph.name}
+                </h3>
+                <p className="text-sm leading-relaxed text-brand-ink/70">{ph.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Totale */}
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3 rounded-2xl bg-white/60 px-4 py-3 text-sm text-brand-ink/70">
+            <span className="font-extrabold text-brand-ink">90 giorni totali</span>
+            <span className="text-brand-ink/30">·</span>
+            <span>2 certificazioni AWS ufficiali</span>
+            <span className="text-brand-ink/30">·</span>
+            <span>~2 ore al giorno</span>
+          </div>
         </div>
 
         {/* Skills */}
