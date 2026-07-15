@@ -304,7 +304,7 @@ function InterestOpening() {
           Voglio partire da una sensazione, non da una promessa.
         </h2>
         <p>
-          È <strong>domenica sera</strong>. La giornata è ancora tua, ma dentro è già lunedì. Lo
+          È <strong>domenica sera</strong>. La giornata non è ancora finita, ma dentro è già lunedì. Lo
           senti quel peso nello stomaco, perché sai già com'è domani: la stessa sveglia, la stessa
           strada, le stesse facce, le stesse ore che non passano mai.
         </p>
