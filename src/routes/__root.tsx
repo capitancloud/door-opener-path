@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Il metodo di Capitan Cloud (Eugenio Fontana) per diventare Cloud Engineer in 90 giorni: percorso completo, 2 certificazioni AWS e Protocollo Subito Assunto!™. 297€ una tantum.",
+          "Diventa Cloud Engineer in 90 giorni con Capitan Cloud: percorso completo, 2 certificazioni AWS e Protocollo Subito Assunto!™. 297€ una tantum.",
       },
       { name: "author", content: "Capitan Cloud" },
       { property: "og:title", content: "Diventa Cloud Engineer in 90 Giorni — Capitan Cloud" },
