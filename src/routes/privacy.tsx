@@ -56,9 +56,9 @@ function PrivacyPage() {
         <div className="mt-10 space-y-10 text-brand-ink/85 leading-relaxed">
           <p className="rounded-2xl border-l-4 border-brand-blue bg-brand-blue/5 p-5 text-base">
             Questa informativa descrive come vengono trattati i dati personali quando visiti il
-            sito/landing page del <strong>Protocollo Supera Esame™</strong> e, in generale, quando
-            interagisci con i nostri contenuti, effettui un acquisto, ti iscrivi a comunicazioni o
-            prenoti una sessione 1-to-1.
+            sito <strong>capitancloud.it</strong> di <strong>Capitan Cloud</strong> e, in generale,
+            quando interagisci con i nostri contenuti, effettui un acquisto, ti iscrivi a
+            comunicazioni o prenoti una sessione 1-to-1.
           </p>
 
           <Section title="1) Titolare del trattamento">
