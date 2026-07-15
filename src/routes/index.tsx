@@ -760,14 +760,6 @@ function Certifications() {
           </p>
         </div>
 
-        <div className="mb-12 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
-          <img
-            src={certificazioniAsset.url}
-            alt="Le certificazioni AWS: CLF-C02 (Cloud Practitioner) e SAA-C03 (Solutions Architect Associate) con Protocollo Supera Esame"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
 
         <div className="grid gap-6 md:grid-cols-3">
           {[
