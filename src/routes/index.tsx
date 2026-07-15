@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CookieBanner } from "@/components/CookieBanner";
 import eugenioPhoto from "@/assets/eugenio-fontana.png.asset.json";
+import capitanLogo from "@/assets/capitan-cloud-logo.jpg.asset.json";
 import {
   Sparkles,
   ArrowRight,
