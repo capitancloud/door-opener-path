@@ -944,14 +944,6 @@ function PercorsiIntegrativi() {
           </p>
         </div>
 
-        <div className="mb-12 overflow-hidden rounded-3xl border border-brand-blue/10 bg-white shadow-xl">
-          <img
-            src={percorsiIntegrativiAsset.url}
-            alt="Percorsi integrativi: Claude Code, Networking, Python, Linux & Bash, Windows & PowerShell, Docker, Kubernetes, Terraform"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {modules.map((m) => (
