@@ -1542,7 +1542,7 @@ function FAQ() {
                 >
                   {f.highlight && (
                     <span className="inline-flex shrink-0 items-center rounded-full bg-brand-orange px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
-                      Più chiesta
+                      Importante
                     </span>
                   )}
                   {f.q}
