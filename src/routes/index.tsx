@@ -827,7 +827,7 @@ function Curriculum() {
               <span>Giorno 1</span>
               <span>Giorno 30</span>
               <span>Giorno 60</span>
-              <span>Giorno 90 → Assunto</span>
+              <span>Giorno 90 → Pronto al colloquio</span>
             </div>
             <div className="flex h-4 w-full overflow-hidden rounded-full border-2 border-brand-blue/10 bg-white shadow-inner">
               {phases.map((ph, i) => (
