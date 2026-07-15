@@ -180,9 +180,10 @@ function Hero() {
 
         <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
           Il percorso completo di <strong>Eugenio Fontana (Capitan Cloud)</strong> — oltre{" "}
-          <strong>100.000 studenti formati</strong> — con <strong>2 certificazioni AWS</strong>{" "}
-          ufficiali e il metodo <strong>Protocollo Subito Assunto!™</strong> che ti accompagna fino
-          al colloquio.
+          <strong>100.000 studenti formati</strong>. Dentro trovi <strong>1 percorso centrale</strong>{" "}
+          da zero a Cloud Engineer, <strong>2 percorsi dedicati alle certificazioni AWS</strong>{" "}
+          più importanti (CLF-C02 e SAA-C03), <strong>8 percorsi integrativi</strong> per specializzarti
+          e il metodo <strong>Protocollo Subito Assunto!™</strong> che ti accompagna fino al colloquio.
         </p>
 
 
