@@ -1388,7 +1388,7 @@ function PostScriptum() {
           perché non decide. Tu sei arrivato in fondo: una parte di te ha già capito che si può.
           <strong> Ascoltala.</strong>{" "}
           <a
-            href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer"
+            href="#checkout"
             className="font-bold text-brand-blue underline decoration-brand-yellow decoration-2 underline-offset-4"
           >
             👉 Inizia ora
