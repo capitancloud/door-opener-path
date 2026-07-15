@@ -1477,6 +1477,11 @@ function Vision() {
 function FAQ() {
   const faqs = [
     {
+      q: "Mi garantite il lavoro?",
+      a: "No, e diffida di chi lo promette. Ti diamo tutto ciò che serve per diventare un candidato credibile: competenze pratiche, due certificazioni AWS, un portfolio reale e un metodo per candidarti. Il resto dipende dal tuo impegno — ma parti con un vantaggio enorme.",
+      highlight: true,
+    },
+    {
       q: "Devo saper programmare?",
       a: "No. Il percorso parte dalle basi assolute. Vedrai un po' di codice, ma il Cloud Engineering non è sviluppo software: si tratta di configurare, automatizzare e mettere in sicurezza infrastrutture.",
     },
@@ -1503,10 +1508,6 @@ function FAQ() {
     {
       q: "Perché pagare, se su internet c'è tutto gratis?",
       a: "Su internet c'è tutto, ma in disordine: è proprio quello che ti ha bloccato finora. Qui paghi l'ordine giusto e il tempo che risparmi — mesi, non giorni.",
-    },
-    {
-      q: "Mi garantite il lavoro?",
-      a: "No, e diffida di chi lo promette. Ti diamo tutto ciò che serve per diventare un candidato credibile: competenze pratiche, due certificazioni AWS, un portfolio reale e un metodo per candidarti. Il resto dipende dal tuo impegno — ma parti con un vantaggio enorme.",
     },
   ];
   const [open, setOpen] = useState<number | null>(0);
