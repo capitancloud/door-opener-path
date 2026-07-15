@@ -10,7 +10,7 @@ export const Route = createFileRoute("/privacy")({
       {
         name: "description",
         content:
-          "Informativa sul trattamento dei dati personali del sito capitancloud.it e del Protocollo Supera Esame™.",
+          "Informativa sul trattamento dei dati personali del sito capitancloud.it di Capitan Cloud (Eugenio Fontana).",
       },
       { property: "og:title", content: "Privacy Policy — Capitan Cloud" },
       {
