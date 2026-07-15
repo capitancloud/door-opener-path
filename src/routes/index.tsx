@@ -1482,6 +1482,11 @@ function FAQ() {
       highlight: true,
     },
     {
+      q: "Il costo degli esami è incluso nel prezzo?",
+      a: "No. Il prezzo copre il percorso completo, i corsi e tutti i materiali. Gli esami di certificazione si pagano separatamente ad AWS, ma ricevi un voucher con il 10% di sconto su ciascuno.",
+      highlightYellow: true,
+    },
+    {
       q: "Devo saper programmare?",
       a: "No. Il percorso parte dalle basi assolute. Vedrai un po' di codice, ma il Cloud Engineering non è sviluppo software: si tratta di configurare, automatizzare e mettere in sicurezza infrastrutture.",
     },
@@ -1492,10 +1497,6 @@ function FAQ() {
     {
       q: "Non ho tempo, lavoro tutto il giorno.",
       a: "Il percorso è pensato per chi ha già una vita: bastano circa 2 ore al giorno, con i tuoi tempi. Nessuna scadenza imposta, l'accesso resta tuo.",
-    },
-    {
-      q: "Il costo degli esami è incluso nel prezzo?",
-      a: "No. Il prezzo copre il percorso completo, i corsi e tutti i materiali. Gli esami di certificazione si pagano separatamente ad AWS, ma ricevi un voucher con il 10% di sconto su ciascuno.",
     },
     {
       q: "E se non ci capisco niente?",
