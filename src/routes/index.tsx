@@ -1285,7 +1285,7 @@ function FAQ() {
       a: "Sì. I laboratori sono guidati passo-passo su entrambi i sistemi.",
     },
     {
-      q: "Il costo degli esami è incluso nei 297€?",
+      q: "Il costo degli esami è incluso nel prezzo?",
       a: "No. Il prezzo copre il percorso completo, i corsi e tutti i materiali. Gli esami di certificazione si pagano separatamente ad AWS, ma ricevi un voucher con il 10% di sconto su ciascuno.",
     },
     {
