@@ -85,6 +85,7 @@ function VslPage() {
       <FAQ />
       <PostScriptum />
       <Footer />
+      <CookieBanner />
     </main>
   );
 }
