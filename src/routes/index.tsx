@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CookieBanner } from "@/components/CookieBanner";
-import eugenioPhoto from "@/assets/eugenio-fontana.png.asset.json";
-import capitanLogo from "@/assets/capitan-cloud-logo.png.asset.json";
+import eugenioPhoto from "@/assets/eugenio-fontana.png";
+import capitanLogo from "@/assets/capitan-cloud-logo.png";
 import {
   Sparkles,
   ArrowRight,
@@ -172,7 +172,7 @@ function Hero() {
       <div className="relative mx-auto max-w-5xl text-center">
         <div className="mb-4 flex justify-center">
           <img
-            src={capitanLogo.url}
+            src={capitanLogo}
             alt="Logo Capitan Cloud"
             className="h-40 w-auto drop-shadow-2xl sm:h-48"
           />
@@ -420,7 +420,7 @@ function StoryBlock() {
             <div className="rounded-full bg-gradient-to-br from-brand-blue to-brand-blue-light p-1.5 shadow-xl ring-4 ring-white">
               <div className="h-28 w-28 overflow-hidden rounded-full sm:h-32 sm:w-32">
                 <img
-                  src={eugenioPhoto.url}
+                  src={eugenioPhoto}
                   alt="Eugenio Fontana — Capitan Cloud"
                   className="h-full w-full scale-[1.75] object-cover object-[50%_38%]"
                   loading="lazy"
