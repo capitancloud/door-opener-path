@@ -195,8 +195,7 @@ function Hero() {
           Voglio iniziare — Diventa Cloud Engineer ({PRICE})
         </a>
         <p className="mt-4 text-sm text-white/70">
-          Pagamento sicuro · Accesso immediato · Disponibile anche in{" "}
-          <Placeholder>rate</Placeholder>
+          Pagamento sicuro · Accesso immediato
         </p>
       </div>
     </section>
