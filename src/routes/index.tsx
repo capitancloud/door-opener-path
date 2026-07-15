@@ -1071,14 +1071,14 @@ function PricingCTA() {
                   Garanzia "Il rischio me lo prendo io"
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-brand-ink/80">
-                  Completa i primi <Placeholder>X</Placeholder> moduli. Se hai fatto la tua parte
-                  e non vedi progressi, ti rimborso. Semplice così.
+                  Se in <strong>90 giorni</strong> completi al 100% il percorso centrale, i
+                  percorsi di certificazione e tutti i percorsi integrativi — quindi hai
+                  visionato tutte le lezioni — e <strong>non superi la prima certificazione
+                  AWS Cloud Practitioner (CLF-C02)</strong>, ti rimborso l'intero importo.
                   <br />
-                  <span className="text-xs opacity-70">
-                    <Placeholder>
-                      Scegli la formula finale (A: 14/30gg soddisfatto o rimborsato · B:
-                      condizionata all'azione · C: di risultato) e aggiorna questo testo.
-                    </Placeholder>
+                  <span className="mt-2 block text-xs opacity-70">
+                    La garanzia premia chi fa sul serio: tu ci metti il lavoro, io mi prendo
+                    il rischio del risultato.
                   </span>
                 </p>
               </div>
