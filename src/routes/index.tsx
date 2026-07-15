@@ -46,7 +46,7 @@ function Placeholder({ children }: { children: React.ReactNode }) {
 function VslPage() {
   return (
     <main className="bg-white text-brand-ink font-sans overflow-x-hidden">
-      <DiscordBar />
+      {/* DiscordBar removed */}
       <Nav />
       <Hero />
       <AttentionBlock />
@@ -134,20 +134,24 @@ function Hero() {
 
       <div className="relative mx-auto max-w-5xl text-center">
         <p className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold backdrop-blur">
-          <Sparkles className="h-4 w-4 text-brand-yellow" /> Nuovo percorso 2026 — posti limitati
+          <Sparkles className="h-4 w-4 text-brand-yellow" /> Nuovo percorso 2026 · Posti limitati
         </p>
 
         <h1 className="font-display text-4xl font-extrabold leading-[1.05] sm:text-6xl md:text-7xl">
-          Supera la tua certificazione{" "}
-          <span className="gradient-yellow-text">Cloud al primo colpo</span>
+          Diventa Cloud Engineer{" "}
+          <span className="gradient-yellow-text">in 90 giorni.</span>
         </h1>
-
-        <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-white/90 sm:text-xl">
-          Il metodo esclusivo creato da{" "}
-          <strong className="font-bold">Eugenio Fontana (Capitan Cloud)</strong>, formatore con
-          oltre <strong>100.000 studenti formati</strong> in cybersecurity e cloud computing, per
-          ridurre al minimo il rischio di fallire la tua certificazione AWS, Azure o Google Cloud.
+        <p className="mx-auto mt-6 max-w-3xl text-lg font-semibold text-white/90 sm:text-2xl">
+          Da zero, senza laurea, anche se oggi fai tutt'altro.
         </p>
+
+        <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
+          Il percorso completo di <strong>Eugenio Fontana (Capitan Cloud)</strong> — oltre{" "}
+          <strong>100.000 studenti formati</strong> — con <strong>2 certificazioni AWS</strong>{" "}
+          ufficiali e il metodo <strong>Protocollo Subito Assunto!™</strong> che ti accompagna fino
+          al colloquio.
+        </p>
+
 
         {/* VSL video placeholder */}
         <div
