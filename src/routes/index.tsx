@@ -89,6 +89,7 @@ function VslPage() {
       <Certifications />
       <ProtocolloSubitoAssunto />
       <PercorsiIntegrativi />
+      <ProgrammaPdf />
       <PricingCTA />
       <Vision />
       <FAQ />
