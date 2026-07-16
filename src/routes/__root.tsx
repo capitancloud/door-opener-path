@@ -118,15 +118,42 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics 4 */}
+        {/* Google Analytics 4 — Consent Mode v2 */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNKNG0D0CM" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+
+  // Consent Mode v2: default tutto negato (GDPR/Italia)
+  gtag('consent', 'default', {
+    analytics_storage:     'denied',
+    ad_storage:            'denied',
+    ad_user_data:          'denied',
+    ad_personalization:    'denied',
+    functionality_storage: 'denied',
+    personalization_storage: 'denied',
+    wait_for_update: 500
+  });
+
+  // Se l'utente aveva già scelto, ripristina il consenso subito
+  try {
+    var saved = localStorage.getItem('cc-cookie-consent-v1');
+    if (saved === 'all') {
+      gtag('consent', 'update', {
+        analytics_storage:     'granted',
+        ad_storage:            'granted',
+        ad_user_data:          'granted',
+        ad_personalization:    'granted',
+        functionality_storage: 'granted',
+        personalization_storage: 'granted'
+      });
+    }
+  } catch(e) {}
+
   gtag('js', new Date());
-  gtag('config', 'G-DNKNG0D0CM');
+  gtag('config', 'G-DNKNG0D0CM', { send_page_view: true });
 `,
           }}
         />

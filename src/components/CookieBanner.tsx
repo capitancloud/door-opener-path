@@ -6,6 +6,31 @@ const STORAGE_KEY = "cc-cookie-consent-v1";
 
 type Consent = "all" | "necessary" | null;
 
+declare function gtag(...args: unknown[]): void;
+
+function updateGtagConsent(value: "all" | "necessary") {
+  if (typeof gtag === "undefined") return;
+  if (value === "all") {
+    gtag("consent", "update", {
+      analytics_storage: "granted",
+      ad_storage: "granted",
+      ad_user_data: "granted",
+      ad_personalization: "granted",
+      functionality_storage: "granted",
+      personalization_storage: "granted",
+    });
+  } else {
+    gtag("consent", "update", {
+      analytics_storage: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      functionality_storage: "denied",
+      personalization_storage: "denied",
+    });
+  }
+}
+
 export function CookieBanner() {
   const [consent, setConsent] = useState<Consent>(null);
   const [ready, setReady] = useState(false);
@@ -26,6 +51,7 @@ export function CookieBanner() {
     } catch {
       /* ignore */
     }
+    updateGtagConsent(value);
     setConsent(value);
   };
 
