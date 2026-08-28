@@ -1,41 +1,31 @@
-
-# Sostituire "chiamata gratuita" con contatto WhatsApp diretto
+# Reindirizzare `/ciurma` verso Discord
 
 ## Obiettivo
-Rimuovere il link "Prenota una chiamata gratuita di 15 minuti" (attualmente punta al placeholder `#book-call`) e sostituirlo con un pulsante/link WhatsApp che apre la chat verso **+39 351 473 4862** con un messaggio pre-compilato.
+Ripristinare il redirect che avevi su capitancloud.it:  
+`https://capitancloud.it/ciurma` → `https://discord.gg/VThxtMSgRf`
 
-## Come funziona il link WhatsApp
-Formato ufficiale: `https://wa.me/393514734862?text=<messaggio-url-encoded>`
-- Numero senza `+`, senza spazi, senza trattini.
-- `text` viene pre-compilato nel campo messaggio; l'utente può modificarlo prima di premere Invia (WhatsApp non consente invio automatico).
-- Funziona su mobile (apre l'app) e desktop (WhatsApp Web/Desktop).
+## Cosa propongo
+Creare una server route TanStack Start dedicata a `/ciurma` che risponde con un redirect HTTP vero (302 Found) verso il link Discord. Questo funziona sia su preview che su capitancloud.it pubblicato, ed è meglio di un redirect client-side (più veloce, SEO-friendly e funziona anche se JS è disattivato).
 
-Messaggio pre-compilato proposto (modificabile):
-> "Ciao Eugenio, ho visto la pagina del corso *Diventa Cloud Engineer in 90 Giorni* e vorrei qualche chiarimento prima di iscrivermi."
+## Passaggi
 
-## Modifiche al codice
+1. **Creare `src/routes/ciurma.ts`**
+   - Usare `createFileRoute("/ciurma")` con `server.handlers.GET`.
+   - Restituire `Response.redirect("https://discord.gg/VThxtMSgRf", 302)`.
+   - Non serve componente React: la route esiste solo per fare il redirect.
 
-**File**: `src/routes/index.tsx`
+2. **Verificare in locale**
+   - Aprire `http://localhost:8080/ciurma` e controllare che il browser arrivi su Discord.
+   - Verificare nessun errore di build.
 
-1. In alto (vicino a `CHECKOUT_URL` / `PRICE`) aggiungere costanti riutilizzabili:
-   ```ts
-   const WHATSAPP_NUMBER = "393514734862";
-   const WHATSAPP_MESSAGE = "Ciao Eugenio, ho visto la pagina del corso \"Diventa Cloud Engineer in 90 Giorni\" e vorrei qualche chiarimento prima di iscrivermi.";
-   const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
-   ```
+3. **Pubblicare**
+   - Dopo il deploy, testare `https://capitancloud.it/ciurma`.
 
-2. Nel blocco pricing (righe ~1394-1407) sostituire il paragrafo "Hai dubbi se fa per te? … Prenota una chiamata gratuita …" con un blocco WhatsApp:
-   - testo introduttivo breve: "Hai dubbi? Scrivimi direttamente su WhatsApp."
-   - pulsante secondario a piena larghezza in **verde WhatsApp** (`#25D366`) con icona WhatsApp (SVG inline, non serve nuova dipendenza) + label "Scrivimi su WhatsApp";
-   - `href={WHATSAPP_URL}` + `target="_blank"` + `rel="noopener noreferrer"`;
-   - sotto, la riga già esistente resta con testo aggiornato: "Ti risponde **personalmente Eugenio** — niente venditori, niente call center. Di solito rispondo entro poche ore.";
-   - rimozione del placeholder `#book-call`.
+4. **Sitemap (non necessario)**
+   - Non aggiungere `/ciurma` al sitemap: è un redirect verso un URL esterno, non una pagina da indicizzare.
 
-3. Nessuna modifica al resto della pagina, alla sezione bonus (riga 1179 menziona una "chiamata personale con Eugenio" come parte del percorso: quella resta invariata, è un bonus del corso, non il CTA di contatto pre-acquisto).
+## Nota sul codice di stato
+- **302 Found** (consigliato): se in futuro vorrai usare `/ciurma` per altro, i motori di ricerca non lo considerano permanente.
+- **308 Permanent Redirect**: se vuoi che sia definitivo e passi tutto il "link juice" a Discord.
 
-## Cosa non faccio
-- Non aggiungo widget WhatsApp fluttuante globale (non richiesto).
-- Non installo librerie: uso un `<svg>` inline per l'icona WhatsApp per non dipendere da `lucide-react` (che non ha l'icona WhatsApp ufficiale).
-- Numero e messaggio finiscono in costanti in cima al file così puoi modificarli in un solo punto in futuro.
-
-Confermi e procedo?
+Di default propongo 302, ma posso mettere 308 se preferisci.
