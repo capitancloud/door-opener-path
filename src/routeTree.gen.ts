@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
+import { Route as CiurmaRouteImport } from './routes/ciurma'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -29,6 +30,11 @@ const CookiePolicyRoute = CookiePolicyRouteImport.update({
   path: '/cookie-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CiurmaRoute = CiurmaRouteImport.update({
+  id: '/ciurma',
+  path: '/ciurma',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -37,12 +43,14 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ciurma': typeof CiurmaRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ciurma': typeof CiurmaRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -50,20 +58,28 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ciurma': typeof CiurmaRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/cookie-policy' | '/privacy' | '/sitemap.xml'
+  fullPaths: '/' | '/ciurma' | '/cookie-policy' | '/privacy' | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cookie-policy' | '/privacy' | '/sitemap.xml'
-  id: '__root__' | '/' | '/cookie-policy' | '/privacy' | '/sitemap.xml'
+  to: '/' | '/ciurma' | '/cookie-policy' | '/privacy' | '/sitemap.xml'
+  id:
+    | '__root__'
+    | '/'
+    | '/ciurma'
+    | '/cookie-policy'
+    | '/privacy'
+    | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CiurmaRoute: typeof CiurmaRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -92,6 +108,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CookiePolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ciurma': {
+      id: '/ciurma'
+      path: '/ciurma'
+      fullPath: '/ciurma'
+      preLoaderRoute: typeof CiurmaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -104,6 +127,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CiurmaRoute: CiurmaRoute,
   CookiePolicyRoute: CookiePolicyRoute,
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
