@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Menu, X } from "lucide-react";
+import { useState } from "react";
 
 const CHECKOUT_URL = "https://studenti.accademiadelcloud.it/p/payment-page";
 const PRICE = "297€";
