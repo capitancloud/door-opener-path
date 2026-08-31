@@ -38,6 +38,7 @@ import {
   Code2,
   MonitorCog,
   Layers,
+  Menu,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
