@@ -40,9 +40,9 @@ export function SiteHeader() {
             className="inline-flex items-center gap-2 rounded-full bg-brand-blue px-4 py-2 text-sm font-bold text-white shadow-md transition hover:bg-brand-blue/90"
           >
             <Sparkles className="h-4 w-4" />
-            <span>Super Programmatore</span>
+            <span>Diventa un Programmatore con l'AI</span>
             <span className="rounded-full bg-brand-yellow px-2 py-0.5 text-xs font-extrabold text-brand-ink">
-              NUOVO
+              97 EUR
             </span>
           </a>
         </nav>
@@ -107,9 +107,9 @@ export function SiteHeader() {
               className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-blue px-4 py-3 text-center text-sm font-bold text-white shadow-md transition hover:bg-brand-blue/90"
             >
               <Sparkles className="h-4 w-4" />
-              <span>Diventa un Super Programmatore con l'AI</span>
+              <span>Diventa un Programmatore con l'AI</span>
               <span className="rounded-full bg-brand-yellow px-2 py-0.5 text-xs font-extrabold text-brand-ink">
-                NUOVO
+                97 EUR
               </span>
             </a>
             <Link
