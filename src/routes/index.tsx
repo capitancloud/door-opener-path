@@ -1477,6 +1477,10 @@ function PricingCTA() {
               </span>
               <span className="pb-3 text-lg text-brand-ink/60">una tantum</span>
             </div>
+            <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-brand-blue/10 px-4 py-1.5 text-sm font-bold text-brand-blue">
+              <Wallet className="h-4 w-4" />
+              Oppure in 3 comode rate da 99€/mese
+            </p>
             <p className="mt-4 text-sm font-semibold text-brand-orange">
               Prezzo di lancio riservato ai primi iscritti — poi torna a {FULL_PRICE}.
             </p>
