@@ -334,7 +334,7 @@ function Hero() {
         {/* VSL video */}
         <div className="mx-auto mt-12 aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-white/20 bg-brand-blue-deep/60 shadow-2xl backdrop-blur">
           <iframe
-            src="https://www.youtube.com/embed/jpOh21eS41A"
+            src="https://www.youtube.com/embed/gN3bYPYuiz4"
             title="Diventa Cloud Engineer in 90 Giorni"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
