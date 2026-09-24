@@ -1605,7 +1605,7 @@ function FAQ() {
     },
     {
       q: "Il costo degli esami è incluso nel prezzo?",
-      a: "No. Il prezzo copre il percorso completo, i corsi e tutti i materiali. Gli esami di certificazione si pagano separatamente ad AWS, ma ricevi un voucher con il 10% di sconto su ciascuno.",
+      a: "No. Il prezzo copre il percorso completo, i corsi e tutti i materiali. Gli esami di certificazione si pagano separatamente ad AWS, ma ricevi un voucher con il 10% di sconto su ciascuno. In totale, il costo per sostenere entrambi gli esami non supera i 150 euro: un prezzo super vantaggioso per due certificazioni di questo valore.",
       highlightYellow: true,
     },
     {
