@@ -30,7 +30,7 @@ const Bullets = ({ items }: { items: ReactNode[] }) => (
 );
 
 const fonti: [string, string, string][] = [
-  ["Glassdoor", "Junior cloud engineer: media 26.000 €, fascia tipica 24.300–29.500 €", "Pochi stipendi dichiarati, dato indicativo"],
+  ["Glassdoor", "Junior cloud engineer: fascia tipica 28.000–35.000 €", "Pochi stipendi dichiarati, dato indicativo"],
   ["Glassdoor", "Cloud engineer, tutti i livelli: media 34.000 €, fascia tipica 29.000–41.000 €", "Oltre 300 stipendi dichiarati"],
   ["Indeed", "Cloud engineer: media circa 35.700 €", "Basato su stipendi indicati dagli utenti"],
   ["TechCompenso", "Cloud engineer: media circa 44.100 €", "Community di professionisti tech, tende verso profili più esperti"],
@@ -113,11 +113,11 @@ export function ArticleBody() {
 
       <H2 id="netto">Dalla RAL al netto: quanto arriva in busta paga</H2>
       <div className="mt-6 flex flex-col items-center gap-4 rounded-3xl border border-brand-blue/20 bg-brand-blue/5 p-6 text-center sm:flex-row sm:justify-around">
-        <div><p className="text-xs font-extrabold uppercase text-brand-ink/60">RAL</p><p className="font-blog-display text-3xl font-extrabold">26–27k €</p></div>
+        <div><p className="text-xs font-extrabold uppercase text-brand-ink/60">RAL</p><p className="font-blog-display text-3xl font-extrabold">28–35k €</p></div>
         <span className="text-2xl text-brand-ink/40">→</span>
-        <div><p className="text-xs font-extrabold uppercase text-brand-ink/60">Netto al mese, circa</p><p className="flex items-center gap-2 font-blog-display text-3xl font-extrabold text-brand-blue"><Wallet className="h-7 w-7" />1.500–1.600 €</p></div>
+        <div><p className="text-xs font-extrabold uppercase text-brand-ink/60">Netto al mese, circa</p><p className="flex items-center gap-2 font-blog-display text-3xl font-extrabold text-brand-blue"><Wallet className="h-7 w-7" />1.600–1.900 €</p></div>
       </div>
-      <P>La RAL non è quello che ricevi ogni mese. Tolti contributi e tasse, e divisa per le mensilità previste dal contratto, una RAL di circa 26.000–27.000 € corrisponde indicativamente a circa 1.500–1.600 € netti al mese. Il netto esatto dipende da regione, detrazioni e numero di mensilità: per il tuo caso usa un calcolatore RAL-netto aggiornato.</P>
+      <P>La RAL non è quello che ricevi ogni mese. Tolti contributi e tasse, e divisa per le mensilità previste dal contratto, una RAL di circa 28.000–35.000 € corrisponde indicativamente a circa 1.600–1.900 € netti al mese. Il netto esatto dipende da regione, detrazioni e numero di mensilità: per il tuo caso usa un calcolatore RAL-netto aggiornato.</P>
       <div className="mt-8 rounded-3xl border border-brand-yellow/50 bg-brand-yellow/15 p-6 sm:p-8">
         <p className="font-blog-display text-2xl font-extrabold">Vuoi arrivare al primo lavoro da cloud engineer con un percorso guidato?</p>
         <p className="mt-3 text-lg leading-relaxed"><Home>Diventa Cloud Engineer in 90 giorni</Home> ti prepara alle certificazioni CLF-C02 e SAA-C03, con progetti per il portfolio e preparazione al colloquio.</p>
