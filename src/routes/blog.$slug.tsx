@@ -1,5 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, BookOpen, ChevronDown, Clock3, Sparkles } from "lucide-react";
+import { useEffect } from "react";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { BLOG_ARTICLES, getBlogArticle } from "@/lib/blog-data";
@@ -40,6 +41,10 @@ function BlogArticlePage() {
   const previous = currentIndex > 0 ? BLOG_ARTICLES[currentIndex - 1] : undefined;
   const next = currentIndex < BLOG_ARTICLES.length - 1 ? BLOG_ARTICLES[currentIndex + 1] : undefined;
   const related = article.related.map(getBlogArticle).filter((item): item is NonNullable<typeof item> => Boolean(item));
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [article.slug]);
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-background font-blog-body text-brand-ink">

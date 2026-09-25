@@ -51,7 +51,13 @@ export const Route = createFileRoute("/")({
         content:
           "Diventa Cloud Engineer in 90 giorni con Capitan Cloud: percorso completo, 2 certificazioni AWS e Protocollo Subito Assunto!™. 297€ una tantum.",
       },
+      { property: "og:title", content: "Diventa Cloud Engineer in 90 Giorni — Capitan Cloud" },
+      { property: "og:description", content: "Percorso completo con due certificazioni AWS, otto percorsi integrativi e preparazione al colloquio." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://capitancloud.it/" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://capitancloud.it/" }],
   }),
   component: VslPage,
 });
