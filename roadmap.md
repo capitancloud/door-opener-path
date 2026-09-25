@@ -22,4 +22,5 @@
 - [x] Articolo 13 "Certificazione AWS serve" pubblicato
 - [x] Articolo 14 "IaaS, PaaS e SaaS" pubblicato
 - [x] Articolo 15 "AWS Skill Builder" pubblicato
+- [x] Articolo 16 "Terraform" pubblicato
 - [ ] Articoli 6–30: in attesa dei testi dall'utente

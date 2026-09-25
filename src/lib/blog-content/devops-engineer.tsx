@@ -176,7 +176,7 @@ export function ArticleBody() {
       <Bullets items={[
         <>partire dalle basi di Linux, reti e Git, se non le hai già;</>,
         <>farti costruire pipeline CI/CD reali, non solo mostrarle in slide;</>,
-        <>insegnare Terraform, Docker e Kubernetes con laboratori pratici;</>,
+        <>insegnare <A slug="terraform">Terraform</A>, Docker e Kubernetes con laboratori pratici;</>,
         <>lavorare su una piattaforma cloud vera, come AWS;</>,
         <>includere almeno un progetto completo da mettere nel portfolio.</>,
       ]} />
