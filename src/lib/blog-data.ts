@@ -38,7 +38,7 @@ const articleSeeds: Array<Omit<BlogArticle, "published" | "readingTime" | "relat
   { number: 15, slug: "aws-skill-builder", title: "AWS Skill Builder e corsi AWS gratis: cosa trovi e dove non bastano", category: "Certificazioni AWS", description: "Cosa offre AWS Skill Builder gratis e a pagamento, gli altri corsi AWS gratuiti e dove le risorse gratuite non bastano per certificazione e lavoro." },
   { number: 16, slug: "terraform", title: "Terraform: cos'è e come si usa, guida per principianti (2026)", category: "Guide pratiche", description: "Terraform spiegato da zero: cos'è, come funziona, i comandi init, plan e apply, un esempio pratico su AWS, lo state file e gli errori da evitare." },
   { number: 17, slug: "git-tutorial", title: "Git tutorial in italiano: guida pratica da zero (2026)", category: "Guide pratiche", description: "Git tutorial in italiano per principianti: installazione, primi comandi, commit, branch, GitHub, .gitignore ed errori da evitare. Con esempi pratici." },
-  { number: 18, slug: "aws-iam", title: "AWS IAM spiegato semplice: utenti, ruoli e policy", category: "Guide pratiche", description: "Identità e permessi AWS spiegati con esempi pratici per chi parte da zero." },
+  { number: 18, slug: "aws-iam", title: "AWS IAM spiegato semplice: utenti, ruoli e policy (2026)", category: "Guide pratiche", description: "AWS IAM spiegato semplice: utenti, gruppi, ruoli e policy, un esempio di policy JSON, come AWS valuta i permessi, best practice ed errori da evitare." },
   { number: 19, slug: "python-per-principianti", title: "Python per principianti: da dove iniziare se parti da zero", category: "Guide pratiche", description: "Una direzione chiara per muovere i primi passi con Python senza disperdersi." },
   { number: 20, slug: "cv-senza-esperienza", title: "CV senza esperienza: come scriverlo (con esempio per il settore IT)", category: "Cambio lavoro", description: "Come valorizzare progetti, competenze e formazione quando manca l'esperienza nel ruolo." },
   { number: 21, slug: "lavori-ben-pagati-senza-diploma", title: "Lavori ben pagati senza diploma: le opzioni reali", category: "Cambio lavoro", description: "Le opzioni concrete per costruire una professionalità richiesta anche senza diploma." },
@@ -60,12 +60,13 @@ const relatedByCategory = (article: (typeof articleSeeds)[number]) =>
     .map((candidate) => candidate.slug);
 
 // slug -> minuti di lettura
-const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10, "voglio-cambiare-lavoro": 9, "come-diventare-cloud-engineer": 12, "certificazioni-aws": 11, "aws-cloud-practitioner": 10, "aws-solutions-architect-associate": 12, "devops-engineer": 10, "corso-aws": 8, "aws-cos-e": 9, "cloud-computing-cos-e": 10, "cambiare-lavoro-mentre-lavori": 8, "lavoro-da-remoto-senza-esperienza": 9, "certificazione-aws-serve": 7, "iaas-paas-saas": 9, "aws-skill-builder": 9, "terraform": 11, "git-tutorial": 12 };
+const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10, "voglio-cambiare-lavoro": 9, "come-diventare-cloud-engineer": 12, "certificazioni-aws": 11, "aws-cloud-practitioner": 10, "aws-solutions-architect-associate": 12, "devops-engineer": 10, "corso-aws": 8, "aws-cos-e": 9, "cloud-computing-cos-e": 10, "cambiare-lavoro-mentre-lavori": 8, "lavoro-da-remoto-senza-esperienza": 9, "certificazione-aws-serve": 7, "iaas-paas-saas": 9, "aws-skill-builder": 9, "terraform": 11, "git-tutorial": 12, "aws-iam": 11 };
 const RELATED_OVERRIDES: Record<string, string[]> = {
   "lavori-ben-pagati-senza-laurea": ["come-diventare-cloud-engineer", "cambiare-lavoro-mentre-lavori", "certificazioni-aws"],
   "come-diventare-cloud-engineer": ["certificazioni-aws", "stipendio-cloud-engineer", "cloud-engineer-cosa-fa"],
   "voglio-cambiare-lavoro": ["lavori-ben-pagati-senza-laurea", "cambiare-lavoro-mentre-lavori", "lavori-per-cambiare-vita"],
   "certificazioni-aws": ["come-diventare-cloud-engineer", "aws-cloud-practitioner", "certificazione-aws-serve"],
+  "aws-iam": ["aws-cloud-practitioner", "aws-solutions-architect-associate", "aws-cos-e"],
   "git-tutorial": ["terraform", "devops-engineer", "come-diventare-cloud-engineer"],
   "terraform": ["devops-engineer", "come-diventare-cloud-engineer", "iaas-paas-saas"],
   "aws-skill-builder": ["corso-aws", "aws-cloud-practitioner", "aws-solutions-architect-associate"],
