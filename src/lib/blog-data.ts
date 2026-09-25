@@ -40,7 +40,7 @@ const articleSeeds: Array<Omit<BlogArticle, "published" | "readingTime" | "relat
   { number: 17, slug: "git-tutorial", title: "Git tutorial in italiano: guida pratica da zero (2026)", category: "Guide pratiche", description: "Git tutorial in italiano per principianti: installazione, primi comandi, commit, branch, GitHub, .gitignore ed errori da evitare. Con esempi pratici." },
   { number: 18, slug: "aws-iam", title: "AWS IAM spiegato semplice: utenti, ruoli e policy (2026)", category: "Guide pratiche", description: "AWS IAM spiegato semplice: utenti, gruppi, ruoli e policy, un esempio di policy JSON, come AWS valuta i permessi, best practice ed errori da evitare." },
   { number: 19, slug: "python-per-principianti", title: "Python per principianti: da dove iniziare se parti da zero (2026)", category: "Guide pratiche", description: "Python per principianti: cosa installare, il primo programma, i 6 concetti base con esempi, un mini progetto e un piano di studio in 4 settimane." },
-  { number: 20, slug: "cv-senza-esperienza", title: "CV senza esperienza: come scriverlo (con esempio per il settore IT)", category: "Cambio lavoro", description: "Come valorizzare progetti, competenze e formazione quando manca l'esperienza nel ruolo." },
+  { number: 20, slug: "cv-senza-esperienza", title: "CV senza esperienza: come scriverlo (con esempio per il settore IT)", seoTitle: "CV senza esperienza: come scriverlo, con esempio per l\'IT (2026)", category: "Cambio lavoro", description: "Come scrivere un CV senza esperienza: struttura, cosa scrivere in ogni sezione, un esempio completo per il settore IT ed errori da evitare." },
   { number: 21, slug: "lavori-ben-pagati-senza-diploma", title: "Lavori ben pagati senza diploma: le opzioni reali", category: "Cambio lavoro", description: "Le opzioni concrete per costruire una professionalità richiesta anche senza diploma." },
   { number: 22, slug: "stipendio-cloud-engineer", title: "Stipendio cloud engineer in Italia: quanto si guadagna davvero", category: "Carriera Cloud", description: "Retribuzioni, esperienza e fattori che influenzano lo stipendio di un cloud engineer." },
   { number: 23, slug: "docker", title: "Docker spiegato da zero: cos'è e perché lo usano tutti", category: "Guide pratiche", description: "Container e immagini spiegati in modo intuitivo, con il loro ruolo nel lavoro cloud." },
@@ -60,12 +60,13 @@ const relatedByCategory = (article: (typeof articleSeeds)[number]) =>
     .map((candidate) => candidate.slug);
 
 // slug -> minuti di lettura
-const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10, "voglio-cambiare-lavoro": 9, "come-diventare-cloud-engineer": 12, "certificazioni-aws": 11, "aws-cloud-practitioner": 10, "aws-solutions-architect-associate": 12, "devops-engineer": 10, "corso-aws": 8, "aws-cos-e": 9, "cloud-computing-cos-e": 10, "cambiare-lavoro-mentre-lavori": 8, "lavoro-da-remoto-senza-esperienza": 9, "certificazione-aws-serve": 7, "iaas-paas-saas": 9, "aws-skill-builder": 9, "terraform": 11, "git-tutorial": 12, "aws-iam": 11, "python-per-principianti": 11 };
+const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10, "voglio-cambiare-lavoro": 9, "come-diventare-cloud-engineer": 12, "certificazioni-aws": 11, "aws-cloud-practitioner": 10, "aws-solutions-architect-associate": 12, "devops-engineer": 10, "corso-aws": 8, "aws-cos-e": 9, "cloud-computing-cos-e": 10, "cambiare-lavoro-mentre-lavori": 8, "lavoro-da-remoto-senza-esperienza": 9, "certificazione-aws-serve": 7, "iaas-paas-saas": 9, "aws-skill-builder": 9, "terraform": 11, "git-tutorial": 12, "aws-iam": 11, "python-per-principianti": 11, "cv-senza-esperienza": 9 };
 const RELATED_OVERRIDES: Record<string, string[]> = {
   "lavori-ben-pagati-senza-laurea": ["come-diventare-cloud-engineer", "cambiare-lavoro-mentre-lavori", "certificazioni-aws"],
   "come-diventare-cloud-engineer": ["certificazioni-aws", "stipendio-cloud-engineer", "cloud-engineer-cosa-fa"],
   "voglio-cambiare-lavoro": ["lavori-ben-pagati-senza-laurea", "cambiare-lavoro-mentre-lavori", "lavori-per-cambiare-vita"],
   "certificazioni-aws": ["come-diventare-cloud-engineer", "aws-cloud-practitioner", "certificazione-aws-serve"],
+  "cv-senza-esperienza": ["lavoro-da-remoto-senza-esperienza", "come-diventare-cloud-engineer", "certificazione-aws-serve"],
   "python-per-principianti": ["git-tutorial", "come-diventare-cloud-engineer", "devops-engineer"],
   "aws-iam": ["aws-cloud-practitioner", "aws-solutions-architect-associate", "aws-cos-e"],
   "git-tutorial": ["terraform", "devops-engineer", "come-diventare-cloud-engineer"],

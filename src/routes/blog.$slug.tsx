@@ -23,6 +23,7 @@ import * as terraform from "@/lib/blog-content/terraform";
 import * as gitTutorial from "@/lib/blog-content/git-tutorial";
 import * as awsIam from "@/lib/blog-content/aws-iam";
 import * as pythonPrinc from "@/lib/blog-content/python-per-principianti";
+import * as cvSenzaEsp from "@/lib/blog-content/cv-senza-esperienza";
 
 const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBody: () => React.ReactElement }> = {
   "lavori-ben-pagati-senza-laurea": lavoriSenzaLaurea,
@@ -44,6 +45,7 @@ const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBod
   "git-tutorial": gitTutorial,
   "aws-iam": awsIam,
   "python-per-principianti": pythonPrinc,
+  "cv-senza-esperienza": cvSenzaEsp,
 };
 
 const SITE_URL = "https://capitancloud.it";
