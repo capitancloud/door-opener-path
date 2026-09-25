@@ -51,7 +51,13 @@ export const Route = createFileRoute("/")({
         content:
           "Diventa Cloud Engineer in 90 giorni con Capitan Cloud: percorso completo, 2 certificazioni AWS e Protocollo Subito Assunto!™. 297€ una tantum.",
       },
+      { property: "og:title", content: "Diventa Cloud Engineer in 90 Giorni — Capitan Cloud" },
+      { property: "og:description", content: "Percorso completo con due certificazioni AWS, otto percorsi integrativi e preparazione al colloquio." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://capitancloud.it/" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://capitancloud.it/" }],
   }),
   component: VslPage,
 });
@@ -149,6 +155,9 @@ function Nav() {
           <a href="#faq" className="font-semibold text-brand-ink/80 hover:text-brand-blue">
             FAQ
           </a>
+          <Link to="/blog" className="font-semibold text-brand-ink/80 hover:text-brand-blue">
+            Blog
+          </Link>
           <a
             href="https://superprogrammatore.it/"
             target="_blank"
@@ -212,6 +221,13 @@ function Nav() {
             >
               FAQ
             </a>
+            <Link
+              to="/blog"
+              onClick={() => setMobileOpen(false)}
+              className="rounded-lg px-3 py-2 font-semibold text-brand-ink/80 hover:bg-black/5 hover:text-brand-blue"
+            >
+              Blog
+            </Link>
             <a
               href="https://superprogrammatore.it/"
               target="_blank"
@@ -1771,7 +1787,10 @@ function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-sm sm:flex-row">
         <p className="font-display text-lg font-extrabold text-white">Capitan Cloud</p>
         <p>© {new Date().getFullYear()} Capitan Cloud — Eugenio Fontana. Tutti i diritti riservati.</p>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link to="/blog" className="hover:text-white">
+            Blog
+          </Link>
           <Link to="/privacy" className="hover:text-white">
             Privacy
           </Link>

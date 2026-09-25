@@ -18,6 +18,8 @@ export const Route = createFileRoute("/cookie-policy")({
         content: "Cookie policy di Capitan Cloud — Eugenio Fontana.",
       },
       { property: "og:url", content: "/cookie-policy" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { name: "robots", content: "index,follow" },
     ],
     links: [{ rel: "canonical", href: "/cookie-policy" }],

@@ -18,6 +18,8 @@ export const Route = createFileRoute("/privacy")({
         content: "Informativa privacy di Capitan Cloud — Eugenio Fontana.",
       },
       { property: "og:url", content: "/privacy" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { name: "robots", content: "index,follow" },
     ],
     links: [{ rel: "canonical", href: "/privacy" }],

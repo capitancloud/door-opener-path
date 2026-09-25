@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://door-opener-path.lovable.app/sitemap.xml
+Sitemap: https://capitancloud.it/sitemap.xml
