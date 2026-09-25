@@ -1,4 +1,4 @@
-import { Check, HelpCircle, Lightbulb, Sparkles } from "lucide-react";
+import { HelpCircle, Lightbulb, Sparkles } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
@@ -160,7 +160,6 @@ export function ArticleBody() {
         <p className="mt-3 text-lg">Fai il quiz gratuito di 2 minuti prima di investire tempo o soldi.</p>
         <a href={QUIZ} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex rounded-xl bg-brand-yellow px-5 py-3 font-extrabold text-brand-ink">Fai il quiz gratuito</a>
       </div>
-      <p className="sr-only"><Check /></p>
     </div>
   );
 }
