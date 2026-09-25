@@ -18,4 +18,5 @@
 - [x] Articolo 9 "AWS: cos'è e come funziona" pubblicato
 - [x] Articolo 10 "Cloud computing: cos'è" pubblicato
 - [x] Articolo 11 "Cambiare lavoro mentre lavori" pubblicato
+- [x] Articolo 12 "Lavoro da remoto senza esperienza" pubblicato
 - [ ] Articoli 6–30: in attesa dei testi dall'utente
