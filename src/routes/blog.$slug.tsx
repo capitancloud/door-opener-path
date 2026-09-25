@@ -15,6 +15,7 @@ import * as corsoAws from "@/lib/blog-content/corso-aws";
 import * as awsCosE from "@/lib/blog-content/aws-cos-e";
 import * as cloudCosE from "@/lib/blog-content/cloud-computing-cos-e";
 import * as cambiareMentre from "@/lib/blog-content/cambiare-lavoro-mentre-lavori";
+import * as remotoSenzaEsp from "@/lib/blog-content/lavoro-da-remoto-senza-esperienza";
 
 const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBody: () => React.ReactElement }> = {
   "lavori-ben-pagati-senza-laurea": lavoriSenzaLaurea,
@@ -28,6 +29,7 @@ const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBod
   "aws-cos-e": awsCosE,
   "cloud-computing-cos-e": cloudCosE,
   "cambiare-lavoro-mentre-lavori": cambiareMentre,
+  "lavoro-da-remoto-senza-esperienza": remotoSenzaEsp,
 };
 
 const SITE_URL = "https://capitancloud.it";
