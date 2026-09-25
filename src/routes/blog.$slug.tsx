@@ -9,6 +9,7 @@ import * as cloudEngineer from "@/lib/blog-content/come-diventare-cloud-engineer
 import * as lavoriSenzaLaurea from "@/lib/blog-content/lavori-ben-pagati-senza-laurea";
 import * as certificazioniAws from "@/lib/blog-content/certificazioni-aws";
 import * as awsCloudPractitioner from "@/lib/blog-content/aws-cloud-practitioner";
+import * as awsSaa from "@/lib/blog-content/aws-solutions-architect-associate";
 
 const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBody: () => React.ReactElement }> = {
   "lavori-ben-pagati-senza-laurea": lavoriSenzaLaurea,
@@ -16,6 +17,7 @@ const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBod
   "come-diventare-cloud-engineer": cloudEngineer,
   "certificazioni-aws": certificazioniAws,
   "aws-cloud-practitioner": awsCloudPractitioner,
+  "aws-solutions-architect-associate": awsSaa,
 };
 
 const SITE_URL = "https://capitancloud.it";
