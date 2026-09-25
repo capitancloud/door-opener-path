@@ -33,6 +33,9 @@ export function SiteHeader() {
           >
             FAQ
           </Link>
+          <Link to="/blog" className="font-semibold text-brand-ink/80 hover:text-brand-blue">
+            Blog
+          </Link>
           <a
             href="https://superprogrammatore.it/"
             target="_blank"
@@ -99,6 +102,13 @@ export function SiteHeader() {
             >
               FAQ
             </Link>
+            <Link
+              to="/blog"
+              onClick={() => setMobileOpen(false)}
+              className="rounded-lg px-3 py-2 font-semibold text-brand-ink/80 hover:bg-black/5 hover:text-brand-blue"
+            >
+              Blog
+            </Link>
             <a
               href="https://superprogrammatore.it/"
               target="_blank"
@@ -136,7 +146,10 @@ export function SiteFooter() {
         <p>
           © {new Date().getFullYear()} Capitan Cloud — Eugenio Fontana. Tutti i diritti riservati.
         </p>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link to="/blog" className="hover:text-white">
+            Blog
+          </Link>
           <Link to="/privacy" className="hover:text-white">
             Privacy
           </Link>

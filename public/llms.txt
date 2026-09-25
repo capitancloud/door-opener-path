@@ -7,5 +7,6 @@ Capitan Cloud è un percorso formativo online (297€ una tantum) pensato per po
 ## Pages
 
 - [Home](/): Presentazione del percorso, prezzo, FAQ, video di introduzione e link al quiz gratuito.
+- [Blog](/blog/): Raccolta di 30 guide su cloud computing, AWS, certificazioni e cambio di carriera. Gli articoli completi vengono aggiunti progressivamente.
 - [Privacy Policy](/privacy): Informativa sul trattamento dei dati personali.
 - [Cookie Policy](/cookie-policy): Informativa sull'uso dei cookie.
