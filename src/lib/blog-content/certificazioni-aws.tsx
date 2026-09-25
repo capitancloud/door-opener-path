@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { AlertTriangle, BadgeCheck, Check, GraduationCap, HelpCircle, Lightbulb, Sparkles, Wallet } from "lucide-react";
+import { AlertTriangle, BadgeCheck, Check, GraduationCap, HelpCircle, Lightbulb, Sparkles } from "lucide-react";
 import type { ReactNode } from "react";
 
 const QUIZ = "https://quiz.capitancloud.it/";
