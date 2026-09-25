@@ -20,6 +20,7 @@ import * as certServe from "@/lib/blog-content/certificazione-aws-serve";
 import * as iaasPaasSaas from "@/lib/blog-content/iaas-paas-saas";
 import * as skillBuilder from "@/lib/blog-content/aws-skill-builder";
 import * as terraform from "@/lib/blog-content/terraform";
+import * as gitTutorial from "@/lib/blog-content/git-tutorial";
 
 const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBody: () => React.ReactElement }> = {
   "lavori-ben-pagati-senza-laurea": lavoriSenzaLaurea,
@@ -38,6 +39,7 @@ const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBod
   "iaas-paas-saas": iaasPaasSaas,
   "aws-skill-builder": skillBuilder,
   "terraform": terraform,
+  "git-tutorial": gitTutorial,
 };
 
 const SITE_URL = "https://capitancloud.it";
