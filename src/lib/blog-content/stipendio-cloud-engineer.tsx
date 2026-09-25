@@ -30,7 +30,7 @@ const Bullets = ({ items }: { items: ReactNode[] }) => (
 );
 
 const fonti: [string, string, string][] = [
-  ["Glassdoor", "Junior cloud engineer: media 26.000 €, fascia tipica 24.300–29.500 €", "Pochi stipendi dichiarati, dato indicativo"],
+  ["Glassdoor", "Junior cloud engineer: fascia tipica 28.000–35.000 €", "Pochi stipendi dichiarati, dato indicativo"],
   ["Glassdoor", "Cloud engineer, tutti i livelli: media 34.000 €, fascia tipica 29.000–41.000 €", "Oltre 300 stipendi dichiarati"],
   ["Indeed", "Cloud engineer: media circa 35.700 €", "Basato su stipendi indicati dagli utenti"],
   ["TechCompenso", "Cloud engineer: media circa 44.100 €", "Community di professionisti tech, tende verso profili più esperti"],
@@ -49,18 +49,18 @@ export function ArticleBody() {
     <div>
       <div className="rounded-3xl border border-brand-blue/15 bg-secondary p-6 sm:p-8">
         <p className="flex items-center gap-2 text-xs font-extrabold uppercase text-brand-blue"><Lightbulb className="h-4 w-4" /> In breve</p>
-        <p className="mt-3 text-lg font-semibold leading-relaxed">Un cloud engineer junior parte indicativamente da 24.000–30.000 € lordi l'anno. La media su tutti i livelli è tra circa 34.000 e 36.000 €, e i più esperti superano i 40.000–50.000 €.</p>
+        <p className="mt-3 text-lg font-semibold leading-relaxed">Un cloud engineer junior parte indicativamente da 28.000–35.000 € lordi l'anno. La media su tutti i livelli è tra circa 34.000 e 36.000 €, e i più esperti superano i 40.000–50.000 €.</p>
       </div>
       <div className="mt-6 grid gap-3 sm:grid-cols-3">
         {[
-          ["Junior", "24–30k €"],
+          ["Junior", "28–35k €"],
           ["Media, tutti i livelli", "34–36k €"],
           ["Profili esperti", "40–50k+ €"],
         ].map(([l, v]) => (
           <div key={l} className="rounded-2xl border border-border p-5 text-center"><p className="text-xs font-extrabold uppercase text-brand-ink/60">{l}</p><p className="mt-2 font-blog-display text-3xl font-extrabold text-brand-blue">{v}</p><p className="mt-1 text-xs text-brand-ink/60">RAL annua</p></div>
         ))}
       </div>
-      <P>Quanto guadagna un cloud engineer in Italia? In sintesi: un cloud engineer junior parte indicativamente da 24.000–30.000 € lordi l'anno, mentre considerando tutti i livelli di esperienza la media si colloca tra circa 34.000 e 36.000 €, con i profili più esperti che superano i 40.000–50.000 €.</P>
+      <P>Quanto guadagna un cloud engineer in Italia? In sintesi: un cloud engineer junior parte indicativamente da 28.000–35.000 € lordi l'anno, mentre considerando tutti i livelli di esperienza la media si colloca tra circa 34.000 e 36.000 €, con i profili più esperti che superano i 40.000–50.000 €.</P>
       <P>In questa guida trovi i dati aggiornati al 2026 dalle principali fonti, perché le cifre cambiano da una fonte all'altra, da cosa dipende lo stipendio di un cloud engineer e come farlo crescere.</P>
 
       <H2 id="dati">Stipendio cloud engineer: i dati 2026</H2>
@@ -80,13 +80,13 @@ export function ArticleBody() {
       </div>
 
       <H2 id="junior">Quanto guadagna un cloud engineer junior</H2>
-      <P>Per il primo lavoro, un riferimento realistico è <strong>24.000–30.000 € di RAL</strong>. È una cifra in linea con altri ruoli tecnici junior, come lo sviluppatore software, e a volte leggermente superiore.</P>
+      <P>Per il primo lavoro, un riferimento realistico è <strong>28.000–35.000 € di RAL</strong>. È una cifra in linea con altri ruoli tecnici junior, come lo sviluppatore software, e a volte leggermente superiore.</P>
       <P>Il punto di forza del cloud non è tanto lo stipendio di partenza, quanto la velocità di crescita: con qualche anno di esperienza e le competenze giuste, lo stipendio sale più in fretta rispetto a molti altri settori. Se stai partendo da zero, trovi il percorso nella guida su <A slug="come-diventare-cloud-engineer">come diventare cloud engineer</A>.</P>
 
       <H2 id="crescita">Come cresce lo stipendio con l'esperienza</H2>
       <div className="mt-6 space-y-3">
         {[
-          ["Junior (0–2 anni)", "Indicativamente 24.000–30.000 €", "w-2/5"],
+          ["Junior (0–2 anni)", "Indicativamente 28.000–35.000 €", "w-2/5"],
           ["Con qualche anno di esperienza", "La fascia più comune è tra 29.000 e 41.000 €", "w-3/5"],
           ["Profili esperti e specializzati", "Oltre i 40.000–50.000 €, con cifre più alte per architetti cloud, specialisti di sicurezza e ruoli di responsabilità", "w-full"],
         ].map(([t, d, w]) => (
@@ -113,11 +113,11 @@ export function ArticleBody() {
 
       <H2 id="netto">Dalla RAL al netto: quanto arriva in busta paga</H2>
       <div className="mt-6 flex flex-col items-center gap-4 rounded-3xl border border-brand-blue/20 bg-brand-blue/5 p-6 text-center sm:flex-row sm:justify-around">
-        <div><p className="text-xs font-extrabold uppercase text-brand-ink/60">RAL</p><p className="font-blog-display text-3xl font-extrabold">26–27k €</p></div>
+        <div><p className="text-xs font-extrabold uppercase text-brand-ink/60">RAL</p><p className="font-blog-display text-3xl font-extrabold">28–35k €</p></div>
         <span className="text-2xl text-brand-ink/40">→</span>
-        <div><p className="text-xs font-extrabold uppercase text-brand-ink/60">Netto al mese, circa</p><p className="flex items-center gap-2 font-blog-display text-3xl font-extrabold text-brand-blue"><Wallet className="h-7 w-7" />1.500–1.600 €</p></div>
+        <div><p className="text-xs font-extrabold uppercase text-brand-ink/60">Netto al mese, circa</p><p className="flex items-center gap-2 font-blog-display text-3xl font-extrabold text-brand-blue"><Wallet className="h-7 w-7" />1.600–1.900 €</p></div>
       </div>
-      <P>La RAL non è quello che ricevi ogni mese. Tolti contributi e tasse, e divisa per le mensilità previste dal contratto, una RAL di circa 26.000–27.000 € corrisponde indicativamente a circa 1.500–1.600 € netti al mese. Il netto esatto dipende da regione, detrazioni e numero di mensilità: per il tuo caso usa un calcolatore RAL-netto aggiornato.</P>
+      <P>La RAL non è quello che ricevi ogni mese. Tolti contributi e tasse, e divisa per le mensilità previste dal contratto, una RAL di circa 28.000–35.000 € corrisponde indicativamente a circa 1.600–1.900 € netti al mese. Il netto esatto dipende da regione, detrazioni e numero di mensilità: per il tuo caso usa un calcolatore RAL-netto aggiornato.</P>
       <div className="mt-8 rounded-3xl border border-brand-yellow/50 bg-brand-yellow/15 p-6 sm:p-8">
         <p className="font-blog-display text-2xl font-extrabold">Vuoi arrivare al primo lavoro da cloud engineer con un percorso guidato?</p>
         <p className="mt-3 text-lg leading-relaxed"><Home>Diventa Cloud Engineer in 90 giorni</Home> ti prepara alle certificazioni CLF-C02 e SAA-C03, con progetti per il portfolio e preparazione al colloquio.</p>
@@ -147,7 +147,7 @@ export function ArticleBody() {
       <H2 id="sintesi">In sintesi</H2>
       <ul className="mt-5 space-y-2">
         {[
-          "Un cloud engineer junior in Italia parte indicativamente da 24.000–30.000 € di RAL.",
+          "Un cloud engineer junior in Italia parte indicativamente da 28.000–35.000 € di RAL.",
           "Considerando tutti i livelli, la media si colloca tra circa 34.000 e 36.000 €, con i più esperti oltre i 40.000–50.000 €.",
           "Lo stipendio dipende da città, tipo di azienda, certificazioni, specializzazione e inglese.",
           "Il vero punto di forza del ruolo è la velocità di crescita.",
