@@ -79,7 +79,7 @@ const faqs: { q: string; a: ReactNode }[] = [
   { q: "Serve saper programmare per diventare cloud engineer?", a: "Non all'inizio. Ti servirà scrivere script di automazione in Python o Bash e file di configurazione, ma non devi essere uno sviluppatore. Le basi si imparano lungo il percorso." },
   { q: "Meglio iniziare con AWS o con Azure?", a: "Per la maggior parte delle persone AWS, perché è la piattaforma più diffusa. Azure è una buona scelta se nella tua zona ci sono molte aziende che lavorano con prodotti Microsoft." },
   { q: "Si può diventare cloud engineer a 40 anni?", a: "Sì. Nel settore contano competenze e affidabilità più dell'età. Chi cambia carriera da adulto porta anche esperienza di lavoro, gestione dei problemi e maturità, che sono qualità apprezzate." },
-  { q: "Serve sapere l'inglese?", a: "Aiuta molto: gli esami AWS sono disponibili anche in altre lingue, ma documentazione e strumenti sono in inglese. Basta un livello di lettura tecnica, che migliora con la pratica." },
+  { q: "Serve sapere l'inglese?", a: "Sì, un po': gli esami AWS si sostengono in inglese, così come la documentazione e gli strumenti. Basta un livello di lettura tecnica, che migliora con la pratica." },
   { q: "Che differenza c'è tra cloud engineer e DevOps engineer?", a: <>I due ruoli si sovrappongono molto. Il cloud engineer si concentra sull'infrastruttura, il DevOps engineer sui processi di sviluppo e rilascio. Trovi il confronto completo nella <A slug="devops-engineer">guida sul DevOps engineer</A>.</> },
 ];
 
