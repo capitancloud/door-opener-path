@@ -26,7 +26,7 @@ const articleSeeds: Array<Omit<BlogArticle, "published" | "readingTime" | "relat
   { number: 3, slug: "come-diventare-cloud-engineer", title: "Come diventare cloud engineer nel 2026 (anche senza laurea)", category: "Carriera Cloud", description: "La roadmap completa per diventare cloud engineer partendo da zero: competenze, certificazioni AWS, tempi realistici, progetti per il portfolio e primo lavoro." },
   { number: 4, slug: "certificazioni-aws", title: "Certificazioni AWS: quali sono, quanto costano e da quale partire", category: "Certificazioni AWS", description: "Tutte le certificazioni AWS aggiornate al 2026: livelli, costi degli esami, novità e da quale certificazione partire in base al tuo profilo." },
   { number: 5, slug: "aws-cloud-practitioner", title: "AWS Cloud Practitioner (CLF-C02): guida completa all'esame 2026", category: "Certificazioni AWS", description: "Tutto sull'esame AWS Cloud Practitioner CLF-C02: domini, servizi da studiare, domande, costo, esame in inglese e un piano di studio in 4 settimane." },
-  { number: 6, slug: "aws-solutions-architect-associate", title: "AWS Solutions Architect Associate (SAA-C03): guida completa", category: "Certificazioni AWS", description: "Cosa studiare e come prepararsi alla certificazione AWS Solutions Architect Associate." },
+  { number: 6, slug: "aws-solutions-architect-associate", title: "AWS Solutions Architect Associate (SAA-C03): guida completa all'esame 2026", seoTitle: "AWS Solutions Architect Associate (SAA-C03): guida all'esame 2026", category: "Certificazioni AWS", description: "Tutto sull'esame AWS Solutions Architect Associate SAA-C03: domini e pesi, servizi da studiare, domande di scenario, esame in inglese e piano di studio in 8 settimane." },
   { number: 7, slug: "devops-engineer", title: "DevOps engineer: cos'è, cosa fa e differenza con il cloud engineer", category: "Carriera Cloud", description: "Ruoli, attività e differenze spiegate in modo semplice per scegliere la direzione giusta." },
   { number: 8, slug: "corso-aws", title: "Corso AWS in italiano: come scegliere quello giusto", category: "Certificazioni AWS", description: "I criteri per valutare un corso AWS e capire se porta davvero a competenze spendibili." },
   { number: 9, slug: "aws-cos-e", title: "AWS: cos'è e come funziona, spiegato semplice", category: "Guide pratiche", description: "Una spiegazione accessibile di Amazon Web Services, dei suoi servizi e del suo utilizzo." },
@@ -60,12 +60,13 @@ const relatedByCategory = (article: (typeof articleSeeds)[number]) =>
     .map((candidate) => candidate.slug);
 
 // slug -> minuti di lettura
-const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10, "voglio-cambiare-lavoro": 9, "come-diventare-cloud-engineer": 12, "certificazioni-aws": 11, "aws-cloud-practitioner": 10 };
+const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10, "voglio-cambiare-lavoro": 9, "come-diventare-cloud-engineer": 12, "certificazioni-aws": 11, "aws-cloud-practitioner": 10, "aws-solutions-architect-associate": 12 };
 const RELATED_OVERRIDES: Record<string, string[]> = {
   "lavori-ben-pagati-senza-laurea": ["come-diventare-cloud-engineer", "cambiare-lavoro-mentre-lavori", "certificazioni-aws"],
   "come-diventare-cloud-engineer": ["certificazioni-aws", "stipendio-cloud-engineer", "cloud-engineer-cosa-fa"],
   "voglio-cambiare-lavoro": ["lavori-ben-pagati-senza-laurea", "cambiare-lavoro-mentre-lavori", "lavori-per-cambiare-vita"],
   "certificazioni-aws": ["come-diventare-cloud-engineer", "aws-cloud-practitioner", "certificazione-aws-serve"],
+  "aws-solutions-architect-associate": ["aws-cloud-practitioner", "certificazioni-aws", "come-diventare-cloud-engineer"],
   "aws-cloud-practitioner": ["certificazioni-aws", "aws-solutions-architect-associate", "certificazione-aws-serve"],
 };
 
