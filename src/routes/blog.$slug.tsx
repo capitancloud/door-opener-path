@@ -4,10 +4,12 @@ import { useEffect } from "react";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { BLOG_ARTICLES, getBlogArticle } from "@/lib/blog-data";
+import * as voglioCambiare from "@/lib/blog-content/voglio-cambiare-lavoro";
 import * as lavoriSenzaLaurea from "@/lib/blog-content/lavori-ben-pagati-senza-laurea";
 
 const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBody: () => React.ReactElement }> = {
   "lavori-ben-pagati-senza-laurea": lavoriSenzaLaurea,
+  "voglio-cambiare-lavoro": voglioCambiare,
 };
 
 const SITE_URL = "https://capitancloud.it";
@@ -24,9 +26,9 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!article) return { meta: [{ title: "Articolo non trovato — Capitan Cloud" }, { name: "robots", content: "noindex,nofollow" }] };
     return {
       meta: [
-        { title: `${article.title} — Capitan Cloud` },
+        { title: article.seoTitle ?? article.title },
         { name: "description", content: article.description },
-        { property: "og:title", content: `${article.title} — Capitan Cloud` },
+        { property: "og:title", content: article.seoTitle ?? article.title },
         { property: "og:description", content: article.description },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },

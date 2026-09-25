@@ -14,6 +14,7 @@ export interface BlogArticle {
   title: string;
   category: BlogCategory;
   description: string;
+  seoTitle?: string;
   published: boolean;
   readingTime: number;
   related: string[];
@@ -21,7 +22,7 @@ export interface BlogArticle {
 
 const articleSeeds: Array<Omit<BlogArticle, "published" | "readingTime" | "related">> = [
   { number: 1, slug: "lavori-ben-pagati-senza-laurea", title: "Lavori ben pagati senza laurea: quali sono davvero nel 2026", category: "Cambio lavoro", description: "Otto lavori ben pagati senza laurea in Italia: quanto si guadagna, cosa serve per iniziare e quanto tempo ci vuole. Con pro e contro onesti di ognuno." },
-  { number: 2, slug: "voglio-cambiare-lavoro", title: "Voglio cambiare lavoro ma non so cosa fare: guida pratica", category: "Cambio lavoro", description: "Come passare dal desiderio di cambiare a un piano realistico, sostenibile e misurabile." },
+  { number: 2, slug: "voglio-cambiare-lavoro", title: "Voglio cambiare lavoro ma non so cosa fare: guida pratica in 6 passi", seoTitle: "Voglio cambiare lavoro ma non so cosa fare: guida in 6 passi", category: "Cambio lavoro", description: "Vorresti cambiare lavoro ma non sai cosa fare? Un metodo pratico in 6 passi per capire il vero motivo, scegliere una direzione e partire senza rischiare lo stipendio." },
   { number: 3, slug: "come-diventare-cloud-engineer", title: "Come diventare cloud engineer nel 2026 (anche senza laurea)", category: "Carriera Cloud", description: "Competenze, certificazioni e passi da seguire per iniziare una carriera nel cloud." },
   { number: 4, slug: "certificazioni-aws", title: "Certificazioni AWS: quali sono, quanto costano e da quale partire", category: "Certificazioni AWS", description: "La mappa completa delle certificazioni AWS per scegliere il primo obiettivo senza confusione." },
   { number: 5, slug: "aws-cloud-practitioner", title: "AWS Cloud Practitioner (CLF-C02): guida completa all'esame", category: "Certificazioni AWS", description: "Argomenti, preparazione e strategia per affrontare la prima certificazione AWS." },
@@ -59,9 +60,10 @@ const relatedByCategory = (article: (typeof articleSeeds)[number]) =>
     .map((candidate) => candidate.slug);
 
 // slug -> minuti di lettura
-const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10 };
+const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10, "voglio-cambiare-lavoro": 9 };
 const RELATED_OVERRIDES: Record<string, string[]> = {
   "lavori-ben-pagati-senza-laurea": ["come-diventare-cloud-engineer", "cambiare-lavoro-mentre-lavori", "certificazioni-aws"],
+  "voglio-cambiare-lavoro": ["lavori-ben-pagati-senza-laurea", "cambiare-lavoro-mentre-lavori", "lavori-per-cambiare-vita"],
 };
 
 export const BLOG_ARTICLES: BlogArticle[] = articleSeeds.map((article) => ({
