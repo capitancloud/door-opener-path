@@ -13,6 +13,7 @@ import * as awsSaa from "@/lib/blog-content/aws-solutions-architect-associate";
 import * as devopsEngineer from "@/lib/blog-content/devops-engineer";
 import * as corsoAws from "@/lib/blog-content/corso-aws";
 import * as awsCosE from "@/lib/blog-content/aws-cos-e";
+import * as cloudCosE from "@/lib/blog-content/cloud-computing-cos-e";
 
 const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBody: () => React.ReactElement }> = {
   "lavori-ben-pagati-senza-laurea": lavoriSenzaLaurea,
@@ -24,6 +25,7 @@ const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBod
   "devops-engineer": devopsEngineer,
   "corso-aws": corsoAws,
   "aws-cos-e": awsCosE,
+  "cloud-computing-cos-e": cloudCosE,
 };
 
 const SITE_URL = "https://capitancloud.it";

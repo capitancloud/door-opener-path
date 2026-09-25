@@ -16,4 +16,5 @@
 - [x] Articolo 7 "DevOps engineer" pubblicato
 - [x] Articolo 8 "Corso AWS in italiano" pubblicato
 - [x] Articolo 9 "AWS: cos'è e come funziona" pubblicato
+- [x] Articolo 10 "Cloud computing: cos'è" pubblicato
 - [ ] Articoli 6–30: in attesa dei testi dall'utente
