@@ -11,3 +11,5 @@
 - [x] Articolo 2 "Voglio cambiare lavoro" pubblicato
 - [x] Articolo 3 "Come diventare cloud engineer" pubblicato
 - [x] Articolo 4 "Certificazioni AWS" pubblicato (senza riferimenti all'esame in italiano)
+- [x] Articolo 5 "AWS Cloud Practitioner (CLF-C02)" pubblicato (senza riferimenti all'esame in italiano)
+- [ ] Articoli 6–30: in attesa dei testi dall'utente
