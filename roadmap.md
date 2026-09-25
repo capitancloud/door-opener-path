@@ -26,4 +26,5 @@
 - [x] Articolo 17 "Git tutorial" pubblicato
 - [x] Articolo 18 "AWS IAM" pubblicato
 - [x] Articolo 19 "Python per principianti" pubblicato
+- [x] Articolo 20 "CV senza esperienza" pubblicato
 - [ ] Articoli 6–30: in attesa dei testi dall'utente
