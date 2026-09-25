@@ -63,7 +63,7 @@ const novita: [string, string][] = [
   ["La Solutions Architect – Professional cambia versione", "Il nuovo esame SAP-C03 sostituirà l'attuale SAP-C02 a fine 2026."],
 ];
 
-const costi: [string, string][] = [
+const costi: [string, string, string][] = [
   ["Foundational", "100 USD", "Cloud Practitioner, AI Practitioner"],
   ["Associate", "150 USD", "Solutions Architect, Developer, CloudOps, ecc."],
   ["Professional e Specialty", "300 USD", "Tutte le certificazioni avanzate e verticali"],
