@@ -35,7 +35,7 @@ const articleSeeds: Array<Omit<BlogArticle, "published" | "readingTime" | "relat
   { number: 12, slug: "lavoro-da-remoto-senza-esperienza", title: "Lavoro da remoto senza esperienza: cosa esiste davvero (2026)", category: "Cambio lavoro", description: "Lavori da remoto senza esperienza: quali esistono, quanto si guadagna, come riconoscere le truffe e la strada realistica per arrivare a un buon lavoro da casa." },
   { number: 13, slug: "certificazione-aws-serve", title: "Certificazione AWS: serve davvero per trovare lavoro? Opinioni oneste", seoTitle: "Certificazione AWS: serve per trovare lavoro? Opinioni oneste", category: "Certificazioni AWS", description: "Una certificazione AWS serve davvero per trovare lavoro? Opinioni oneste: cosa fa per te, cosa non fa, quale conta di più e come farla pesare ai colloqui." },
   { number: 14, slug: "iaas-paas-saas", title: "IaaS, PaaS e SaaS: differenze con esempi pratici (2026)", category: "Guide pratiche", description: "La differenza tra IaaS, PaaS e SaaS spiegata semplice: esempi pratici su AWS, Azure e Google Cloud, tabella delle responsabilità e quale modello scegliere." },
-  { number: 15, slug: "aws-skill-builder", title: "AWS Skill Builder e corsi AWS gratis: cosa trovi e dove non bastano", category: "Certificazioni AWS", description: "Cosa offrono le risorse gratuite AWS e quando serve un percorso più strutturato." },
+  { number: 15, slug: "aws-skill-builder", title: "AWS Skill Builder e corsi AWS gratis: cosa trovi e dove non bastano", category: "Certificazioni AWS", description: "Cosa offre AWS Skill Builder gratis e a pagamento, gli altri corsi AWS gratuiti e dove le risorse gratuite non bastano per certificazione e lavoro." },
   { number: 16, slug: "terraform", title: "Terraform: cos'è e come si usa, guida per principianti", category: "Guide pratiche", description: "Come funziona Terraform e perché è uno strumento centrale nelle infrastrutture cloud." },
   { number: 17, slug: "git-tutorial", title: "Git tutorial in italiano: guida pratica da zero", category: "Guide pratiche", description: "Le basi di Git, dai primi comandi al lavoro quotidiano su un progetto." },
   { number: 18, slug: "aws-iam", title: "AWS IAM spiegato semplice: utenti, ruoli e policy", category: "Guide pratiche", description: "Identità e permessi AWS spiegati con esempi pratici per chi parte da zero." },
@@ -60,12 +60,13 @@ const relatedByCategory = (article: (typeof articleSeeds)[number]) =>
     .map((candidate) => candidate.slug);
 
 // slug -> minuti di lettura
-const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10, "voglio-cambiare-lavoro": 9, "come-diventare-cloud-engineer": 12, "certificazioni-aws": 11, "aws-cloud-practitioner": 10, "aws-solutions-architect-associate": 12, "devops-engineer": 10, "corso-aws": 8, "aws-cos-e": 9, "cloud-computing-cos-e": 10, "cambiare-lavoro-mentre-lavori": 8, "lavoro-da-remoto-senza-esperienza": 9, "certificazione-aws-serve": 7, "iaas-paas-saas": 9 };
+const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10, "voglio-cambiare-lavoro": 9, "come-diventare-cloud-engineer": 12, "certificazioni-aws": 11, "aws-cloud-practitioner": 10, "aws-solutions-architect-associate": 12, "devops-engineer": 10, "corso-aws": 8, "aws-cos-e": 9, "cloud-computing-cos-e": 10, "cambiare-lavoro-mentre-lavori": 8, "lavoro-da-remoto-senza-esperienza": 9, "certificazione-aws-serve": 7, "iaas-paas-saas": 9, "aws-skill-builder": 9 };
 const RELATED_OVERRIDES: Record<string, string[]> = {
   "lavori-ben-pagati-senza-laurea": ["come-diventare-cloud-engineer", "cambiare-lavoro-mentre-lavori", "certificazioni-aws"],
   "come-diventare-cloud-engineer": ["certificazioni-aws", "stipendio-cloud-engineer", "cloud-engineer-cosa-fa"],
   "voglio-cambiare-lavoro": ["lavori-ben-pagati-senza-laurea", "cambiare-lavoro-mentre-lavori", "lavori-per-cambiare-vita"],
   "certificazioni-aws": ["come-diventare-cloud-engineer", "aws-cloud-practitioner", "certificazione-aws-serve"],
+  "aws-skill-builder": ["corso-aws", "aws-cloud-practitioner", "aws-solutions-architect-associate"],
   "iaas-paas-saas": ["cloud-computing-cos-e", "aws-cos-e", "come-diventare-cloud-engineer"],
   "certificazione-aws-serve": ["aws-solutions-architect-associate", "certificazioni-aws", "come-diventare-cloud-engineer"],
   "lavoro-da-remoto-senza-esperienza": ["cambiare-lavoro-mentre-lavori", "cv-senza-esperienza", "come-diventare-cloud-engineer"],
