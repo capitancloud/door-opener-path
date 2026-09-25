@@ -20,4 +20,5 @@
 - [x] Articolo 11 "Cambiare lavoro mentre lavori" pubblicato
 - [x] Articolo 12 "Lavoro da remoto senza esperienza" pubblicato
 - [x] Articolo 13 "Certificazione AWS serve" pubblicato
+- [x] Articolo 14 "IaaS, PaaS e SaaS" pubblicato
 - [ ] Articoli 6–30: in attesa dei testi dall'utente
