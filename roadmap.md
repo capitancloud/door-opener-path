@@ -27,4 +27,5 @@
 - [x] Articolo 18 "AWS IAM" pubblicato
 - [x] Articolo 19 "Python per principianti" pubblicato
 - [x] Articolo 20 "CV senza esperienza" pubblicato
+- [x] Articolo 21 "Lavori ben pagati senza diploma" pubblicato
 - [ ] Articoli 6–30: in attesa dei testi dall'utente
