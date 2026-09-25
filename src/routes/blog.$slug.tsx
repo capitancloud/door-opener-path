@@ -4,6 +4,11 @@ import { useEffect } from "react";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { BLOG_ARTICLES, getBlogArticle } from "@/lib/blog-data";
+import * as lavoriSenzaLaurea from "@/lib/blog-content/lavori-ben-pagati-senza-laurea";
+
+const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBody: () => React.ReactElement }> = {
+  "lavori-ben-pagati-senza-laurea": lavoriSenzaLaurea,
+};
 
 const SITE_URL = "https://capitancloud.it";
 
@@ -40,6 +45,7 @@ function BlogArticlePage() {
   const currentIndex = BLOG_ARTICLES.findIndex((item) => item.slug === article.slug);
   const previous = currentIndex > 0 ? BLOG_ARTICLES[currentIndex - 1] : undefined;
   const next = currentIndex < BLOG_ARTICLES.length - 1 ? BLOG_ARTICLES[currentIndex + 1] : undefined;
+  const content = CONTENT[article.slug];
   const related = article.related.map(getBlogArticle).filter((item): item is NonNullable<typeof item> => Boolean(item));
 
   useEffect(() => {
@@ -74,14 +80,19 @@ function BlogArticlePage() {
               In questa guida <ChevronDown className="h-4 w-4 lg:hidden" />
             </summary>
             <nav className="mt-4 space-y-1 border-l-2 border-brand-blue/20 pl-4 text-sm" aria-label="Indice dell'articolo">
+              {content ? content.toc.map((t) => (
+                <a key={t.id} href={`#${t.id}`} className="block py-1.5 text-muted-foreground hover:text-brand-blue">{t.label}</a>
+              )) : (<>
               <a href="#stato" className="block py-2 font-semibold text-brand-blue">Stato dell'articolo</a>
               <a href="#cosa-troverai" className="block py-2 text-muted-foreground hover:text-brand-blue">Cosa troverai</a>
+              </>)}
               <a href="#approfondisci" className="block py-2 text-muted-foreground hover:text-brand-blue">Guide correlate</a>
             </nav>
           </details>
         </aside>
 
         <article className="min-w-0">
+          {content ? <div className="pb-12"><content.ArticleBody /></div> : (<>
           <section id="stato" className="rounded-3xl border border-brand-yellow/40 bg-brand-yellow/10 p-6 sm:p-8">
             <div className="flex items-start gap-4">
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-yellow text-brand-ink"><BookOpen className="h-5 w-5" /></div>
@@ -105,6 +116,7 @@ function BlogArticlePage() {
               ))}
             </div>
           </section>
+          </>)}
 
           <section id="approfondisci" className="border-t border-border pt-10">
             <h2 className="font-blog-display text-3xl font-extrabold">Continua a esplorare</h2>
