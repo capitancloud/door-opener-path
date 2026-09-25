@@ -18,6 +18,7 @@ import * as cambiareMentre from "@/lib/blog-content/cambiare-lavoro-mentre-lavor
 import * as remotoSenzaEsp from "@/lib/blog-content/lavoro-da-remoto-senza-esperienza";
 import * as certServe from "@/lib/blog-content/certificazione-aws-serve";
 import * as iaasPaasSaas from "@/lib/blog-content/iaas-paas-saas";
+import * as skillBuilder from "@/lib/blog-content/aws-skill-builder";
 
 const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBody: () => React.ReactElement }> = {
   "lavori-ben-pagati-senza-laurea": lavoriSenzaLaurea,
@@ -34,6 +35,7 @@ const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBod
   "lavoro-da-remoto-senza-esperienza": remotoSenzaEsp,
   "certificazione-aws-serve": certServe,
   "iaas-paas-saas": iaasPaasSaas,
+  "aws-skill-builder": skillBuilder,
 };
 
 const SITE_URL = "https://capitancloud.it";
