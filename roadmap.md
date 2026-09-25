@@ -13,4 +13,5 @@
 - [x] Articolo 4 "Certificazioni AWS" pubblicato (senza riferimenti all'esame in italiano)
 - [x] Articolo 5 "AWS Cloud Practitioner (CLF-C02)" pubblicato (senza riferimenti all'esame in italiano)
 - [x] Articolo 6 "AWS Solutions Architect Associate (SAA-C03)" pubblicato
+- [x] Articolo 7 "DevOps engineer" pubblicato
 - [ ] Articoli 6–30: in attesa dei testi dall'utente
