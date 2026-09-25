@@ -29,7 +29,7 @@ const articleSeeds: Array<Omit<BlogArticle, "published" | "readingTime" | "relat
   { number: 6, slug: "aws-solutions-architect-associate", title: "AWS Solutions Architect Associate (SAA-C03): guida completa all'esame 2026", seoTitle: "AWS Solutions Architect Associate (SAA-C03): guida all'esame 2026", category: "Certificazioni AWS", description: "Tutto sull'esame AWS Solutions Architect Associate SAA-C03: domini e pesi, servizi da studiare, domande di scenario, esame in inglese e piano di studio in 8 settimane." },
   { number: 7, slug: "devops-engineer", title: "DevOps engineer: cos'è, cosa fa e differenza con il cloud engineer", category: "Carriera Cloud", description: "Cosa fa un DevOps engineer, quali competenze servono, quanto guadagna e che differenza c'è con il cloud engineer. Con il percorso per diventarlo." },
   { number: 8, slug: "corso-aws", title: "Corso AWS in italiano: come scegliere quello giusto (2026)", category: "Certificazioni AWS", description: "Come scegliere un corso AWS in italiano: le 4 tipologie, 8 criteri di valutazione, i segnali d'allarme e le 5 domande da fare prima di iscriverti." },
-  { number: 9, slug: "aws-cos-e", title: "AWS: cos'è e come funziona, spiegato semplice", category: "Guide pratiche", description: "Una spiegazione accessibile di Amazon Web Services, dei suoi servizi e del suo utilizzo." },
+  { number: 9, slug: "aws-cos-e", title: "AWS: cos'è e come funziona, spiegato semplice", seoTitle: "AWS: cos'è e come funziona, spiegato semplice (2026)", category: "Guide pratiche", description: "Cos'è AWS (Amazon Web Services), come funziona, i servizi principali, quanto costa e come iniziare a usarlo in 5 passi, anche partendo da zero." },
   { number: 10, slug: "cloud-computing-cos-e", title: "Cloud computing: cos'è e come funziona, spiegato semplice", category: "Guide pratiche", description: "Il cloud computing raccontato senza tecnicismi, con esempi vicini alla vita quotidiana." },
   { number: 11, slug: "cambiare-lavoro-mentre-lavori", title: "Come cambiare lavoro mentre lavori: piano pratico passo passo", category: "Cambio lavoro", description: "Un piano per formarti e cercare nuove opportunità senza lasciare subito il lavoro attuale." },
   { number: 12, slug: "lavoro-da-remoto-senza-esperienza", title: "Lavoro da remoto senza esperienza: cosa esiste davvero", category: "Cambio lavoro", description: "Le opportunità reali da remoto per chi parte da zero e come evitare false promesse." },
@@ -60,12 +60,13 @@ const relatedByCategory = (article: (typeof articleSeeds)[number]) =>
     .map((candidate) => candidate.slug);
 
 // slug -> minuti di lettura
-const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10, "voglio-cambiare-lavoro": 9, "come-diventare-cloud-engineer": 12, "certificazioni-aws": 11, "aws-cloud-practitioner": 10, "aws-solutions-architect-associate": 12, "devops-engineer": 10, "corso-aws": 8 };
+const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10, "voglio-cambiare-lavoro": 9, "come-diventare-cloud-engineer": 12, "certificazioni-aws": 11, "aws-cloud-practitioner": 10, "aws-solutions-architect-associate": 12, "devops-engineer": 10, "corso-aws": 8, "aws-cos-e": 9 };
 const RELATED_OVERRIDES: Record<string, string[]> = {
   "lavori-ben-pagati-senza-laurea": ["come-diventare-cloud-engineer", "cambiare-lavoro-mentre-lavori", "certificazioni-aws"],
   "come-diventare-cloud-engineer": ["certificazioni-aws", "stipendio-cloud-engineer", "cloud-engineer-cosa-fa"],
   "voglio-cambiare-lavoro": ["lavori-ben-pagati-senza-laurea", "cambiare-lavoro-mentre-lavori", "lavori-per-cambiare-vita"],
   "certificazioni-aws": ["come-diventare-cloud-engineer", "aws-cloud-practitioner", "certificazione-aws-serve"],
+  "aws-cos-e": ["cloud-computing-cos-e", "certificazioni-aws", "aws-cloud-practitioner"],
   "corso-aws": ["aws-skill-builder", "certificazioni-aws", "aws-cloud-practitioner"],
   "devops-engineer": ["come-diventare-cloud-engineer", "cloud-engineer-cosa-fa", "aws-solutions-architect-associate"],
   "aws-solutions-architect-associate": ["aws-cloud-practitioner", "certificazioni-aws", "come-diventare-cloud-engineer"],
