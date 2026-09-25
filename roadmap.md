@@ -28,4 +28,5 @@
 - [x] Articolo 19 "Python per principianti" pubblicato
 - [x] Articolo 20 "CV senza esperienza" pubblicato
 - [x] Articolo 21 "Lavori ben pagati senza diploma" pubblicato
+- [x] Articolo 22 "Stipendio cloud engineer" pubblicato
 - [ ] Articoli 6–30: in attesa dei testi dall'utente
