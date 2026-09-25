@@ -17,4 +17,5 @@
 - [x] Articolo 8 "Corso AWS in italiano" pubblicato
 - [x] Articolo 9 "AWS: cos'è e come funziona" pubblicato
 - [x] Articolo 10 "Cloud computing: cos'è" pubblicato
+- [x] Articolo 11 "Cambiare lavoro mentre lavori" pubblicato
 - [ ] Articoli 6–30: in attesa dei testi dall'utente
