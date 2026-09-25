@@ -5,11 +5,13 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { BLOG_ARTICLES, getBlogArticle } from "@/lib/blog-data";
 import * as voglioCambiare from "@/lib/blog-content/voglio-cambiare-lavoro";
+import * as cloudEngineer from "@/lib/blog-content/come-diventare-cloud-engineer";
 import * as lavoriSenzaLaurea from "@/lib/blog-content/lavori-ben-pagati-senza-laurea";
 
 const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBody: () => React.ReactElement }> = {
   "lavori-ben-pagati-senza-laurea": lavoriSenzaLaurea,
   "voglio-cambiare-lavoro": voglioCambiare,
+  "come-diventare-cloud-engineer": cloudEngineer,
 };
 
 const SITE_URL = "https://capitancloud.it";
