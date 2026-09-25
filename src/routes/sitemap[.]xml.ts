@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { BLOG_ARTICLES } from "@/lib/blog-data";
 
 const BASE_URL = "https://capitancloud.it";
 
@@ -16,6 +17,7 @@ export const Route = createFileRoute("/sitemap.xml")({
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/blog/", changefreq: "weekly", priority: "0.8" },
+          ...BLOG_ARTICLES.filter((a) => a.published).map((a) => ({ path: `/blog/${a.slug}/`, changefreq: "monthly" as const, priority: "0.7" })),
           { path: "/privacy", changefreq: "yearly", priority: "0.3" },
           { path: "/cookie-policy", changefreq: "yearly", priority: "0.3" },
         ];
