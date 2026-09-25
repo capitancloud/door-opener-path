@@ -23,4 +23,5 @@
 - [x] Articolo 14 "IaaS, PaaS e SaaS" pubblicato
 - [x] Articolo 15 "AWS Skill Builder" pubblicato
 - [x] Articolo 16 "Terraform" pubblicato
+- [x] Articolo 17 "Git tutorial" pubblicato
 - [ ] Articoli 6–30: in attesa dei testi dall'utente
