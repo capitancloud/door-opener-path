@@ -33,4 +33,5 @@
 - [x] Articolo 24 "Kubernetes" pubblicato
 - [x] Articolo 25 "Linux per principianti" pubblicato
 - [x] Articolo 26 "AWS o Azure" pubblicato
-- [ ] Articoli 27–30: in attesa dei testi dall'utente
+- [x] Articolo 27 "Amazon EC2" pubblicato
+- [ ] Articoli 28–30: in attesa dei testi dall'utente
