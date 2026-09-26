@@ -34,4 +34,5 @@
 - [x] Articolo 25 "Linux per principianti" pubblicato
 - [x] Articolo 26 "AWS o Azure" pubblicato
 - [x] Articolo 27 "Amazon EC2" pubblicato
-- [ ] Articoli 29–30: in attesa dei testi dall'utente
+- [x] Articolo 29 "Cloud engineer cosa fa" pubblicato
+- [ ] Articolo 30: in attesa dei testi dall'utente

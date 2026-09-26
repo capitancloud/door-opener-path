@@ -49,7 +49,7 @@ const articleSeeds: Array<Omit<BlogArticle, "published" | "readingTime" | "relat
   { number: 26, slug: "aws-o-azure", title: "AWS o Azure: quale imparare per primo nel 2026?", seoTitle: "AWS o Azure: quale imparare per primo nel 2026?", category: "Carriera Cloud", description: "AWS o Azure per iniziare nel cloud? Differenze, servizi equivalenti, certificazioni a confronto e come capire quale piattaforma chiede il mercato nella tua zona." },
   { number: 27, slug: "amazon-ec2", title: "Amazon EC2: cos'è e come funziona (guida per principianti 2026)", seoTitle: "Amazon EC2: cos'è e come funziona, guida per principianti (2026)", category: "Guide pratiche", description: "AWS EC2 spiegato da zero: istanze, AMI, tipi di istanza, come avviare e collegarsi al primo server, modelli di prezzo, costi nascosti ed errori da evitare." },
   { number: 28, slug: "amazon-s3", title: "Amazon S3: cos'è e come si usa (guida per principianti 2026)", seoTitle: "Amazon S3: cos'è e come si usa, guida per principianti (2026)", category: "Guide pratiche", description: "AWS S3 spiegato da zero: bucket e oggetti, classi di storage, primo bucket, comandi AWS CLI, sicurezza, versioning, costi ed errori da evitare." },
-  { number: 29, slug: "cloud-engineer-cosa-fa", title: "Cloud engineer: cosa fa in una giornata tipo", category: "Carriera Cloud", description: "Attività, strumenti e responsabilità raccontati attraverso una giornata di lavoro reale." },
+  { number: 29, slug: "cloud-engineer-cosa-fa", title: "Cloud engineer: cosa fa davvero in una giornata tipo", seoTitle: "Cloud engineer: cosa fa davvero in una giornata tipo (2026)", category: "Carriera Cloud", description: "Cosa fa un cloud engineer: mansioni, una giornata tipo ora per ora, differenze tra junior e senior, strumenti usati e lati positivi e negativi del lavoro." },
   { number: 30, slug: "lavori-per-cambiare-vita", title: "Lavori per cambiare vita: le professioni che puoi imparare da adulto", category: "Cambio lavoro", description: "Professioni accessibili in età adulta e criteri per scegliere un cambiamento sostenibile." },
 ];
 
@@ -60,7 +60,7 @@ const relatedByCategory = (article: (typeof articleSeeds)[number]) =>
     .map((candidate) => candidate.slug);
 
 // slug -> minuti di lettura
-const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10, "voglio-cambiare-lavoro": 9, "come-diventare-cloud-engineer": 12, "certificazioni-aws": 11, "aws-cloud-practitioner": 10, "aws-solutions-architect-associate": 12, "devops-engineer": 10, "corso-aws": 8, "aws-cos-e": 9, "cloud-computing-cos-e": 10, "cambiare-lavoro-mentre-lavori": 8, "lavoro-da-remoto-senza-esperienza": 9, "certificazione-aws-serve": 7, "iaas-paas-saas": 9, "aws-skill-builder": 9, "terraform": 11, "git-tutorial": 12, "aws-iam": 11, "python-per-principianti": 11, "cv-senza-esperienza": 9, "lavori-ben-pagati-senza-diploma": 8, "stipendio-cloud-engineer": 7, "docker": 9, "kubernetes": 10, "linux-per-principianti": 11, "aws-o-azure": 9, "amazon-ec2": 12, "amazon-s3": 11 };
+const PUBLISHED: Record<string, number> = { "lavori-ben-pagati-senza-laurea": 10, "voglio-cambiare-lavoro": 9, "come-diventare-cloud-engineer": 12, "certificazioni-aws": 11, "aws-cloud-practitioner": 10, "aws-solutions-architect-associate": 12, "devops-engineer": 10, "corso-aws": 8, "aws-cos-e": 9, "cloud-computing-cos-e": 10, "cambiare-lavoro-mentre-lavori": 8, "lavoro-da-remoto-senza-esperienza": 9, "certificazione-aws-serve": 7, "iaas-paas-saas": 9, "aws-skill-builder": 9, "terraform": 11, "git-tutorial": 12, "aws-iam": 11, "python-per-principianti": 11, "cv-senza-esperienza": 9, "lavori-ben-pagati-senza-diploma": 8, "stipendio-cloud-engineer": 7, "docker": 9, "kubernetes": 10, "linux-per-principianti": 11, "aws-o-azure": 9, "amazon-ec2": 12, "amazon-s3": 11, "cloud-engineer-cosa-fa": 7 };
 const RELATED_OVERRIDES: Record<string, string[]> = {
   "lavori-ben-pagati-senza-laurea": ["come-diventare-cloud-engineer", "cambiare-lavoro-mentre-lavori", "certificazioni-aws"],
   "come-diventare-cloud-engineer": ["certificazioni-aws", "stipendio-cloud-engineer", "cloud-engineer-cosa-fa"],
@@ -84,6 +84,7 @@ const RELATED_OVERRIDES: Record<string, string[]> = {
   "devops-engineer": ["come-diventare-cloud-engineer", "cloud-engineer-cosa-fa", "aws-solutions-architect-associate"],
   "aws-solutions-architect-associate": ["aws-cloud-practitioner", "certificazioni-aws", "come-diventare-cloud-engineer"],
   "amazon-s3": ["amazon-ec2", "aws-cos-e", "aws-iam"],
+  "cloud-engineer-cosa-fa": ["come-diventare-cloud-engineer", "stipendio-cloud-engineer", "devops-engineer"],
   "aws-cloud-practitioner": ["certificazioni-aws", "aws-solutions-architect-associate", "certificazione-aws-serve"],
 };
 
