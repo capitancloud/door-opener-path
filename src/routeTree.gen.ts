@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as LlmsDottxtRouteImport } from './routes/llms[.]txt'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
 import { Route as CiurmaRouteImport } from './routes/ciurma'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -26,6 +27,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LlmsDottxtRoute = LlmsDottxtRouteImport.update({
+  id: '/llms.txt',
+  path: '/llms.txt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CookiePolicyRoute = CookiePolicyRouteImport.update({
@@ -64,6 +70,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/ciurma': typeof CiurmaRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/llms.txt': typeof LlmsDottxtRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -73,6 +80,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/ciurma': typeof CiurmaRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/llms.txt': typeof LlmsDottxtRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -84,6 +92,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/ciurma': typeof CiurmaRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/llms.txt': typeof LlmsDottxtRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -96,6 +105,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/ciurma'
     | '/cookie-policy'
+    | '/llms.txt'
     | '/privacy'
     | '/sitemap.xml'
     | '/blog/$slug'
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ciurma'
     | '/cookie-policy'
+    | '/llms.txt'
     | '/privacy'
     | '/sitemap.xml'
     | '/blog/$slug'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/ciurma'
     | '/cookie-policy'
+    | '/llms.txt'
     | '/privacy'
     | '/sitemap.xml'
     | '/blog/$slug'
@@ -126,6 +138,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   CiurmaRoute: typeof CiurmaRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
+  LlmsDottxtRoute: typeof LlmsDottxtRoute
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
@@ -144,6 +157,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/llms.txt': {
+      id: '/llms.txt'
+      path: '/llms.txt'
+      fullPath: '/llms.txt'
+      preLoaderRoute: typeof LlmsDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cookie-policy': {
@@ -208,6 +228,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRouteWithChildren,
   CiurmaRoute: CiurmaRoute,
   CookiePolicyRoute: CookiePolicyRoute,
+  LlmsDottxtRoute: LlmsDottxtRoute,
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
