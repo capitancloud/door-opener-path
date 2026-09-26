@@ -31,4 +31,5 @@
 - [x] Articolo 22 "Stipendio cloud engineer" pubblicato
 - [x] Articolo 23 "Docker" pubblicato
 - [x] Articolo 24 "Kubernetes" pubblicato
-- [ ] Articoli 25–30: in attesa dei testi dall'utente
+- [x] Articolo 25 "Linux per principianti" pubblicato
+- [ ] Articoli 26–30: in attesa dei testi dall'utente
