@@ -92,7 +92,7 @@ export const Route = createFileRoute("/blog/$slug")({
         { name: "robots", content: article.published ? "index,follow" : "noindex,follow" },
       ],
       links: [{ rel: "canonical", href: url }],
-      scripts: article.published ? [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.description, author: { "@type": "Person", name: "Eugenio Fontana", url: "https://eugeniofontana.com/" }, publisher: { "@type": "Organization", name: "Capitan Cloud", url: SITE_URL }, mainEntityOfPage: url }) }] : [],
+      scripts: article.published ? [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", inLanguage: "it-IT", headline: article.title, description: article.description, author: { "@type": "Person", name: "Eugenio Fontana", url: "https://eugeniofontana.com/" }, publisher: { "@type": "Organization", name: "Capitan Cloud", url: SITE_URL }, mainEntityOfPage: url }) }] : [],
     };
   },
   component: BlogArticlePage,
