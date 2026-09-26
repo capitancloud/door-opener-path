@@ -25,7 +25,6 @@ const P = ({ children }: { children: ReactNode }) => <p className="mt-5 text-lg 
 const Bullets = ({ items }: { items: ReactNode[] }) => (
   <ul className="mt-4 space-y-3">{items.map((t, i) => <li key={i} className="flex gap-3 text-lg leading-relaxed"><Check className="mt-1 h-5 w-5 shrink-0 text-brand-blue" /><span>{t}</span></li>)}</ul>
 );
-const Code = ({ title, children }: { title: string; children: string }) => (
 const C = ({ children }: { children: ReactNode }) => <code className="rounded bg-secondary px-1.5 py-0.5 font-mono text-[0.9em] text-brand-blue">{children}</code>;
 const Table = ({ head, rows }: { head: string[]; rows: ReactNode[][] }) => (
   <div className="mt-6 overflow-x-auto rounded-2xl border border-border">
