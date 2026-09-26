@@ -34,4 +34,4 @@
 - [x] Articolo 25 "Linux per principianti" pubblicato
 - [x] Articolo 26 "AWS o Azure" pubblicato
 - [x] Articolo 27 "Amazon EC2" pubblicato
-- [ ] Articoli 28–30: in attesa dei testi dall'utente
+- [ ] Articoli 29–30: in attesa dei testi dall'utente
