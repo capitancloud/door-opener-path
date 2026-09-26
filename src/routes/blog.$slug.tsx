@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, BookOpen, ChevronDown, Clock3, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronDown, Clock3, Sparkles } from "lucide-react";
 import { useEffect } from "react";
 import { CookieBanner } from "@/components/CookieBanner";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
@@ -73,7 +73,7 @@ const SITE_URL = "https://capitancloud.it";
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
     const article = getBlogArticle(params.slug);
-    if (!article) throw notFound();
+    if (!article || !CONTENT[params.slug]) throw notFound();
     return { article };
   },
   head: ({ loaderData, params }) => {
@@ -138,43 +138,16 @@ function BlogArticlePage() {
               In questa guida <ChevronDown className="h-4 w-4 lg:hidden" />
             </summary>
             <nav className="mt-4 space-y-1 border-l-2 border-brand-blue/20 pl-4 text-sm" aria-label="Indice dell'articolo">
-              {content ? content.toc.map((t) => (
+               {content.toc.map((t) => (
                 <a key={t.id} href={`#${t.id}`} className="block py-1.5 text-muted-foreground hover:text-brand-blue">{t.label}</a>
-              )) : (<>
-              <a href="#stato" className="block py-2 font-semibold text-brand-blue">Stato dell'articolo</a>
-              <a href="#cosa-troverai" className="block py-2 text-muted-foreground hover:text-brand-blue">Cosa troverai</a>
-              </>)}
+               ))}
               <a href="#approfondisci" className="block py-2 text-muted-foreground hover:text-brand-blue">Guide correlate</a>
             </nav>
           </details>
         </aside>
 
         <article className="min-w-0">
-          {content ? <div className="pb-12"><content.ArticleBody /></div> : (<>
-          <section id="stato" className="rounded-3xl border border-brand-yellow/40 bg-brand-yellow/10 p-6 sm:p-8">
-            <div className="flex items-start gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-yellow text-brand-ink"><BookOpen className="h-5 w-5" /></div>
-              <div>
-                <p className="text-xs font-extrabold uppercase text-brand-yellow-deep">In preparazione</p>
-                <h2 className="mt-1 font-blog-display text-2xl font-extrabold">Questa guida sta arrivando</h2>
-                <p className="mt-3 leading-relaxed text-brand-ink/75">Il titolo e l'indirizzo definitivo sono già pronti. Il contenuto completo sarà pubblicato qui dopo la revisione editoriale.</p>
-              </div>
-            </div>
-          </section>
-
-          <section id="cosa-troverai" className="py-12">
-            <p className="text-sm font-extrabold uppercase text-brand-blue">Una lettura utile, non un muro di testo</p>
-            <h2 className="mt-3 font-blog-display text-3xl font-extrabold">Cosa troverai in questa guida</h2>
-            <div className="mt-7 grid gap-4 sm:grid-cols-3">
-              {["Una risposta semplice già dall'inizio", "Esempi e passaggi concreti", "Collegamenti alle guide più utili"].map((text, index) => (
-                <div key={text} className="rounded-2xl border border-border bg-secondary p-5">
-                  <span className="text-2xl font-extrabold text-brand-blue">0{index + 1}</span>
-                  <p className="mt-3 font-semibold leading-relaxed">{text}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-          </>)}
+           <div className="pb-12"><content.ArticleBody /></div>
 
           <section id="approfondisci" className="border-t border-border pt-10">
             <h2 className="font-blog-display text-3xl font-extrabold">Continua a esplorare</h2>
