@@ -26,6 +26,7 @@ import * as pythonPrinc from "@/lib/blog-content/python-per-principianti";
 import * as cvSenzaEsp from "@/lib/blog-content/cv-senza-esperienza";
 import * as senzaDiploma from "@/lib/blog-content/lavori-ben-pagati-senza-diploma";
 import * as stipendioCE from "@/lib/blog-content/stipendio-cloud-engineer";
+import * as docker from "@/lib/blog-content/docker";
 
 const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBody: () => React.ReactElement }> = {
   "lavori-ben-pagati-senza-laurea": lavoriSenzaLaurea,
@@ -50,6 +51,7 @@ const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBod
   "cv-senza-esperienza": cvSenzaEsp,
   "lavori-ben-pagati-senza-diploma": senzaDiploma,
   "stipendio-cloud-engineer": stipendioCE,
+  "docker": docker,
 };
 
 const SITE_URL = "https://capitancloud.it";
