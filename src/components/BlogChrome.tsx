@@ -11,9 +11,6 @@ export function ArticleCard({ article }: { article: BlogArticle }) {
         <span className="absolute left-4 top-4 rounded-full border border-primary-foreground/30 bg-background/90 px-3 py-1 text-[0.65rem] font-extrabold uppercase text-brand-ink backdrop-blur">
           {article.category}
         </span>
-        <span className="absolute bottom-4 right-4 rounded-full bg-brand-yellow px-3 py-1 text-xs font-extrabold text-brand-ink">
-          In preparazione
-        </span>
       </div>
       <div className="flex flex-1 flex-col px-2 pb-2">
         <div className="mb-3 flex items-center gap-2 text-xs font-semibold text-muted-foreground">
@@ -31,7 +28,7 @@ export function ArticleCard({ article }: { article: BlogArticle }) {
           className="flex items-center justify-between border-t border-border pt-5 text-sm font-bold text-brand-blue"
           aria-label={`Apri ${article.title}`}
         >
-          Anteprima articolo
+          Leggi l'articolo
           <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary transition-colors group-hover:bg-brand-blue group-hover:text-primary-foreground">
             <ArrowRight className="h-5 w-5" />
           </span>
