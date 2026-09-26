@@ -32,6 +32,7 @@ import * as linuxPrinc from "@/lib/blog-content/linux-per-principianti";
 import * as awsAzure from "@/lib/blog-content/aws-o-azure";
 import * as amazonEc2 from "@/lib/blog-content/amazon-ec2";
 import * as amazonS3 from "@/lib/blog-content/amazon-s3";
+import * as lavoriPerCambiareVita from "@/lib/blog-content/lavori-per-cambiare-vita";
 import * as cloudEngineerCosaFa from "@/lib/blog-content/cloud-engineer-cosa-fa";
 
 const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBody: () => React.ReactElement }> = {
@@ -64,6 +65,7 @@ const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBod
   "amazon-ec2": amazonEc2,
   "amazon-s3": amazonS3,
   "cloud-engineer-cosa-fa": cloudEngineerCosaFa,
+  "lavori-per-cambiare-vita": lavoriPerCambiareVita,
 };
 
 const SITE_URL = "https://capitancloud.it";
