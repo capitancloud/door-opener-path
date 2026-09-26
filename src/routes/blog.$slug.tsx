@@ -30,6 +30,7 @@ import * as docker from "@/lib/blog-content/docker";
 import * as kubernetes from "@/lib/blog-content/kubernetes";
 import * as linuxPrinc from "@/lib/blog-content/linux-per-principianti";
 import * as awsAzure from "@/lib/blog-content/aws-o-azure";
+import * as amazonEc2 from "@/lib/blog-content/amazon-ec2";
 
 const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBody: () => React.ReactElement }> = {
   "lavori-ben-pagati-senza-laurea": lavoriSenzaLaurea,
@@ -58,6 +59,7 @@ const CONTENT: Record<string, { toc: { id: string; label: string }[]; ArticleBod
   "kubernetes": kubernetes,
   "linux-per-principianti": linuxPrinc,
   "aws-o-azure": awsAzure,
+  "amazon-ec2": amazonEc2,
 };
 
 const SITE_URL = "https://capitancloud.it";
