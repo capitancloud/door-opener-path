@@ -78,7 +78,7 @@ export const Route = createFileRoute("/blog/$slug")({
   },
   head: ({ loaderData, params }) => {
     const article = loaderData?.article;
-    const url = `${SITE_URL}/blog/${params.slug}/`;
+    const url = `${SITE_URL}/blog/${params.slug}`;
     if (!article) return { meta: [{ title: "Articolo non trovato — Capitan Cloud" }, { name: "robots", content: "noindex,nofollow" }] };
     return {
       meta: [

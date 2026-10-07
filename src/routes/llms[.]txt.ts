@@ -12,7 +12,7 @@ export const Route = createFileRoute("/llms.txt")({
         const sections = BLOG_CATEGORIES.filter((c) => c !== "Tutti").map((cat) => {
           const items = pub.filter((a) => a.category === cat);
           if (!items.length) return "";
-          return `## Blog: ${cat}\n\n${items.map((a) => `- [${a.title}](${B}/blog/${a.slug}/): ${a.description}`).join("\n")}\n`;
+          return `## Blog: ${cat}\n\n${items.map((a) => `- [${a.title}](${B}/blog/${a.slug}): ${a.description}`).join("\n")}\n`;
         }).filter(Boolean).join("\n");
         const text = `# Capitan Cloud
 
@@ -23,7 +23,7 @@ Capitan Cloud è un percorso formativo online in italiano (297 € una tantum, o
 ## Pagine principali
 
 - [Home](${B}/): presentazione del percorso, programma, prezzo, garanzia, FAQ e video di introduzione.
-- [Blog](${B}/blog/): ${pub.length} guide su cloud computing, AWS, certificazioni, carriera e cambio lavoro.
+- [Blog](${B}/blog): ${pub.length} guide su cloud computing, AWS, certificazioni, carriera e cambio lavoro.
 - [Quiz gratuito](https://quiz.capitancloud.it/): 9 domande in 2 minuti per capire se il cloud fa per te.
 - [Chi è Eugenio Fontana](https://eugeniofontana.com/): autore e formatore, oltre 100.000 studenti.
 
