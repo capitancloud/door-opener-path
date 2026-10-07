@@ -2,6 +2,16 @@ import { createStart, createMiddleware } from "@tanstack/react-start";
 
 import { renderErrorPage } from "./lib/error-page";
 
+// One URL form per page: strip trailing slash (except root) with a permanent 301.
+const trailingSlashMiddleware = createMiddleware().server(async ({ next, request }) => {
+  const url = new URL(request.url);
+  if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
+    url.pathname = url.pathname.replace(/\/+$/, "") || "/";
+    return new Response(null, { status: 301, headers: { Location: url.pathname + url.search } });
+  }
+  return next();
+});
+
 const errorMiddleware = createMiddleware().server(async ({ next }) => {
   try {
     return await next();
@@ -18,5 +28,5 @@ const errorMiddleware = createMiddleware().server(async ({ next }) => {
 });
 
 export const startInstance = createStart(() => ({
-  requestMiddleware: [errorMiddleware],
+  requestMiddleware: [trailingSlashMiddleware, errorMiddleware],
 }));

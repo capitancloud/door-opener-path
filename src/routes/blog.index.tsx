@@ -16,11 +16,11 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:title", content: "Blog Cloud, AWS e Carriera — Capitan Cloud" },
       { property: "og:description", content: "Guide pratiche per capire il cloud, preparare le certificazioni AWS e cambiare lavoro." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://capitancloud.it/blog/" },
+      { property: "og:url", content: "https://capitancloud.it/blog" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "robots", content: "index,follow" },
     ],
-    links: [{ rel: "canonical", href: "https://capitancloud.it/blog/" }],
+    links: [{ rel: "canonical", href: "https://capitancloud.it/blog" }],
   }),
   component: BlogIndexPage,
 });
